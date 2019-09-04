@@ -1,7 +1,5 @@
 package controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import dao.impl.UserEntityDaoImpl;
@@ -27,13 +25,42 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
         UserEntityDaoImpl user = new UserEntityDaoImpl();
-        UserEntity userEntity = user.getUserByName("xyf");
-        if(userEntity==null){
-            model.addAttribute("user", "null");
-        }
-        else{
-            model.addAttribute("user", userEntity.getUsername());
-        }
+
+        UserEntity test = new UserEntity();
+	    test.setUsername("1278007");
+	    test.setEmail("1");
+	    test.setPassword("asd");
+	    test.setNickname("asd");
+	    test.setGender("asd");
+	    test.setiSstaff(1);
+	    test.setPerDes("sad");
+	    test.setPhotoPro("asd");
+	    test.setContactIno("asd");
+	    user.addUser(test);
+        user.setNewnickname(test,"rrrrrrrrrrrrrrrrr");
+
+//        UserEntity test1 = new UserEntity();
+//	    test.setUsername("111");
+//	    test.setEmail("123");
+//	    test.setPassword("1231");
+//	    test.setNickname("aaaaa");
+//	    test.setGender("ddddd");
+//	    test.setiSstaff(0);
+//	    test.setPerDes("sssss");
+//	    test.setPhotoPro("ssss");
+//	    test.setContactIno("asaad");
+//
+//	    user.addUser(test1);
+
+
+
+//        UserEntity userEntity = user.getUserByName("xyf");
+//        if(userEntity==null){
+//            model.addAttribute("user", "null");
+//        }
+//        else{
+//            model.addAttribute("user", userEntity.getUsername());
+//        }
 
 		return "home";
 	}
