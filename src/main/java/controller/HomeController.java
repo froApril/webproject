@@ -26,18 +26,18 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
         UserEntityDaoImpl user = new UserEntityDaoImpl();
 
-        UserEntity test = new UserEntity();
-	    test.setUsername("1278007");
-	    test.setEmail("1");
-	    test.setPassword("asd");
-	    test.setNickname("asd");
-	    test.setGender("asd");
-	    test.setiSstaff(1);
-	    test.setPerDes("sad");
-	    test.setPhotoPro("asd");
-	    test.setContactIno("asd");
-	    user.addUser(test);
-        user.setNewnickname(test,"rrrrrrrrrrrrrrrrr");
+//        UserEntity test = new UserEntity();
+//	    test.setUsername("1278007");
+//	    test.setEmail("1");
+//	    test.setPassword("asd");
+//	    test.setNickname("asd");
+//	    test.setGender("asd");
+//	    test.setiSstaff(1);
+//	    test.setPerDes("sad");
+//	    test.setPhotoPro("asd");
+//	    test.setContactIno("asd");
+//	    user.addUser(test);
+//        user.setNewnickname(test,"rrrrrrrrrrrrrrrrr");
 
 //        UserEntity test1 = new UserEntity();
 //	    test.setUsername("111");
@@ -54,13 +54,13 @@ public class HomeController {
 
 
 
-//        UserEntity userEntity = user.getUserByName("xyf");
-//        if(userEntity==null){
-//            model.addAttribute("user", "null");
-//        }
-//        else{
-//            model.addAttribute("user", userEntity.getUsername());
-//        }
+        UserEntity userEntity = user.getUserByName("xyf");
+        if(userEntity==null){
+            model.addAttribute("user", "null");
+        }
+        else{
+            model.addAttribute("user", userEntity.getUsername());
+        }
 
 		return "home";
 	}
