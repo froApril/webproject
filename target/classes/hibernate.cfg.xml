@@ -23,7 +23,6 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping class="entities.UserEntity"/>
         <mapping resource="UserEntity.hbm.xml"/>
-        <mapping resource="UserEntity.hbm.xml"/>
         <mapping resource="TestEntity.hbm.xml"/>
         <mapping class="entities.TestEntity"/>
 

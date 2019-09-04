@@ -5,7 +5,6 @@
 <hibernate-mapping>
 
     <class name="entities.UserEntity" table="User" schema="webApplication">
-
         <id name="username">
             <column name="username" sql-type="char(10)" length="10"/>
         </id>
