@@ -16,7 +16,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
         Transaction transaction = session.beginTransaction();
         try{
             Query query = session
-                    .createQuery("from UserEntity where username='xyf'");
+                    .createQuery("from UserEntity where username= " +"\'" +user+"\'");
             findUser = (UserEntity) query.uniqueResult();
             transaction.commit();
         }catch (Exception e){
@@ -28,5 +28,113 @@ public class UserEntityDaoImpl implements UserEntityDao {
         }
 
         return findUser;
+    }
+
+    @Override
+    public Boolean isUsernameExist(String username) {
+
+        if(getUserByName(username) == null){
+            return false;
+        }
+        else
+            return true;
+    }
+
+    @Override
+    public Boolean addUser(UserEntity user) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+        if(isUsernameExist(user.getUsername())){
+            return false;
+        }
+        session.save(user);
+        session.getTransaction().commit();
+
+        return true;
+    }
+
+    @Override
+    public Boolean isStaff(UserEntity user) {
+        if(user.getiSstaff() == 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean setNewnickname(UserEntity user, String name) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+
+        if(isUsernameExist(user.getUsername())){
+            user.setNickname(name);
+            session.save(user);
+            session.getTransaction().commit();
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public Boolean setNewpassword(UserEntity user, String password) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+        if(isUsernameExist(user.getUsername())){
+            user.setPassword(password);
+            session.save(user);
+            session.getTransaction().commit();
+            return true;
+
+        }
+
+        return false;
+    }
+
+    @Override
+    public Boolean setGender(UserEntity user, String gender) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+        if(isUsernameExist(user.getUsername())){
+            user.setGender(gender);
+            session.save(user);
+            session.getTransaction().commit();
+            return true;
+
+        }
+
+        return false;
+    }
+
+    @Override
+    public Boolean setDes(UserEntity user, String description) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+        if(isUsernameExist(user.getUsername())){
+            user.setPerDes(description);
+            session.save(user);
+            session.getTransaction().commit();
+            return true;
+
+        }
+
+
+        return false;
+    }
+
+    @Override
+    public Boolean setContactInfo(UserEntity user, String contactInfo) {
+        Session session = HibernateFactory.getSession();
+        session.beginTransaction();
+        if(isUsernameExist(user.getUsername())){
+            user.setContactIno(contactInfo);
+            session.save(user);
+            session.getTransaction().commit();
+            return true;
+
+        }
+
+
+        return false;
     }
 }
