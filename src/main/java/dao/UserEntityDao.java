@@ -1,9 +1,12 @@
 package dao;
 
+import dao.impl.UserEntityDaoImpl;
 import entities.UserEntity;
 
 public interface UserEntityDao {
+
     UserEntity getUserByName(String username);
+
     Boolean isUsernameExist(String username);
     Boolean isStaff(UserEntity user);
     Boolean addUser(UserEntity user);
