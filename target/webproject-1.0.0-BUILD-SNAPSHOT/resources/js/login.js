@@ -1,23 +1,23 @@
 
 (function ($) {
+    "use strict";
 
-    function submit() {
-        var input = $('.validate-input .account-info');
+    var input = $('.validate-input .input100');
+    
+    //login button on click 
+    $('.login100-form-btn').on('click',function(){
+        var check = true;
 
-        $('.validate-form').on('submit',function(){
-            var check = true;
-
-            for(var i=0; i<input.length; i++) {
-                if(validate(input[i]) == false){
-                    showValidate(input[i]);
-                    check=false;
-                }
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
             }
+        }
+        // TODO: check if the info is correct in format, if true, use ajax to request
+        // validation from server
 
-            return check;
-        });
-
-    }
+    });
 
 
     $('.validate-form .input100').each(function(){
