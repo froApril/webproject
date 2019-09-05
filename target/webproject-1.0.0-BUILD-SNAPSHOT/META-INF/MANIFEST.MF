@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
+Built-By: XUYIFEI
 Created-By: IntelliJ IDEA
-Built-By: Mady
-Build-Jdk: 1.8.0_162
+Build-Jdk: 1.8
 
