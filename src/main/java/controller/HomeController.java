@@ -1,11 +1,7 @@
 package controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
-import dao.impl.UserEntityDaoImpl;
-import entities.UserEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -26,16 +22,14 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-        UserEntityDaoImpl user = new UserEntityDaoImpl();
-        UserEntity userEntity = user.getUserByName("xyf");
-        if(userEntity==null){
-            model.addAttribute("user", "null");
-        }
-        else{
-            model.addAttribute("user", userEntity.getUsername());
-        }
 
-		return "home";
+		return "login";
 	}
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String home1(Locale locale, Model model) {
+
+        return "login";
+    }
 	
 }

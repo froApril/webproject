@@ -12,10 +12,25 @@
             <column name="password" sql-type="char(15)" length="15"/>
         </property>
         <property name="nickname">
-            <column name="nickname" sql-type="char(6)" length="6" not-null="true"/>
+            <column name="nickname" sql-type="char(6)" length="6"/>
         </property>
-        <property name="birthday">
-            <column name="birthday" sql-type="date" not-null="true"/>
+        <property name="email">
+            <column name="email" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="perDes">
+            <column name="perDes" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+        <property name="photoPro">
+            <column name="photoPro" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="contactIno">
+            <column name="contactIno" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+        <property name="iSstaff">
+            <column name="ISstaff" sql-type="int(1)"/>
         </property>
     </class>
 </hibernate-mapping>
