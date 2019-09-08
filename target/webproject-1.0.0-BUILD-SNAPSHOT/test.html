@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <title>Login</title>
+    <script src="./resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+
 </head>
 <body>
-    <img src="resources/images/bg-01.jpg">
+    <button onclick="test()">rer</button>
+    <p id="show">123</p>
+    <script>
+        function test() {
+            var params = {};
+            params.topic = '123';
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: "localhost:8080/webproject_war/test",
+                data: params,
+                dataType: "json",
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (data) {
+                    alert("123");
+                }
+            });
+        }
+    </script>
+
 
 </body>
 </html>

@@ -9,6 +9,7 @@ public class TopicEntity {
     private String topicName;
     private int commentNum;
 
+
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {

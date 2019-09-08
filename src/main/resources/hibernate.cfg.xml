@@ -7,7 +7,8 @@
 
         <property name="connection.url">jdbc:mysql://35.189.58.102/webApplication</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
         <property name="connection.pool_size">4</property>
