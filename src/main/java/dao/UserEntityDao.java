@@ -1,6 +1,5 @@
 package dao;
 
-import dao.impl.UserEntityDaoImpl;
 import entities.UserEntity;
 
 public interface UserEntityDao {
@@ -8,13 +7,15 @@ public interface UserEntityDao {
     UserEntity getUserByName(String username);
 
     Boolean isUsernameExist(String username);
-    Boolean isStaff(UserEntity user);
+    Boolean isStaff(String username);
     Boolean addUser(UserEntity user);
-    Boolean setNewnickname(UserEntity user, String name);
-    Boolean setNewpassword(UserEntity user, String password);
-    Boolean setGender(UserEntity user, String gender);
-    Boolean setDes(UserEntity user, String description);
-    Boolean setContactInfo(UserEntity user, String contactInfo);
+    Boolean setNewnickname(String username, String name);
+    Boolean setNewpassword(String username, String password);
+    Boolean setGender(String username, String gender);
+    Boolean setDes(String username, String description);
+    Boolean setContactInfo(String username, String contactInfo);
+    Boolean setNewphoto(String username, String photoUrl);
+    Boolean deleteUser(String username);
     
 
 }
