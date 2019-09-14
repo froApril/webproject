@@ -2,6 +2,8 @@ package dao;
 
 import entities.TopicEntity;
 
+import java.util.List;
+
 /**
  * @author XUYIFEI
  *
@@ -41,6 +43,14 @@ public interface TopicEntityDao {
 
     /**
      *
+     * @param entity
+     * @return boolean
+     */
+
+    boolean addNewTopic(TopicEntity entity);
+
+    /**
+     *
      * @param String topicName
      * @return boolean
      *
@@ -59,6 +69,17 @@ public interface TopicEntityDao {
      * exist, create one with new name.
      */
     boolean updateTopic(String oldName,String newName);
+
+    /**
+     *
+     * @param Integer score
+     *
+     *
+     */
+    void updateScore(Integer score, String topicName);
+
+
+
 
 
 }

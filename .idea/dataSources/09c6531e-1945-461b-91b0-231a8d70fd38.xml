@@ -928,88 +928,101 @@
     <column id="234" parent="230" name="topicName">
       <Position>2</Position>
       <DataType>char(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="235" parent="230" name="commentNum">
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="236" parent="230" name="PRIMARY">
+    <column id="236" parent="230" name="score">
+      <Position>4</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="230" name="times">
+      <Position>5</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="238" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="237" parent="231" name="password">
+    <column id="239" parent="231" name="password">
       <Position>1</Position>
-      <DataType>char(15)|0s</DataType>
+      <DataType>char(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="231" name="nickname">
+    <column id="240" parent="231" name="nickname">
       <Position>2</Position>
-      <DataType>char(6)|0s</DataType>
+      <DataType>char(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="231" name="email">
+    <column id="241" parent="231" name="email">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="231" name="perDes">
+    <column id="242" parent="231" name="perDes">
       <Position>4</Position>
       <DataType>varchar(225)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="231" name="photoPro">
+    <column id="243" parent="231" name="photoPro">
       <Position>5</Position>
       <DataType>varchar(225)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="231" name="gender">
+    <column id="244" parent="231" name="gender">
       <Position>6</Position>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="231" name="contactIno">
+    <column id="245" parent="231" name="contactIno">
       <Position>7</Position>
       <DataType>varchar(225)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="231" name="ISstaff">
+    <column id="246" parent="231" name="ISstaff">
       <Position>8</Position>
       <DataType>int(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="231" name="id">
+    <column id="247" parent="231" name="id">
       <Position>9</Position>
       <DataType>int(255) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="231" name="username">
+    <column id="248" parent="231" name="username">
       <Position>10</Position>
       <DataType>char(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="247" parent="231" name="PRIMARY">
+    <key id="249" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="248" parent="232" name="id">
+    <column id="250" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="249" parent="232" name="PRIMARY">
+    <key id="251" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
