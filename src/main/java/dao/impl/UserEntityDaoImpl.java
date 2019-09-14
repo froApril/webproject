@@ -86,6 +86,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
         }catch (Exception e){
             e.printStackTrace();
             session.getTransaction().rollback();
+            return false;
         }
         finally {
             session.close();
