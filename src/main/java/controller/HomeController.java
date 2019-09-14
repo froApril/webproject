@@ -53,5 +53,10 @@ public class HomeController {
 
         return topicEntityDao.getTopicByName("newname1");
     }
+
+    @RequestMapping(value = "/test1",method = RequestMethod.GET)
+    public String test1(){
+	    return "test";
+    }
 	
 }
