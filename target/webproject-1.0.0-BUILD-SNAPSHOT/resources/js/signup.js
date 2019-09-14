@@ -11,14 +11,39 @@
                 check=false;
             }
         }
-        // TODO: check if the info is correct in format, if true, use ajax to post request
-        // to sever with data
+       var param={};
+        param.username = $("input[name='username']").val();
+        param.password = $("input[name='pass']").val();
+        param.email = $("input[name='email']").val();
+        $.ajax({
+            url:"signup",
+            type:"post",
+            data: param,
+            datatype:"json",
+            success: function (state) {
+                if(state.result == 'SUCCESS')
+                    console.log("Success");
+            }
+        })
 
 
     });
 
-    $('.resend_button').on('click', function () {
+    $('#resend_button').on('click', function () {
         // TODO: send vaildate code to the email address.
+        var param={};
+        param.username = "123";
+        param.password ="123";
+        $.ajax({
+            url:"signup",
+            type:"post",
+            data: param,
+            datatype:"json",
+            success: function (state) {
+                if(state.result == 'SUCCESS')
+                    console.log("ok");
+            }
+        })
     });
 
     

@@ -5,14 +5,14 @@
 <hibernate-mapping>
 
     <class name="entities.UserEntity" table="User" schema="webApplication">
-        <id name="username">
-            <column name="username" sql-type="char(10)" length="10"/>
+        <id name="id">
+            <column name="id" sql-type="int(255) unsigned"/>
         </id>
         <property name="password">
-            <column name="password" sql-type="char(15)" length="15"/>
+            <column name="password" sql-type="char(16)" length="16" not-null="true"/>
         </property>
         <property name="nickname">
-            <column name="nickname" sql-type="char(6)" length="6"/>
+            <column name="nickname" sql-type="char(50)" length="50" not-null="true"/>
         </property>
         <property name="email">
             <column name="email" sql-type="varchar(50)" length="50"/>
@@ -24,13 +24,16 @@
             <column name="photoPro" sql-type="varchar(225)" length="225" not-null="true"/>
         </property>
         <property name="gender">
-            <column name="gender" sql-type="varchar(10)" length="10"/>
+            <column name="gender" sql-type="varchar(10)" length="10" not-null="true"/>
         </property>
         <property name="contactIno">
             <column name="contactIno" sql-type="varchar(225)" length="225" not-null="true"/>
         </property>
         <property name="iSstaff">
-            <column name="ISstaff" sql-type="int(1)"/>
+            <column name="ISstaff" sql-type="int(1)" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="char(50)" length="50"/>
         </property>
     </class>
 </hibernate-mapping>
