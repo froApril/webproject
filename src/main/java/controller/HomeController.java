@@ -5,6 +5,7 @@ import java.util.Locale;
 //import dao.impl.TopicEntityDaoImpl;
 import dao.impl.UserEntityDaoImpl;
 //import entities.TopicEntity;
+import entities.UserEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -41,14 +42,14 @@ public class HomeController {
 //        else{
 //            model.addAttribute("user", userEntity.getUsername());
 //        }
-
+//
 //        UserEntity test = new UserEntity();
-//        test.setUsername("ssqq1");
+//        test.setUsername("11");
 //        test.setEmail("1");
 //        test.setPassword("asd");
 //        test.setNickname("asd");
 //        test.setGender("asd");
-//        test.setiSstaff(1);
+//        test.setiSstaff(0);
 //        test.setPerDes("sad");
 //        test.setPhotoPro("asd");
 //        test.setContactIno("asd");

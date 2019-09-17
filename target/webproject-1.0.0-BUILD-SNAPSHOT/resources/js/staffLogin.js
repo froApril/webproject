@@ -19,28 +19,42 @@
         param.username = $("input[name='username']").val();
         param.password = $("input[name='pass']").val();
         $.ajax({
-            url:"login",
+            url:"staffLogin",
             type:"post",
             data: param,
             datatype:"json",
             success: function (state) {
                 if(state.result == 'SUCCESS'){
                     console.log("Success");
-                    window.location.href ="Homepage.html"
+                    window.location.href ="staffHomepage.html"
 
 
                 }
                 else if(state.result == "Fail"){
 
-                    if($('#erruser').css("display") == "block")
+                    if($('#erruser').css("display") == "block" || $('#errstaff').css("display") == "block"){
                         $('#erruser').css("display","none")
+                        $('#errstaff').css("display","none")
+                    }
 
                     $('#errpss').css('display','block');
 
                  }
-                else{
-                    if($('#errpss').css("display") == "block")
+                else if(state.result == "fail not staff"){
+                    if($('#erruser').css("display") == "block" || $('#errpss').css("display") == "block"){
+                        $('#erruser').css("display","none")
                         $('#errpss').css("display","none")
+                    }
+
+
+                    $('#errstaff').css('display','block');
+
+                }
+                else{
+                    if($('#errstaff').css("display") == "block" || $('#errpss').css("display") == "block"){
+                        $('#errstaff').css("display","none")
+                        $('#errpss').css("display","none")
+                    }
                     $('#erruser').css('display','block');
                 }
 

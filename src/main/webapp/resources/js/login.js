@@ -14,8 +14,7 @@
                 check=false;
             }
         }
-        // TODO: check if the info is correct in format, if true, use ajax to request
-        // validation from server
+
         var param={};
         param.username = $("input[name='username']").val();
         param.password = $("input[name='pass']").val();
@@ -29,7 +28,22 @@
                     console.log("Success");
                     window.location.href ="Homepage.html"
 
+
                 }
+                else if(state.result == "Fail"){
+
+                    if($('#erruser').css("display") == "block")
+                        $('#erruser').css("display","none")
+
+                    $('#errpss').css('display','block');
+
+                 }
+                else{
+                    if($('#errpss').css("display") == "block")
+                        $('#errpss').css("display","none")
+                    $('#erruser').css('display','block');
+                }
+
 
             }
         })
