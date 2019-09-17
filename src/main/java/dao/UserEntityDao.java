@@ -16,6 +16,7 @@ public interface UserEntityDao {
     Boolean setContactInfo(String username, String contactInfo);
     Boolean setNewphoto(String username, String photoUrl);
     Boolean deleteUser(String username);
+    Boolean isUsercanlogin(String username, String password);
     
 
 }

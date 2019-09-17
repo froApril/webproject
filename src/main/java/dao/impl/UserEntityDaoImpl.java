@@ -243,4 +243,28 @@ public class UserEntityDaoImpl implements UserEntityDao {
         return true;
     }
 
+    @Override
+    public Boolean isUsercanlogin(String username, String password) {
+        Session session = null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(userEntity==null){
+                return false;
+            }
+           String rightPassword = userEntity.getPassword();
+            return rightPassword.equals(password);
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally{
+            session.close();
+        }
+
+
+    }
 }

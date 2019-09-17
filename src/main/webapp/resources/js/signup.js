@@ -30,20 +30,55 @@
     });
 
     $('#resend_button').on('click', function () {
-        // TODO: send vaildate code to the email address.
-        var param={};
-        param.username = "123";
-        param.password ="123";
-        $.ajax({
-            url:"signup",
-            type:"post",
-            data: param,
-            datatype:"json",
-            success: function (state) {
-                if(state.result == 'SUCCESS')
-                    console.log("ok");
+
+       var user_email = $("input[name='email']").val();
+            var flag=0;
+            time(this);
+            $.ajax({
+                type:'post',
+                url:'../../ajax/post_order.php',
+                data:'type=5&mobile_phone='+user_email,
+                dataType:'json',
+                success:function(data){
+                    if(data.status==1){//验证码已发送
+                    }
+                },
+
+            });
+        var wait=60;
+        $('#resend_button').attr("disabled",false);
+        function time(o) {
+            if (wait == 0) {
+                o.removeAttribute("disabled");
+                o.value="免费获取";
+                wait = 60;
+            } else {
+                o.setAttribute("disabled", true);
+                o.value=wait + "秒后可重发";
+                wait--;
+                setTimeout(function() {
+                        time(o)
+                    },
+                    1000)
             }
-        })
+
+
+
+
+        // // TODO: send vaildate code to the email address.
+        // var param={};
+        // param.username = "123";
+        // param.password ="123";
+        // $.ajax({
+        //     url:"signup",
+        //     type:"post",
+        //     data: param,
+        //     datatype:"json",
+        //     success: function (state) {
+        //         if(state.result == 'SUCCESS')
+        //             console.log("ok");
+        //     }
+        // })
     });
 
     

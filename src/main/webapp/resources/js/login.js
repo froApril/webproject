@@ -16,6 +16,24 @@
         }
         // TODO: check if the info is correct in format, if true, use ajax to request
         // validation from server
+        var param={};
+        param.username = $("input[name='username']").val();
+        param.password = $("input[name='pass']").val();
+        $.ajax({
+            url:"login",
+            type:"post",
+            data: param,
+            datatype:"json",
+            success: function (state) {
+                if(state.result == 'SUCCESS'){
+                    console.log("Success");
+                    window.location.href ="Homepage.html"
+
+                }
+
+            }
+        })
+
 
     });
 

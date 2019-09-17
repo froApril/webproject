@@ -17,7 +17,7 @@ import java.util.Map;
  * Handles requests for the application home page.
  */
 @Controller
-public class SignupController {
+public class LoginController {
 
 
 	/**
@@ -25,33 +25,27 @@ public class SignupController {
 	 */
 
 
-    @RequestMapping(value= "/signup",method = RequestMethod.POST)
+    @RequestMapping(value= "/login",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> signup(String username, String password, String email){
+    public Map<String,Object> login(String username, String password){
         UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
-        UserEntity userEntity = new UserEntity();
         Map<String, Object> result = new HashMap<String, Object>();
-
-         if (username == null){
+        if (username == null){
             result.put("result","fail, no name");
         }
-
-        else if(userEntityDao.isUsernameExist(username)){
-            result.put("result","fail, name exist");
+        else if(!userEntityDao.isUsernameExist(username)){
+            result.put("result","fail no stored name");
         }
-
         else if (password == null){
             result.put("result","fail, no password exist");
         }
-        else if (email ==null){
-            result.put("result","fail, no email exist");
-        }
         else{
-            userEntity.setUsername(username);
-            userEntity.setPassword(password);
-            userEntity.setEmail(email);
-            userEntityDao.addUser(userEntity);
-            result.put("result","SUCCESS");
+           if(userEntityDao.isUsercanlogin(username, password))
+               result.put("result","SUCCESS");
+           else
+               result.put("result","Fail");
+
+
         }
 
 
