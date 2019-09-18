@@ -21,7 +21,18 @@ public class staffLoginController {
 
 	/**
 	 * Simply selects the home view to render by returning its name.
+     *
 	 */
+
+	@RequestMapping(value = "/staffHomePage",method = RequestMethod.GET)
+    public String staffHome(){
+	    return "staffHomepage";
+    }
+
+	@RequestMapping(value = "/staffLogin",method = RequestMethod.GET)
+    public String staffPage(){
+	    return "staffLogin";
+    }
 
 
     @RequestMapping(value= "/staffLogin",method = RequestMethod.POST)
@@ -46,7 +57,6 @@ public class staffLoginController {
                result.put("result","SUCCESS");
            else
                result.put("result","Fail");
-
 
         }
 

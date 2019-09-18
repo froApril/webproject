@@ -24,9 +24,18 @@
             data: param,
             datatype:"json",
             success: function (state) {
+
+                // console.log(state)
                 if(state.result == 'SUCCESS'){
                     console.log("Success");
-                    window.location.href ="staffHomepage.html"
+                    window.location.href ="/webproject_war/staffHomePage"
+                    // $.ajax({
+                    //     url:"staffHomepage",
+                    //     type:"get",
+                    //     success:function () {
+                    //
+                    //     }
+                    // })
 
 
                 }

@@ -23,7 +23,20 @@ public class LoginController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+//
+//    @RequestMapping(value="/test",method = RequestMethod.GET)
+//    public String loginsuccess(){
+//        return "homepage";
+//    }
+    @RequestMapping(value = "/HomePage",method = RequestMethod.GET)
+    public String staffHome(){
+        return "Homepage";
+    }
 
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public String staffPage(){
+        return "login";
+    }
 
     @RequestMapping(value= "/login",method = RequestMethod.POST)
     @ResponseBody

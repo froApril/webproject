@@ -26,7 +26,15 @@
             success: function (state) {
                 if(state.result == 'SUCCESS'){
                     console.log("Success");
-                    window.location.href ="Homepage.html"
+                    window.location.href ="/webproject_war/HomePage"
+                    // $.ajax({
+                    //     url:"test",
+                    //     type:"get",
+                    //     datatype:"json",
+                    //     success:function (state) {
+                    //
+                    //     }
+                    // })
 
 
                 }
