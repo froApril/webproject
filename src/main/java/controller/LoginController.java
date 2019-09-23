@@ -29,12 +29,12 @@ public class LoginController {
 //        return "homepage";
 //    }
     @RequestMapping(value = "/HomePage",method = RequestMethod.GET)
-    public String staffHome(){
+    public String Home(){
         return "Homepage";
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String staffPage(){
+    public String Page(){
         return "login";
     }
 
