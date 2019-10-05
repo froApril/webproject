@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Yifei Xu (yixu5881@uni.sydney.edu.au)
+ * @date    2019-10-05
+ * @version 1.0
+ */
+
+html, body {
+    height: 100%;
+}
+ 
+.span2{
+	border:10px solid rgba(0,0,0,.125);
+
+}
+
+.span10{
+	border:1px solid rgba(0,0,0,.125);
+}
+
+}
+
