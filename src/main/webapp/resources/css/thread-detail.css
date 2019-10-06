@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Yifei Xu
+ * @date    2019-10-05
+ * @version 1.0
+ */
+
+
+
+.requester img{
+	width: 70%;
+	height: 70%;
+	margin: 5px 0px 0px 30px;
+
+}
+
+.user-info{
+	margin-top: 8px;
+
+}
+
+.user-info p{
+	line-height: 15px;
+}
+
+.requester{
+	margin-left:50px;
+	margin-top:20px;
+}
+.thread-title, .thread-main{
+	margin-left: 80px;
+}
+
+.user-name{
+	color: #ff4000;
+}
+
+.thread-date{
+	color: rgb(247, 39, 146);
+}
+
+.reply-thread{
+	color:#AAAAAA;
+}
+
+.reply-thread:hover{
+	color: #888888;
+	text-decoration: none;
+}
+
+
+
+
