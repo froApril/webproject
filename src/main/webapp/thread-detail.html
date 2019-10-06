@@ -45,35 +45,139 @@
 			
 		</div>
 
-		<div class="row">
-			<div class="col-2">
-			</div>
-			<div class="col-10 ">
-				<a href="javascript:void(0);" onclick="showHidden()" class="reply-thread">Reply</a>
-			</div>
-		</div>
 
-		<div class="row thread-reply-input" style="display: none">
-			<div class="col-2">
-			</div>
-			<div class="col-10 ">
-				<div class="input-group mb-3">
-				  <input type="text" class="form-control" placeholder="" aria-label="Reply message" aria-describedby="basic-addon2">
-				  <div class="input-group-append">
-				    <button class="btn btn-outline-secondary" type="button">Submit</button>
-				  </div>
+
+		<div class="comment-group">
+			<div class="comment-item">
+				<div class="row">
+					<div class="col-2">
+					</div>
+					<div class="col-1 comment-user--profile-photo">
+						<img src="resources/images/icons/user.svg" alt="">
+					</div>
+					<div class="col-9 comment-user-info">
+						<p class="user-name">Little Ming</p>
+						<p class="thread-date">6/10/2019</p>
+					</div>
 				</div>
+				<div class="row">
+					<div class="col-3">
+					</div>
+					<div class="col-9 comment-user-info comment-message">
+						<p>
+						Hi tutors 
+						<br>
+						Due to an urgent incident, I was unable to submit my individual report on the wiki page.
+						<br>
+						I am wondering if late submissions are allowed or not?
+						</p>
+					</div>
+				</div>
+
+				<div class="row reply-row">
+					<div class="col-3">
+					</div>
+					<div class="col-9">
+						<a href="#textarea-id" class="reply-thread" id="user-name">Reply</a>
+					</div>
+				</div>
+
+
 			</div>
+
+			<div class="comment-item">
+				<div class="row">
+					<div class="col-2">
+					</div>
+					<div class="col-1 comment-user--profile-photo">
+						<!-- 每添加一个新的comment要给头像一个id， 格式为username+img -->
+						<img id="xiaoming-img" src="resources/images/icons/user.svg" alt="">
+					</div>
+					<div class="col-9 comment-user-info">
+						<p class="user-name">Little Ming</p>
+						<p class="thread-date">6/10/2019</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+					</div>
+					<div class="col-9 comment-user-info comment-message">
+						<p>
+						Hi tutors 
+						<br>
+						Due to an urgent incident, I was unable to submit my individual report on the wiki page.
+						<br>
+						I am wondering if late submissions are allowed or not?
+						</p>
+					</div>
+				</div>
+				<div class="row reply-row">
+					<div class="col-3">
+					</div>
+					<div class="col-9">
+						<!-- 这里对应回复回复的按钮，需要在插入html时给一个username的ID -->
+						<!-- 这样可以保证点击后输入栏显示将回复的用户名 -->
+						<a href="#textarea-id" class="reply-thread" id="xiaoming">Reply</a>
+					</div>
+				</div>
+
+			</div>
+
+				<div class="comment-item">
+				<div class="row">
+					<div class="col-2">
+					</div>
+					<div class="col-1 comment-user--profile-photo">
+						<img src="resources/images/icons/user.svg" alt="">
+					</div>
+					<div class="col-9 comment-user-info">
+						<p class="user-name">Little Huang</p>
+						<p class="thread-date">7/10/2019</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+					</div>
+					<div class="col-9 comment-user-info comment-message">
+						<!-- 这里的跳转一定要在id后加img -->
+						<!-- 在js中检测是否第一行开头为@， 如果是则将第一行变为超链接 -->
+						<a href="#xiaoming-img">@xiaoming</a>
+						<p>Yes</p>
+					</div>
+				</div>
+				<div class="row reply-row">
+					<div class="col-3">
+					</div>
+					<div class="col-9">
+						<a href="#textarea-id" class="reply-thread" id="xiaohuang">Reply</a>
+					</div>
+				</div>
+
+			</div>
+
+
 		</div>
+		
 
 	</div>
-	<div class="container thread-main">
-		<h3 style="margin-top: 150px">Your answer</h3>
+
+	
+
+
+
+	<div class="container thread-main" style="margin-bottom: 40px">
+		<form role="form">
+		  <div class="form-group">
+			<h3 style="margin-top: 100px; margin-bottom: 20px;">Your answer</h3>
+		    <textarea class="form-control comment-textarea" rows="8" id="textarea-id">
+		    </textarea>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
 	</div>
 
 
-
-    
+ 
 </body>
 
 <footer>

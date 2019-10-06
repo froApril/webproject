@@ -1,9 +1,9 @@
 window.onload =function () {
+	$(".reply-thread").click(function(e){
+		var name = $(e.target).attr("id");
+
+		$(".comment-textarea").html("@"+name);	
+	});
 }
 
 
-
-function showHidden(){
-	console.log("123")
-	$(".thread-reply-input").show();
-}
