@@ -38,18 +38,14 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
     }
 
     @Override
-    public boolean addNewTopic(String topicName, String courseId, String major) {
-        if(existTopic(topicName))
+    public boolean addNewTopic(Topic2Entity topic) {
+        if(existTopic(topic.getName()))
             return false;
         Session session =null;
         try{
-            Topic2Entity topicEntity = new Topic2Entity();
-            topicEntity.setName(topicName);
-            topicEntity.setCourseId(courseId);
-            topicEntity.setMajor(major);
             session = HibernateFactory.getSession();
             session.beginTransaction();
-            session.save(topicEntity);
+            session.save(topic);
             session.getTransaction().commit();
 
         }catch (Exception e){
@@ -89,19 +85,19 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
     }
 
     @Override
-    public boolean updateTopic(String oldName,String newName) {
+    public boolean updateTopic(String oldTopic, Topic2Entity newTopic) {
         Session session =null;
         try{
             session =HibernateFactory.getSession();
             session.beginTransaction();
-            Topic2Entity topicEntity = this.getTopicByName(oldName);
-            if(topicEntity==null){
-                addNewTopic(newName,"","");
+
+            if(!this.existTopic(oldTopic)){
+                addNewTopic(newTopic);
                 return true;
             }
             else{
-                topicEntity.setName(newName);
-                session.update(topicEntity);
+
+                session.update(newTopic);
             }
 
             session.getTransaction().commit();

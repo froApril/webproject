@@ -17,14 +17,14 @@ public interface Topic2EntityDao {
     boolean existTopic(String topicName);
 
 
-    boolean addNewTopic(String topicName, String courseId, String major);
+    boolean addNewTopic(Topic2Entity topic);
 
 
 
     boolean deleteTopic(String topicName);
 
 
-    boolean updateTopic(String oldName, String newName);
+    boolean updateTopic(String oldTopic, Topic2Entity newTopic);
 
 
 }

@@ -193,7 +193,7 @@ footer .bottom-social i.fa{font-size: 24px;margin-right: 12px;}
 .contact-form{margin-top: 0;}
 .contact-form h3{font-size: 57px; font-weight: 400;}
 
-#ff .sendButton , #comment_form .sendButton {cursor:pointer;background-color:#575756;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;width:20%;color:#ffffff;margin-top: 50px;}
+#ff .sendButton , #comment_form .sendButton {cursor:pointer;background-color:#575756;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;width:20%;color:#ffffff;margin-top: 50px;margin-right: auto;margin-left: auto;}
 #ff .sendButton:hover , #comment_form .sendButton:hover{opacity: 0.8;}
 
 /* ---------------------------------------------------------------------------- */
