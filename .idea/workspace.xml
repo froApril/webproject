@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/staffLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/staffLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +33,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - webApplication@35.189.58.102" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - webApplication@35.189.58.102" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - webApplication@35.189.58.102" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="webApplication: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -40,17 +63,10 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>login.js</find>
-      <find>id</find>
-      <find>wrap-input100 rs1-wrap-input100 validate-input m-b-20</find>
-      <find>staffLogin.js</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,13 +90,14 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JPA.DatabaseSchemaImportDialog" value="09c6531e-1945-461b-91b0-231a8d70fd38" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567673539785" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/dao/impl" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -88,24 +105,27 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="entities" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/dao/impl" />
+      <recent name="$PROJECT_DIR$/src/main/java/dao" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/css" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="entities.Topic2" />
+      <recent name="" />
+      <recent name="entities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -270,6 +290,21 @@
         <item itemvalue="Tomcat Server.login.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@96ca217c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

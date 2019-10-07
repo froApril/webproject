@@ -5,10 +5,8 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.url">jdbc:mysql://35.189.58.102/webApplication?characterEncoding=utf8</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+        <property name="connection.url">jdbc:mysql://35.189.58.102/webApplication</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
@@ -25,6 +23,8 @@
         <mapping resource="UserEntity.hbm.xml"/>
         <mapping resource="TestEntity.hbm.xml"/>
         <mapping class="entities.TestEntity"/>
+        <mapping class="entities.Topic2Entity"/>
+        <mapping resource="Topic2Entity.hbm.xml"/>
 
 
     </session-factory>

@@ -24,10 +24,10 @@ public class staffLoginController {
      *
 	 */
 
-	@RequestMapping(value = "/staffHomePage",method = RequestMethod.GET)
+	/*@RequestMapping(value = "/staffHomePage",method = RequestMethod.GET)
     public String staffHome(){
 	    return "staffHomepage";
-    }
+    }*/
 
 	@RequestMapping(value = "/staffLogin",method = RequestMethod.GET)
     public String staffPage(){
