@@ -14,7 +14,7 @@ import java.util.Map;
 @Controller
 public class adminController {
 
-    @RequestMapping(value = "/addTopic",method = RequestMethod.GET)
+    /*@RequestMapping(value = "/addTopic",method = RequestMethod.GET)
     public String addTopicPage() {
         return "addTopic";
     }
@@ -27,7 +27,7 @@ public class adminController {
     @RequestMapping(value = "/fail",method = RequestMethod.GET)
     public String fail() {
         return "fail";
-    }
+    }*/
 
     /*@RequestMapping(value= "/addTopic",method = RequestMethod.POST)
     @ResponseBody
@@ -51,15 +51,15 @@ public class adminController {
         return result;
     }*/
 
-    @RequestMapping(value= "/addTopic",method = RequestMethod.POST)
+    @RequestMapping(value= "/adminController",method = RequestMethod.POST)
     @ResponseBody
     public String addNewTopic(@RequestParam("major") String major, @RequestParam("id")String id, @RequestParam("name")String name){
-        Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
+        /*Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
         Topic2Entity topicEntity = new Topic2Entity();
 
 
         if(topicEntityDao.existTopic(name)){
-            return "fail.html";
+            return "fail";
         }
 
         else{
@@ -67,8 +67,10 @@ public class adminController {
             topicEntity.setCourseId(id);
             topicEntity.setName(name);
             topicEntityDao.addNewTopic(topicEntity);
-            return "success.html";
-        }
+            return "success";
+        }*/
+        return "success";
+
 
 
     }
