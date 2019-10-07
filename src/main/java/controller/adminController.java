@@ -5,6 +5,7 @@ import entities.Topic2Entity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
@@ -52,13 +53,13 @@ public class adminController {
 
     @RequestMapping(value= "/addTopic",method = RequestMethod.POST)
     @ResponseBody
-    public String addNewTopic(String major, String id, String name){
+    public String addNewTopic(@RequestParam("major") String major, @RequestParam("id")String id, @RequestParam("name")String name){
         Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
         Topic2Entity topicEntity = new Topic2Entity();
 
 
         if(topicEntityDao.existTopic(name)){
-            return "fail";
+            return "fail.html";
         }
 
         else{
@@ -66,7 +67,7 @@ public class adminController {
             topicEntity.setCourseId(id);
             topicEntity.setName(name);
             topicEntityDao.addNewTopic(topicEntity);
-            return "success";
+            return "success.html";
         }
 
 
