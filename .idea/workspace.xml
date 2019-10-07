@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +41,7 @@
       <list>
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -83,27 +81,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567673539785" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/js" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="entities" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="entities" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,6 +253,7 @@
       <workItem from="1569302694744" duration="501000" />
       <workItem from="1570285100069" duration="188000" />
       <workItem from="1570420024520" duration="634000" />
+      <workItem from="1570421060154" duration="261000" />
     </task>
     <servers />
   </component>
