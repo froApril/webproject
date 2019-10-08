@@ -7,28 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Controller
 public class adminController {
-
-    /*@RequestMapping(value = "/addTopic",method = RequestMethod.GET)
-    public String addTopicPage() {
-        return "addTopic";
-    }
-
-    @RequestMapping(value = "/success",method = RequestMethod.GET)
-    public String success() {
-        return "success";
-    }
-
-    @RequestMapping(value = "/fail",method = RequestMethod.GET)
-    public String fail() {
-        return "fail";
-    }*/
-
+    //@Resource//(name="topicEntityDao")
+    //private Topic2EntityDaoImpl topicEntityDao;
     /*@RequestMapping(value= "/addTopic",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> addNewTopic(String major, String id, String name){
@@ -51,28 +39,44 @@ public class adminController {
         return result;
     }*/
 
-    @RequestMapping(value= "/adminController",method = RequestMethod.POST)
+    /*@RequestMapping(value= "/adminController",method = RequestMethod.POST)
     @ResponseBody
     public String addNewTopic(@RequestParam("major") String major, @RequestParam("id")String id, @RequestParam("name")String name){
-        /*Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
+        Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
         Topic2Entity topicEntity = new Topic2Entity();
-
 
         if(topicEntityDao.existTopic(name)){
             return "fail";
         }
 
         else{
+            topicEntity.setId(3);
             topicEntity.setMajor(major);
             topicEntity.setCourseId(id);
             topicEntity.setName(name);
             topicEntityDao.addNewTopic(topicEntity);
             return "success";
-        }*/
-        return "success";
+        }
+    }*/
 
+    @RequestMapping(value= "/addNewTopic",method = RequestMethod.POST)
+    @ResponseBody
+    public String addNewTopic(HttpServletRequest req){
 
+        Topic2Entity topicEntity = new Topic2Entity();
+        Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
+        if(topicEntityDao.existTopic(req.getParameter("name"))){
+            return "fail";
+        }
 
+        else{
+            //topicEntity.setId(3);
+            topicEntity.setMajor(req.getParameter("major"));
+            topicEntity.setCourseId(req.getParameter("id"));
+            topicEntity.setName(req.getParameter("name"));
+            topicEntityDao.addNewTopic(topicEntity);
+            return "success";
+        }
     }
 
 

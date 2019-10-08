@@ -1,19 +1,38 @@
 package dao.impl;
 
-import dao.Topic2EntityDao;
+/*import dao.Topic2EntityDao;
 import entities.Topic2Entity;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import utils.HibernateFactory;
+import utils.HibernateFactory;*/
 
+
+import dao.Topic2EntityDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
+import entities.Topic2Entity;
+
+
+
+@Service(value="Topic2EntityDao")
 
 public class Topic2EntityDaoImpl implements Topic2EntityDao {
 
+    private SessionFactory sessionFactory;
+    @Autowired
+    public void setSessionFactory(SessionFactory sf) {
+        this.sessionFactory = sf;
+    }
     @Override
     public Topic2Entity getTopicByName(String topicName) {
 
-        Topic2Entity findTopic=null ;
+        Session current = this.sessionFactory.getCurrentSession();
+        Topic2Entity topic = (Topic2Entity) current.get(Topic2Entity.class, topicName);
+        return topic;
+        /*Topic2Entity findTopic=null ;
         Session session = HibernateFactory.getSession();
         Transaction transaction = session.beginTransaction();
         try{
@@ -28,17 +47,24 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
             session.close();
         }
 
-        return findTopic;
+        return findTopic;*/
     }
 
     @Override
     public boolean existTopic(String topicName) {
-        Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
-        return topicEntityDao.getTopicByName(topicName)!=null;
+        /*Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
+        return topicEntityDao.getTopicByName(topicName)!=null;*/
+        if (this.sessionFactory!=null) {
+            Session current = this.sessionFactory.getCurrentSession();
+            Topic2Entity topic = (Topic2Entity) current.get(Topic2Entity.class, topicName);
+            return topic!=null;
+        }
+        return false;
+
     }
 
     @Override
-    public boolean addNewTopic(Topic2Entity topic) {
+    /*public boolean addNewTopic(Topic2Entity topic) {
         if(existTopic(topic.getName()))
             return false;
         Session session =null;
@@ -56,11 +82,18 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
             session.close();
         }
         return true;
+    }*/
+
+    public void addNewTopic(Topic2Entity topic) {
+        if (this.sessionFactory!=null) {
+            this.sessionFactory.getCurrentSession().save(topic);
+        }
+
     }
 
 
 
-    @Override
+    /*@Override
     public boolean deleteTopic(String topicName) {
         Session session =null;
         try{
@@ -111,5 +144,5 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
         }
 
         return true;
-    }
+    }*/
 }
