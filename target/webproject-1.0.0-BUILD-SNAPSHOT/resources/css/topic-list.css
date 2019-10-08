@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Yifei Xu yixu5881@uni.sydney.edu.au
+ * @date    2019-10-05
+ * @version 1.0
+ */
+
+.input-group-prepend{
+	margin-right: 1px; 
+}
+
+.mb-0, .author, .date{
+	text-align: center;
+}
+
