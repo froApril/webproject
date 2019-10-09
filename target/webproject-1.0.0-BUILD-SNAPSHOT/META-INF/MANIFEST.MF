@@ -2,8 +2,11 @@ Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
 Built-By: Mady
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Build-Jdk: 1.8.0_162
 =======
+=======
+>>>>>>> Stashed changes
 Build-Jdk: 12.0.2
 >>>>>>> Stashed changes
 
