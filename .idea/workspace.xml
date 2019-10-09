@@ -6,10 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" afterDir="false" />
+=======
+    <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,6 +40,15 @@
     <expand />
     <select />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="webproject" />
+  </component>
+>>>>>>> Stashed changes
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -60,12 +77,15 @@
       </MavenImportingSettings>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="97" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="736" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="ProjectId" id="1QLux67AqWDeyjStVnPvNn143ew" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -82,6 +102,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -276,12 +299,33 @@
       <option name="presentableId" value="Default" />
       <updated>1567562442327</updated>
       <workItem from="1567562448639" duration="1104000" />
+<<<<<<< Updated upstream
       <workItem from="1567923038623" duration="10607000" />
       <workItem from="1568349584599" duration="3468000" />
       <workItem from="1570502027807" duration="4291000" />
     </task>
     <servers />
   </component>
+=======
+      <workItem from="1568452183925" duration="7520000" />
+      <workItem from="1568692872966" duration="23499000" />
+      <workItem from="1569041184552" duration="3518000" />
+      <workItem from="1569302694744" duration="501000" />
+      <workItem from="1570285100069" duration="188000" />
+      <workItem from="1570583482094" duration="257000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+>>>>>>> Stashed changes
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
