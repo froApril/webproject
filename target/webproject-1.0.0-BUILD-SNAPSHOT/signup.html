@@ -64,29 +64,7 @@
 						<button id='resend_button' class="verify-code" data-toggle="popover" data-trigger="focus" data-content="Code is sent">
 							Send
 						</button>
-						<script type="text/javascript">
-							window.onload=function(){
-								var send=document.getElementById('resend_button'),
-										times=60,
-										timer=null;
-								send.onclick=function(){
-									// 计时开始
-									timer=setInterval(function(){
-										times--;
-										if(times<=0){
-											send.value='发送验证码';
-											clearInterval(timer);
-											times=10;
-											send.disabled=false;
-										}else{
-											send.value=times+'秒后重试'
-											send.disabled=true;
-										}console.log(times)
-									},1000)
 
-								}
-							}
-						</script>
 
 					</div>
 
