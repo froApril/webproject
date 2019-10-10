@@ -23,13 +23,18 @@ public interface Topic2EntityDao {
     boolean updateTopic(String oldTopic, Topic2Entity newTopic);*/
 
 
-    public void setSessionFactory(SessionFactory sf);
+    /*public void setSessionFactory(SessionFactory sf);
 
     public Topic2Entity getTopicByName(String topicName);
 
     public void addNewTopic(Topic2Entity topic);
 
-    public boolean existTopic(String topicName);
+    public boolean existTopic(String topicName);*/
+
+    Topic2Entity getTopicByName(String topicName);
+    Boolean addNewTopic(Topic2Entity topic);
+    Boolean existTopic(String topicName);
+
 
 
 
