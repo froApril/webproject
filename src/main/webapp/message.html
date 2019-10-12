@@ -19,7 +19,7 @@
     <div class="context">
         <div class="conLeft">
             <ul id="ulid">
-                <li onclick="delete('1')">
+                <li onclick="deleteMessage('1')">
                     <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
                     <div class="liRight">
                         <span class="intername">student2</span>
@@ -186,7 +186,7 @@
 <script type="text/javascript" src="resources/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="resources/js/chat.js"></script>
 <script>
-    function delete(id){
+    function deleteMessage(id){
         $("ul li:eq("+id+")").remove()
     }
 </script>
