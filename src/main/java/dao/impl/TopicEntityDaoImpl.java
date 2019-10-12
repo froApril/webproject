@@ -1,7 +1,7 @@
 package dao.impl;
 
 import dao.TopicEntityDao;
-import entities.TopicEntity;
+import entities.TopicsEntity;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,15 +17,15 @@ import utils.HibernateFactory;
 public class TopicEntityDaoImpl implements TopicEntityDao {
 
     @Override
-    public TopicEntity getTopicByName(String topicName) {
+    public TopicsEntity getTopicByName(String topicName) {
 
-        TopicEntity findTopic=null ;
+        TopicsEntity findTopic=null ;
         Session session = HibernateFactory.getSession();
         Transaction transaction = session.beginTransaction();
         try{
             Query query = session
-                    .createQuery("from TopicEntity where topicName= " +"\'" +topicName+"\'");
-            findTopic = (TopicEntity) query.uniqueResult();
+                    .createQuery("from TopicsEntity where topicName= " +"\'" +topicName+"\'");
+            findTopic = (TopicsEntity) query.uniqueResult();
             transaction.commit();
         }catch (Exception e){
             e.printStackTrace();
@@ -49,7 +49,7 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
             return false;
         Session session =null;
         try{
-            TopicEntity topicEntity = new TopicEntity();
+            TopicsEntity topicEntity = new TopicsEntity();
             topicEntity.setTopicName(topicName);
             session = HibernateFactory.getSession();
             session.beginTransaction();
@@ -74,7 +74,7 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         try{
             session = HibernateFactory.getSession();
             session.beginTransaction();
-            TopicEntity topicEntity = this.getTopicByName(topicName);
+            TopicsEntity topicEntity = this.getTopicByName(topicName);
             if(topicEntity==null){
                 return false;
             }
@@ -98,7 +98,7 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         try{
             session =HibernateFactory.getSession();
             session.beginTransaction();
-            TopicEntity topicEntity = this.getTopicByName(oldName);
+            TopicsEntity topicEntity = this.getTopicByName(oldName);
             if(topicEntity==null){
                 addNewTopic(newName);
                 return true;

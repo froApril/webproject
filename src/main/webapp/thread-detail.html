@@ -7,180 +7,22 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		
-		<link rel="stylesheet" href="resources/css/thread-detail.css">
-		<script type="text/javascript" src="resources/js/thread-detail.js"></script>
+
+        <link rel="stylesheet" href="resources/css/thread-detail.css">
 
 	</head>
 <body>
-	<div class="container thread-title thread-main">
-		<h1 style="margin-top: 20px">This is my topic</h1>
-	</div>
-	<div class="container requester">
-		<div class="row">
-			<div class="col-2">
-			<img src="resources/images/icons/user.svg" alt="">
-			</div>
-			<div class="col-10 user-info">
-				<p class="user-name">Little Ming</p>
-				<p class="thread-date">6/10/2019</p>
-			</div>
-		</div>
-		
-		<div class="row thread-message ">
-			<div class="col-2">
-			</div>
-			<div class="col-10">
-				<p>
-				Hi tutors 
-				<br>
-				Due to an urgent incident, I was unable to submit my individual report on the wiki page.
-				<br>
-				I am wondering if late submissions are allowed or not?
-				</p>
-			</div>
-			
-		</div>
 
 
 
-		<div class="comment-group">
-			<div class="comment-item">
-				<div class="row">
-					<div class="col-2">
-					</div>
-					<div class="col-1 comment-user--profile-photo">
-						<img src="resources/images/icons/user.svg" alt="">
-					</div>
-					<div class="col-9 comment-user-info">
-						<p class="user-name">Little Ming</p>
-						<p class="thread-date">6/10/2019</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-3">
-					</div>
-					<div class="col-9 comment-user-info comment-message">
-						<p>
-						Hi tutors 
-						<br>
-						Due to an urgent incident, I was unable to submit my individual report on the wiki page.
-						<br>
-						I am wondering if late submissions are allowed or not?
-						</p>
-					</div>
-				</div>
 
-				<div class="row reply-row">
-					<div class="col-3">
-					</div>
-					<div class="col-9">
-						<a href="#textarea-id" class="reply-thread" id="user-name">Reply</a>
-					</div>
-				</div>
-
-
-			</div>
-
-			<div class="comment-item">
-				<div class="row">
-					<div class="col-2">
-					</div>
-					<div class="col-1 comment-user--profile-photo">
-						<!-- 每添加一个新的comment要给头像一个id， 格式为username+img -->
-						<img id="xiaoming-img" src="resources/images/icons/user.svg" alt="">
-					</div>
-					<div class="col-9 comment-user-info">
-						<p class="user-name">Little Ming</p>
-						<p class="thread-date">6/10/2019</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-3">
-					</div>
-					<div class="col-9 comment-user-info comment-message">
-						<p>
-						Hi tutors 
-						<br>
-						Due to an urgent incident, I was unable to submit my individual report on the wiki page.
-						<br>
-						I am wondering if late submissions are allowed or not?
-						</p>
-					</div>
-				</div>
-				<div class="row reply-row">
-					<div class="col-3">
-					</div>
-					<div class="col-9">
-						<!-- 这里对应回复回复的按钮，需要在插入html时给一个username的ID -->
-						<!-- 这样可以保证点击后输入栏显示将回复的用户名 -->
-						<a href="#textarea-id" class="reply-thread" id="xiaoming">Reply</a>
-					</div>
-				</div>
-
-			</div>
-
-				<div class="comment-item">
-				<div class="row">
-					<div class="col-2">
-					</div>
-					<div class="col-1 comment-user--profile-photo">
-						<img src="resources/images/icons/user.svg" alt="">
-					</div>
-					<div class="col-9 comment-user-info">
-						<p class="user-name">Little Huang</p>
-						<p class="thread-date">7/10/2019</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-3">
-					</div>
-					<div class="col-9 comment-user-info comment-message">
-						<!-- 这里的跳转一定要在id后加img -->
-						<!-- 在js中检测是否第一行开头为@， 如果是则将第一行变为超链接 -->
-						<a href="#xiaoming-img">@xiaoming</a>
-						<p>Yes</p>
-					</div>
-				</div>
-				<div class="row reply-row">
-					<div class="col-3">
-					</div>
-					<div class="col-9">
-						<a href="#textarea-id" class="reply-thread" id="xiaohuang">Reply</a>
-					</div>
-				</div>
-
-			</div>
-
-
-		</div>
-		
-
-	</div>
-
-	
-
-
-
-	<div class="container thread-main" style="margin-bottom: 40px">
-		<form role="form">
-		  <div class="form-group">
-			<h3 style="margin-top: 100px; margin-bottom: 20px;">Your answer</h3>
-		    <textarea class="form-control comment-textarea" rows="8" id="textarea-id">
-		    </textarea>
-		  </div>
-		  <button type="submit" class="btn btn-default">Submit</button>
-		</form>
-	</div>
-
-
- 
 </body>
 
 <footer>
+    <script src="resources/js/thread-detail.js"></script>
 
 </footer>
 </html>

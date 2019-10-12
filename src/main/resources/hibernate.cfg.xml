@@ -22,8 +22,8 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping class="entities.UserEntity"/>
         <mapping resource="UserEntity.hbm.xml"/>
-        <mapping class="entities.TopicEntity"/>
-        <mapping resource="TopicEntity.hbm.xml"/>
+        <mapping class="entities.TopicsEntity"/>
+        <mapping resource="TopicsEntity.hbm.xml"/>
         <mapping class="entities.CommentEntity"/>
         <mapping resource="CommentEntity.hbm.xml"/>
 

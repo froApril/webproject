@@ -1,6 +1,6 @@
 package dao;
 
-import entities.TopicEntity;
+import entities.TopicsEntity;
 
 /**
  * @author XUYIFEI
@@ -18,7 +18,7 @@ public interface TopicEntityDao {
      * used to find topic entity with name
      * if no exist return null
      */
-    TopicEntity getTopicByName(String topicName);
+    TopicsEntity getTopicByName(String topicName);
 
     /**
      *

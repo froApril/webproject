@@ -58,18 +58,18 @@
 	    <div class="span2 col-3">
 	      <!--边栏内容-->
 	      <iframe id="sideIframe" name="sideIframe" src="topic-list.html" frameborder="0" scrolling="auto" ></iframe>
-            <script>
-                document.getElementById('sideIframe').onload= function(){
-                    var ht = initData();
-                    sideIframe.window.sethtml(ht);
-                    // setClickNewThread();
-                }
-            </script>
         </div>
 	    <div class="span10 col-9">
 	      <!--主体内容--><iframe id="mainIframe" name="mainIframe" src="thread-detail.html" frameborder="0" scrolling="auto" ></iframe>
 
 	    </div>
+          <script>
+              document.getElementById('sideIframe').onload= function(){
+                  var ht = initData();
+                  sideIframe.window.sethtml(ht);
+                  // setClickNewThread();
+              }
+          </script>
 	  </div>
 	</div>
 

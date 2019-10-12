@@ -8,7 +8,9 @@ public interface CommentEntityDao {
 
     CommentEntity getCommentById(int id);
 
-    List<CommentEntity> getCommentsByTopic(int topicId);
+    List<CommentEntity> getCommentsByTopic(int topic_id);
+
+    List<CommentEntity> getCommentByTopicAndTitle(int parent_id,String title);
 
 
 }

@@ -3,12 +3,11 @@ package entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Topic", schema = "webApplication")
-public class TopicEntity {
+@Table(name = "Topics", schema = "webApplication", catalog = "")
+public class TopicsEntity {
     private int id;
     private String topicName;
-    private int commentNum;
-
+    private Integer commentNum;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -21,7 +20,7 @@ public class TopicEntity {
     }
 
     @Basic
-    @Column(name = "topicName", nullable = true, length = 30)
+    @Column(name = "topicName", nullable = false, length = 30)
     public String getTopicName() {
         return topicName;
     }
@@ -31,12 +30,12 @@ public class TopicEntity {
     }
 
     @Basic
-    @Column(name = "commentNum", nullable = false)
-    public int getCommentNum() {
+    @Column(name = "commentNum", nullable = true)
+    public Integer getCommentNum() {
         return commentNum;
     }
 
-    public void setCommentNum(int commentNum) {
+    public void setCommentNum(Integer commentNum) {
         this.commentNum = commentNum;
     }
 
@@ -45,11 +44,11 @@ public class TopicEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TopicEntity that = (TopicEntity) o;
+        TopicsEntity that = (TopicsEntity) o;
 
         if (id != that.id) return false;
-        if (commentNum != that.commentNum) return false;
         if (topicName != null ? !topicName.equals(that.topicName) : that.topicName != null) return false;
+        if (commentNum != null ? !commentNum.equals(that.commentNum) : that.commentNum != null) return false;
 
         return true;
     }
@@ -58,7 +57,7 @@ public class TopicEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (topicName != null ? topicName.hashCode() : 0);
-        result = 31 * result + commentNum;
+        result = 31 * result + (commentNum != null ? commentNum.hashCode() : 0);
         return result;
     }
 }
