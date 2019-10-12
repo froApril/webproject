@@ -26,6 +26,9 @@
         <mapping resource="TopicEntity.hbm.xml"/>
         <mapping class="entities.CommentEntity"/>
         <mapping resource="CommentEntity.hbm.xml"/>
+        <mapping class="entities.MessageEntity"/>
+        <mapping resource="MessageEntity.hbm.xml"/>
+
 
 
     </session-factory>

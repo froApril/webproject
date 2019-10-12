@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "User", schema = "webApplication", catalog = "")
 public class UserEntity {
-    private String username;
     private String password;
     private String nickname;
     private String email;
@@ -13,20 +12,12 @@ public class UserEntity {
     private String photoPro;
     private String gender;
     private String contactIno;
-    private int iSstaff;
-
-    @Id
-    @Column(name = "username", nullable = false, length = 10)
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    private Integer iSstaff;
+    private int id;
+    private String username;
 
     @Basic
-    @Column(name = "password", nullable = false, length = 15)
+    @Column(name = "password", nullable = false, length = 16)
     public String getPassword() {
         return password;
     }
@@ -36,7 +27,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "nickname", nullable = false, length = 50)
+    @Column(name = "nickname", nullable = true, length = 50)
     public String getNickname() {
         return nickname;
     }
@@ -76,7 +67,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "gender", nullable = false, length = 10)
+    @Column(name = "gender", nullable = true, length = 10)
     public String getGender() {
         return gender;
     }
@@ -96,13 +87,33 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "ISstaff", nullable = false)
-    public int getiSstaff() {
+    @Column(name = "ISstaff", nullable = true)
+    public Integer getiSstaff() {
         return iSstaff;
     }
 
-    public void setiSstaff(int iSstaff) {
+    public void setiSstaff(Integer iSstaff) {
         this.iSstaff = iSstaff;
+    }
+
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Basic
+    @Column(name = "username", nullable = false, length = 50)
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -112,8 +123,7 @@ public class UserEntity {
 
         UserEntity that = (UserEntity) o;
 
-        if (iSstaff != that.iSstaff) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
+        if (id != that.id) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
@@ -121,21 +131,24 @@ public class UserEntity {
         if (photoPro != null ? !photoPro.equals(that.photoPro) : that.photoPro != null) return false;
         if (gender != null ? !gender.equals(that.gender) : that.gender != null) return false;
         if (contactIno != null ? !contactIno.equals(that.contactIno) : that.contactIno != null) return false;
+        if (iSstaff != null ? !iSstaff.equals(that.iSstaff) : that.iSstaff != null) return false;
+        if (username != null ? !username.equals(that.username) : that.username != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = username != null ? username.hashCode() : 0;
-        result = 31 * result + (password != null ? password.hashCode() : 0);
+        int result = password != null ? password.hashCode() : 0;
         result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (perDes != null ? perDes.hashCode() : 0);
         result = 31 * result + (photoPro != null ? photoPro.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (contactIno != null ? contactIno.hashCode() : 0);
-        result = 31 * result + iSstaff;
+        result = 31 * result + (iSstaff != null ? iSstaff.hashCode() : 0);
+        result = 31 * result + id;
+        result = 31 * result + (username != null ? username.hashCode() : 0);
         return result;
     }
 }

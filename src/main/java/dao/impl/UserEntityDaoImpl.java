@@ -7,6 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class UserEntityDaoImpl implements UserEntityDao {
     @Override
@@ -14,16 +17,35 @@ public class UserEntityDaoImpl implements UserEntityDao {
         UserEntity findUser = null;
         Session session = HibernateFactory.getSession();
         Transaction transaction = session.beginTransaction();
-        try{
+        try {
             Query query = session
-                    .createQuery("from UserEntity where username= " +"\'" +user+"\'");
+                    .createQuery("from UserEntity where username= " + "\'" + user + "\'");
             findUser = (UserEntity) query.uniqueResult();
             transaction.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        finally {
+
+        return findUser;
+    }
+
+    @Override
+    public UserEntity getUserById(int id) {
+        UserEntity findUser = null;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Query query = session
+                    .createQuery("from UserEntity where id= " + "\'" + id + "\'");
+            findUser = (UserEntity) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
             session.close();
         }
 
@@ -33,10 +55,9 @@ public class UserEntityDaoImpl implements UserEntityDao {
     @Override
     public Boolean isUsernameExist(String username) {
 
-        if(getUserByName(username) == null){
+        if (getUserByName(username) == null) {
             return false;
-        }
-        else
+        } else
             return true;
     }
 
@@ -44,7 +65,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean addUser(UserEntity user) {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             return false;
         }
         session.save(user);
@@ -55,7 +76,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
 
     @Override
     public Boolean isStaff(UserEntity user) {
-        if(user.getiSstaff() == 1){
+        if (user.getiSstaff() == 1) {
             return true;
         }
         return false;
@@ -66,13 +87,12 @@ public class UserEntityDaoImpl implements UserEntityDao {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
 
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             user.setNickname(name);
             session.save(user);
             session.getTransaction().commit();
             return true;
         }
-
         return false;
     }
 
@@ -80,14 +100,12 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean setNewpassword(UserEntity user, String password) {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             user.setPassword(password);
             session.save(user);
             session.getTransaction().commit();
             return true;
-
         }
-
         return false;
     }
 
@@ -95,14 +113,12 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean setGender(UserEntity user, String gender) {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             user.setGender(gender);
             session.save(user);
             session.getTransaction().commit();
             return true;
-
         }
-
         return false;
     }
 
@@ -110,15 +126,12 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean setDes(UserEntity user, String description) {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             user.setPerDes(description);
             session.save(user);
             session.getTransaction().commit();
             return true;
-
         }
-
-
         return false;
     }
 
@@ -126,15 +139,13 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean setContactInfo(UserEntity user, String contactInfo) {
         Session session = HibernateFactory.getSession();
         session.beginTransaction();
-        if(isUsernameExist(user.getUsername())){
+        if (isUsernameExist(user.getUsername())) {
             user.setContactIno(contactInfo);
             session.save(user);
             session.getTransaction().commit();
             return true;
-
         }
-
-
         return false;
     }
+
 }

@@ -50,3 +50,29 @@ $('.emjon li').on('click',function(){
     $('.emjon').hide();
     $('.RightCont').scrollTop($('.RightCont')[0].scrollHeight );
 })
+
+
+
+// for(i=0;i=+1;){
+//getMessage();
+// }
+
+//
+// function getMessage(){
+//   var userlist=getAllUser;
+//
+//     $.ajax({
+//         url:"/messages/allmessagesbyposter,
+//         type:"get",
+//         dataType:"json",
+//         async : false,
+//         success: function(list){
+//
+//         <li>
+//           <div class="liLeft"> <img src="resources/images/portrait-3.jpg"/>   </div>
+//           <div class="liRight"> <span  class="intername">this.username = username</span> </div>
+//         </li>
+//
+//     });
+// }
+//
