@@ -1,55 +1,46 @@
-// <div class="container thread-title thread-main">
-//     <h1 style="margin-top: 20px">This is my topic</h1>
-// </div>
-// <div class="container requester">
-//     <div class="row">
-//     <div class="col-2">
-//     <img src="resources/images/icons/user.svg" alt="">
-//     </div>
-//     <div class="col-10 user-info">
-//     <p class="user-name">Little Ming</p>
-// <p class="thread-date">6/10/2019</p>
-//     </div>
-//     </div>
-//
-//     <div class="row thread-message ">
-//     <div class="col-2">
-//     </div>
-//     <div class="col-10">
-//     <p>
-//     Hi tutors
-// <br>
-// Due to an urgent incident, I was unable to submit my individual report on the wiki page.
-// <br>
-// I am wondering if late submissions are allowed or not?
-// </p>
-// </div>
-//
-// </div>
-//
-// </div>
-//
-//
-// <div class="container thread-main" style="margin-bottom: 40px">
-//     <form role="form">
-//     <div class="form-group">
-//     <h3 style="margin-top: 100px; margin-bottom: 20px;">Your answer</h3>
-// <textarea class="form-control comment-textarea" rows="8" id="textarea-id">
-//     </textarea>
-//     </div>
-//     <button type="submit" class="btn btn-default">Submit</button>
-//     </form>
-//     </div>
 
 
-function setInnerHTML(title) {
-    var details = getCommentDetails(title);
-    var html = constructHtmlString(details);
+
+
+
+var parent_comment;
+
+function getTopicComment(comment) {
+    var html = "";
+    parent_comment = comment;
+
+    html+= "<div class=\"container thread-title thread-main\">"+
+        "<h1 style=\"margin-top: 20px\">"+comment.commentTitle+"</h1>"
+        +"</div>";
+    html += "<div class=\"container requester\">" +
+        "<div class=\"row\">" +
+        "<div class=\"col-2\">" +
+        "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+        "</div>" +
+        "<div class=\"col-10 user-info\">" +
+        "<p class=\"user-name\">"+comment.authorName+"</p>" +
+        "</div>" +
+        "</div>" +
+        "<div class=\"row thread-message \">" +
+        "<div class=\"col-2\">" +
+        "</div>" +
+        "<div class=\"col-10\">" +
+        "<p>" +
+        comment.commentMessage +
+        "</p>" +
+        "</div>" +
+        "</div>" +
+        "</div>"
+
+    $("#topic-comment-heading").html(html);
 
 }
 
-function getCommentDetails(title){
 
+
+
+
+function getCommentDetails(title){
     var t = parent.window.getQueryVariable('topic');
     $.ajax({
         url:"/comments/detail"+"?topic="+t+"&title="+title,
@@ -57,43 +48,93 @@ function getCommentDetails(title){
         dataType:"json",
         async : false,
         success: function(data){
-            return data;
+            // console.log(data)
+            var temp ="";
+            for(var i =0;i<data.length; i++){
+
+                temp += "<div class=\"container requester\">" +
+                    "<div class=\"row\">" +
+                    "<div class=\"col-2\">" +
+                    "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+                    "</div>" +
+                    "<div class=\"col-10 user-info\">" +
+                    "<p class=\"user-name\">"+data[i].authorName+"</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class=\"row thread-message \">" +
+                    "<div class=\"col-2\">" +
+                    "</div>" +
+                    "<div class=\"col-10\">" +
+                    "<p>" +
+                    TransferString(data[i].commentMessage) +
+                    "</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>";
+
+
+            }
+            $("#replies-to-comment").html(temp);
+
+            var textare= "<div class=\"container thread-main form-section\" style=\"margin-bottom: 40px\">" +
+                "<form role=\"form\">" +
+                "<div class=\"form-group\">" +
+                "<h3 style=\"margin-top: 100px; margin-bottom: 20px;\">Your answer</h3>" +
+                "<textarea class=\"form-control comment-textarea\" rows=\"8\" id=\"textarea-id\">" +
+                "</textarea>" +
+                "</div>" +
+                "<button type='submit' class=\"btn btn-default form-submit\">Submit</button>" +
+                "</form>" +
+                "</div>"
+
+            $("#text-area-block").html(textare);
+
         }
 
     });
-    return null;
+
+    $("form").submit(function(e){
+        $.ajax({
+            type:"post",
+            url:"/comments/add",
+            data:{author:"test user",parent_id:parent_comment.id
+                ,message:$("#textarea-id").val(),topic_id: parent_comment.topicId},
+            datatype:"json",
+            async: false,
+            success: function(data){
+                var newComment = "";
+                newComment+="<div class=\"container requester\">" +
+                    "<div class=\"row\">" +
+                    "<div class=\"col-2\">" +
+                    "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+                    "</div>" +
+                    "<div class=\"col-10 user-info\">" +
+                    "<p class=\"user-name\">"+data.authorName+"</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class=\"row thread-message \">" +
+                    "<div class=\"col-2\">" +
+                    "</div>" +
+                    "<div class=\"col-10\">" +
+                    "<p>" +
+                    TransferString(data.commentMessage) +
+                    "</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>";
+                $("#text-area-block").before(newComment);
+                $("#textarea-id").val("");
+            }
+
+        });
+        return false;
+    });
+
 }
 
-function constructHtmlString(data) {
-    var html = "";
-    html += "<div class=\"container thread-title thread-main\">"+
-                "<h1 style=\"margin-top: 20px\">"+data.commentTitle+"</h1>"
-                +"</div>";
-
-// <div class="container requester">
-    //     <div class="row">
-    //     <div class="col-2">
-    //     <img src="resources/images/icons/user.svg" alt="">
-    //     </div>
-    //     <div class="col-10 user-info">
-// <p class="user-name">Little Ming</p>
-// <p class="thread-date">6/10/2019</p>
-//     </div>
-
-    html += "<div class=\"container requester\">" +
-        "<div class=\"row\">" +
-        "<div class=\"col-2\">" +
-        "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
-        "</div>" +
-        "<div class=\"col-10 user-info\">" +
-        "<p class=\"user-name\">"+data+"</p>"
-}
 
 
 
-// function setInnerHtml(title){
-//     $("body").html(title);
-// }
 
 function getQueryVariable(variable)
 {
@@ -104,6 +145,19 @@ function getQueryVariable(variable)
         if(pair[0] == variable){return pair[1];}
     }
     return(false);
+}
+
+
+function TransferString(content)
+{
+    var string = content;
+    try{
+        string=string.replace(/\r\n/g,"<br>")
+        string=string.replace(/\n/g,"<br>");
+    }catch(e) {
+        alert(e.message);
+    }
+    return string;
 }
 
 

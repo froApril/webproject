@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface CommentEntityDao {
 
-    CommentEntity getCommentById(int id);
 
     List<CommentEntity> getCommentsByTopic(int topic_id);
 
-    List<CommentEntity> getCommentByTopicAndTitle(int parent_id,String title);
+    List<CommentEntity> getCommentByTopicAndTitle(String topic,String title);
 
+    void addNewComment(CommentEntity commentEntity);
 
 }

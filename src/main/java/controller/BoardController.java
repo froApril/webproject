@@ -32,7 +32,7 @@ public class BoardController {
         System.out.println(topic_id);
         CommentEntityDao commentEntityDao = new CommentEntityImpl();
         List<CommentEntity> commentEntityList =  commentEntityDao.getCommentsByTopic(topic_id);
-
+        System.out.println(commentEntityList);
         return commentEntityList;
 
     }
@@ -40,12 +40,44 @@ public class BoardController {
 
     @RequestMapping(value="/comments/detail", method = RequestMethod.GET)
     @ResponseBody
-    public List<CommentEntity> getCommentBytitle(int parent_id, String title){
+    public List<CommentEntity> getCommentsBytitle(String topic, String title){
         CommentEntityDao commentEntityDao = new CommentEntityImpl();
-        List<CommentEntity>commentEntity = commentEntityDao.getCommentByTopicAndTitle(parent_id,title);
+        List<CommentEntity>commentEntityList = commentEntityDao.getCommentByTopicAndTitle(topic,title);
+        return commentEntityList;
 
+    }
+
+    @RequestMapping(value="/comments/topicComment", method = RequestMethod.GET)
+    @ResponseBody
+    public CommentEntity getTopicComment(String topicComment,String topic){
+        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicsEntity topicEntity = topicEntityDao.getTopicByName(topic);
+        CommentEntity findComment=null;
+        int topic_id = topicEntity.getId();
+        List<CommentEntity> commentEntityList =  commentEntityDao.getCommentsByTopic(topic_id);
+        for(CommentEntity c:commentEntityList){
+            if(c.getCommentTitle().equals(topicComment)){
+                findComment = c;
+            }
+        }
+        return findComment;
+    }
+
+//    data:{topic:t,author:"test user",parent_id:parent_comment.id
+//            ,message:$("#textarea-id").text(),topic_id: parent_comment.topicId},
+    @RequestMapping(value="/comments/add", method = RequestMethod.POST)
+    @ResponseBody
+    public CommentEntity addNewComment( String author, int parent_id
+            , String message,int topic_id){
+        CommentEntity commentEntity = new CommentEntity();
+        commentEntity.setParentId(parent_id);
+        commentEntity.setCommentMessage(message);
+        commentEntity.setTopicId(topic_id);
+        commentEntity.setAuthorName(author);
+        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        commentEntityDao.addNewComment(commentEntity);
         return commentEntity;
-
     }
 
 
