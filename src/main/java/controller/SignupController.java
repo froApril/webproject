@@ -23,7 +23,10 @@ public class SignupController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-
+//    @RequestMapping(value = "/signup",method = RequestMethod.GET)
+//    public String Page(){
+//        return "signup";
+//    }
 
     @RequestMapping(value= "/signup",method = RequestMethod.POST)
     @ResponseBody
@@ -32,24 +35,30 @@ public class SignupController {
         UserEntity userEntity = new UserEntity();
         Map<String, Object> result = new HashMap<String, Object>();
 
-         if (username == null){
+         if (username.isEmpty()){
             result.put("result","fail, no name");
         }
 
         else if(userEntityDao.isUsernameExist(username)){
-            result.put("result","fail, name exist");
+            result.put("result","fail");
         }
 
-        else if (password == null){
+        else if (password.isEmpty()){
             result.put("result","fail, no password exist");
         }
-        else if (email ==null){
+        else if (email.isEmpty()){
             result.put("result","fail, no email exist");
         }
         else{
             userEntity.setUsername(username);
             userEntity.setPassword(password);
             userEntity.setEmail(email);
+            userEntity.setiSstaff(0);
+//            userEntity.setPhotoPro(null);
+//            userEntity.setContactIno(null);
+//            userEntity.setPerDes(null);
+//            userEntity.setNickname(null);
+            userEntity.setGender("Male");
             userEntityDao.addUser(userEntity);
             result.put("result","SUCCESS");
         }

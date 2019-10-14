@@ -6,9 +6,9 @@ import javax.persistence.*;
 @Table(name = "User", schema = "webApplication", catalog = "")
 public class UserEntity {
     private String password;
-    private String nickname="boy";
+    private String nickname = "User";
     private String email;
-    private String perDes="123";
+    private String perDes="This is personal Description";
     private String photoPro="123";
     private String gender="male";
     private String contactIno="info";

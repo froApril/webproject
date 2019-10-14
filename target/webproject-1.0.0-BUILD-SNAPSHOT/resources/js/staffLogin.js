@@ -28,6 +28,7 @@
                 // console.log(state)
                 if(state.result == 'SUCCESS'){
                     console.log("Success");
+                    document.cookie = param.username
                     window.location.href ="/webproject_war/staffHomePage"
                     // $.ajax({
                     //     url:"staffHomepage",
