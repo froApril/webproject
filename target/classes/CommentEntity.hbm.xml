@@ -12,7 +12,7 @@
             <column name="parent_id" sql-type="int(11)" not-null="true"/>
         </property>
         <property name="commentTitle">
-            <column name="commentTitle" sql-type="varchar(11)" length="11" not-null="true"/>
+            <column name="commentTitle" sql-type="varchar(11)" length="11"/>
         </property>
         <property name="authorName">
             <column name="authorName" sql-type="varchar(100)" length="100"/>

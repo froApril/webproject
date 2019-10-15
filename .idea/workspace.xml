@@ -8,42 +8,22 @@
   <component name="ChangeListManager">
 
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CommentEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TopicEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HibernateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TopicEntity.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserEntity.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/CommentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/board.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/thread-detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/thread-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/comment-detail-loading.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/thread-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/thread-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/topic-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/topic-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommentEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommentEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TopicEntity.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UserEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/CommentEntity.hbm.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/board.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/board-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/board-loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/comment-detail-loading.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/comments-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/comments-loading.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/thread-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/thread-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/thread-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/thread-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topic-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topic-list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,33 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="44" column="69" lean-forward="true" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/TopicsEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-              <folding>
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="141">
+              <caret line="44" column="64" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,47 +82,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="104">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/thread-detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2312">
+              <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1056#1071#0" expanded="true" />
-                <element signature="e#1423#1438#0" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/CommentEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="842">
-              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comment-detail-loading.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="1327">
+              <caret line="108" column="4" lean-forward="true" selection-start-line="108" selection-start-column="4" selection-end-line="138" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,22 +164,24 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/message.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/topic-list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/board.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/thread-detail.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js" />
         <option value="$PROJECT_DIR$/src/main/java/utils/HibernateFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js" />
         <option value="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/BoardController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/board.html" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/BoardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/CommentEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/thread-detail.css" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/thread-detail.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js" />
       </list>
     </option>
   </component>
@@ -245,7 +200,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-53" />
+    <option name="x" value="-25" />
     <option name="y" value="23" />
     <option name="width" value="1359" />
     <option name="height" value="733" />
@@ -258,7 +213,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="09c6531e-1945-461b-91b0-231a8d70fd38" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570872972048" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571072589604" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
@@ -449,7 +404,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69356000" />
+    <option name="totallyTimeSpent" value="84472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,13 +416,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-53" y="23" width="1359" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="-25" y="23" width="1359" height="733" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7559633" visible="true" weight="0.29460895" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75454545" visible="true" weight="0.18830676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.2440367" side_tool="true" visible="true" weight="0.29460895" />
+      <window_info id="Persistence" order="3" sideWeight="0.24545455" side_tool="true" visible="true" weight="0.18830676" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -476,7 +430,7 @@
       <window_info id="Web" order="9" sideWeight="0.10313901" side_tool="true" weight="0.19628432" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4477379" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4851794" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,7 +444,7 @@
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Messages" order="16" visible="true" weight="0.14976598" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.37597504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -697,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/board.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/topic-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -721,20 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/thread-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/TopicEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -746,26 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -793,9 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comment-detail-loading.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/chat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -803,56 +713,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CommentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="44" column="69" lean-forward="true" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1892">
-          <caret line="108" column="4" lean-forward="true" selection-start-line="108" selection-start-column="4" selection-end-line="138" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-886">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/TopicsEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="93">
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
           <folding>
             <element signature="e#306#307#0" expanded="true" />
@@ -861,22 +724,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comment-detail-loading.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CommentEntity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="44" column="64" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+        <state relative-caret-position="437">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CommentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="70">
+          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1056#1071#0" expanded="true" />
             <element signature="e#1423#1438#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/thread-detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1327">
+          <caret line="108" column="4" lean-forward="true" selection-start-line="108" selection-start-column="4" selection-end-line="138" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/thread-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="124" column="57" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>

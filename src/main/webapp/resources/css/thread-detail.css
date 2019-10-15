@@ -16,7 +16,7 @@
 }
 
 .user-info{
-	margin-top: 8px;
+	margin-top: 18px;
 
 }
 
@@ -91,6 +91,10 @@
 	margin-bottom: 30px;
 }
 
+
+.col-10 p{
+    line-height: 30px;
+}
 
 
 

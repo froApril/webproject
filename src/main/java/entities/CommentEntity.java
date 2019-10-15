@@ -33,7 +33,7 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "commentTitle", nullable = true, length = 100)
+    @Column(name = "commentTitle", length = 100)
     public String getCommentTitle() {
         return commentTitle;
     }

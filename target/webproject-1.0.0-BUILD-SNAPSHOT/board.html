@@ -66,7 +66,8 @@
           <script>
               document.getElementById('sideIframe').onload= function(){
                   var ht = initData();
-                  sideIframe.window.sethtml(ht);
+                  var topic = getQueryVariable("topic");
+                  sideIframe.window.sethtml(ht,topic);
                   // setClickNewThread();
               }
           </script>
