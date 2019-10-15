@@ -5,12 +5,14 @@ import javax.persistence.*;
 @Entity
 @Table(name = "User", schema = "webApplication", catalog = "")
 public class UserEntity {
+
     private int id;
     private String username;
     private String password;
     private String nickname;
     private String email;
     private String gender;
+
     private Integer iSstaff;
 
     @Id
@@ -83,6 +85,26 @@ public class UserEntity {
         this.iSstaff = iSstaff;
     }
 
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Basic
+    @Column(name = "username", nullable = false, length = 50)
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -91,7 +113,7 @@ public class UserEntity {
         UserEntity that = (UserEntity) o;
 
         if (id != that.id) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
+
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;

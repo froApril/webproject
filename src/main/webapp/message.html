@@ -6,8 +6,48 @@
 
     <link rel="stylesheet" type="text/css" href="resources/css/qq-layout.css"/>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="resources/css/board.css" rel="stylesheet">
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="resources/images/icons/brand-icon.svg" alt=""
+             class="d-inline-block align-top" width="30" height="30">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    User
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="message.html">Message</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
 
 <div class="qqBox">
     <div class="BoxHead">
@@ -22,15 +62,16 @@
                 <li onclick="deleteMessage('1')">
                     <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
                     <div class="liRight">
-                        <span class="intername">student2</span>
-                        <span class="infor">good job</span>
+                        <span class="intername">student</span>
+<!--                        <span class="infor">good job</span>-->
                     </div>
                 </li>
+
                 <li class="bg">
                     <div class="liLeft"><img src="resources/images/portrait-3.jpg"/></div>
                     <div class="liRight">
                         <span  class="intername">jason</span>
-                        <span class="infor">try</span>
+<!--                        <span class="infor">try</span>-->
                     </div>
                 </li>
                 <li>
@@ -61,76 +102,6 @@
                         <span class="infor">hi</span>
                     </div>
                 </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">5990</span>
-                        <span class="infor">when is final</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">878</span>
-                        <span class="infor">dasda</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">3232</span>
-                        <span class="infor">sada</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">212</span>
-                        <span class="infor">dasda</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">212</span>
-                        <span class="infor">[流泪]</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">21112</span>
-                        <span class="infor">2121</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">...</span>
-                        <span class="infor">[21212</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">423432423</span>
-                        <span class="infor">34243</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">432423324</span>
-                        <span class="infor">43423432</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
-                    <div class="liRight">
-                        <span  class="intername">2121</span>
-                        <span class="infor">21212</span>
-                    </div>
-                </li>
             </ul>
         </div>
         <div class="conRight">
@@ -139,7 +110,6 @@
             </div>
             <div class="RightCont">
                 <ul class="newsList">
-
                 </ul>
             </div>
             <div class="RightFoot">

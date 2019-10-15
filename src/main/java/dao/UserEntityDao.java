@@ -2,10 +2,12 @@ package dao;
 
 import dao.impl.UserEntityDaoImpl;
 import entities.UserEntity;
+import java.util.List;
 
 public interface UserEntityDao {
 
     UserEntity getUserByName(String username);
+    UserEntity getUserById(int id);
 
     Boolean isUsernameExist(String username);
     Boolean isStaff(UserEntity user);

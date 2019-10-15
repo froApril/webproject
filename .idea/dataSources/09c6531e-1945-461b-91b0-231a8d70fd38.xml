@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="webApplication@35.189.58.102">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.14">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
     <root id="1">
       <ServerVersion>5.7.14</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -24,7 +24,6 @@
     </schema>
     <schema id="7" parent="1" name="webApplication">
       <Current>1</Current>
-      <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
     </schema>
     <collation id="8" parent="1" name="armscii8_bin">
@@ -916,6 +915,7 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="230" parent="7" name="Comment"/>
+
     <table id="231" parent="7" name="Topics"/>
     <table id="232" parent="7" name="User"/>
     <column id="233" parent="230" name="id">
@@ -925,16 +925,19 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="234" parent="230" name="parent_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="235" parent="230" name="commentTitle">
       <Position>3</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="236" parent="230" name="authorName">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
@@ -949,6 +952,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="238" parent="230" name="topic_id">
       <Position>6</Position>
       <DataType>int(11) unsigned|0s</DataType>
@@ -960,6 +964,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+
     <column id="240" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
@@ -967,6 +972,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="241" parent="231" name="topicName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
@@ -974,6 +980,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="242" parent="231" name="commentNum">
       <Position>3</Position>
       <DataType>int(100) unsigned|0s</DataType>
@@ -985,6 +992,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+
     <column id="244" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
@@ -992,6 +1000,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="245" parent="232" name="username">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
@@ -999,6 +1008,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="246" parent="232" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
@@ -1006,24 +1016,28 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="247" parent="232" name="nickname">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <DefaultExpression>&apos;nickname&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="248" parent="232" name="email">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="249" parent="232" name="gender">
       <Position>6</Position>
       <DataType>varchar(10)|0s</DataType>
       <DefaultExpression>&apos;male&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
     <column id="250" parent="232" name="iSstaff">
       <Position>7</Position>
       <DataType>int(1) unsigned|0s</DataType>
