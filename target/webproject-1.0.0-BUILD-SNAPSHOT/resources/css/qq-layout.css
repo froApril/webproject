@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .qqBox{
     width: 798px;
-    height: 570px;
+    height: 600px;
     border: 1px solid #ccc;
     position: absolute;
     top: 0;
@@ -43,7 +43,7 @@
 }
 .conLeft{
     width: 200px;
-    height:518px;
+    height:548px;
     overflow: auto;
     background: #fafafa;
 }

@@ -23,6 +23,9 @@
 //     </div>
 // </div>
 
+function test(data) {
+    console.log(data)
+}
 
 
 function initData(){
@@ -60,7 +63,7 @@ function createHtml(list){
         html += "<div class=\"card\">"
             +"<div class=\"card-header\" id=\"comment"+i+"\">"
             +"<h5 class=\"mb-0\">"
-            +"<button class=\"btn btn-link\""
+            +"<button id= \""+comment.commentTitle+"\"class=\"btn btn-link\""
             +"data-toggle=\"collapse\" data-target=\"#collapse"+i+"\"aria-expanded=\"true\" "
             +"aria-controls=\"collapse"+i+"\">";
         html += comment.commentTitle;
@@ -68,7 +71,7 @@ function createHtml(list){
             +"</h5></div>"
             +"<div id=\"collapse"+i+"\" class=\"collapse\" aria-labelledby=\"comment"+i+"\" data-parent=\"#accordion\"> "
             +"<div class=\"card-body\">"
-            +"<p class=\"date\">Date: "+comment.createDate+"</p>"
+            +"<p class=\"date\">Author: "+comment.authorName+"</p>"
             +"</div></div></div>";
     }
     return html;

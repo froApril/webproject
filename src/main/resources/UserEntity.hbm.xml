@@ -6,34 +6,27 @@
 
     <class name="entities.UserEntity" table="User" schema="webApplication">
         <id name="id">
-            <column name="id" sql-type="int(255) unsigned"/>
+     
+           <column name="id" sql-type="int(11) unsigned"/>
         </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(30)" length="30"/>
+        </property>
         <property name="password">
-            <column name="password" sql-type="char(16)" length="16"/>
+            <column name="password" sql-type="varchar(30)" length="30"/>
         </property>
         <property name="nickname">
-            <column name="nickname" sql-type="char(50)" length="50" not-null="true"/>
+            <column name="nickname" sql-type="varchar(20)" length="20" not-null="true"/>
         </property>
         <property name="email">
-            <column name="email" sql-type="varchar(50)" length="50"/>
-        </property>
-        <property name="perDes">
-            <column name="perDes" sql-type="varchar(225)" length="225" not-null="true"/>
-        </property>
-        <property name="photoPro">
-            <column name="photoPro" sql-type="varchar(225)" length="225" not-null="true"/>
+            <column name="email" sql-type="varchar(20)" length="20" not-null="true"/>
         </property>
         <property name="gender">
             <column name="gender" sql-type="varchar(10)" length="10" not-null="true"/>
-        </property>
-        <property name="contactIno">
-            <column name="contactIno" sql-type="varchar(225)" length="225" not-null="true"/>
+
         </property>
         <property name="iSstaff">
-            <column name="ISstaff" sql-type="int(1)" not-null="true"/>
-        </property>
-        <property name="username">
-            <column name="username" sql-type="char(50)" length="50"/>
+            <column name="iSstaff" sql-type="int(1) unsigned" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

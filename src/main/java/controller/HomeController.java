@@ -6,7 +6,8 @@ import java.util.Map;
 
 import dao.TopicEntityDao;
 import dao.impl.TopicEntityDaoImpl;
-import entities.TopicEntity;
+import entities.TopicsEntity;
+import entities.TopicsEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class HomeController {
 
     @RequestMapping(value="/test", method = RequestMethod.GET)
     @ResponseBody
-    public TopicEntity test(String topic){
+    public TopicsEntity test(String topic){
         TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
         if(topicEntityDao.updateTopic("12334","newname1")){
             System.out.println("ok");

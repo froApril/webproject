@@ -15,9 +15,8 @@ public interface UserEntityDao {
     Boolean setNewnickname(UserEntity user, String name);
     Boolean setNewpassword(UserEntity user, String password);
     Boolean setGender(UserEntity user, String gender);
-    Boolean setDes(UserEntity user, String description);
-    Boolean setContactInfo(UserEntity user, String contactInfo);
-
+//    Boolean setDes(UserEntity user, String description);
+//    Boolean setContactInfo(UserEntity user, String contactInfo);
     
 
 }

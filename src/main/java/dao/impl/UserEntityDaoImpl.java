@@ -122,30 +122,36 @@ public class UserEntityDaoImpl implements UserEntityDao {
         return false;
     }
 
-    @Override
-    public Boolean setDes(UserEntity user, String description) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-        if (isUsernameExist(user.getUsername())) {
-            user.setPerDes(description);
-            session.save(user);
-            session.getTransaction().commit();
-            return true;
-        }
-        return false;
-    }
 
-    @Override
-    public Boolean setContactInfo(UserEntity user, String contactInfo) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-        if (isUsernameExist(user.getUsername())) {
-            user.setContactIno(contactInfo);
-            session.save(user);
-            session.getTransaction().commit();
-            return true;
-        }
-        return false;
-    }
-
+//    @Override
+//    public Boolean setDes(UserEntity user, String description) {
+//        Session session = HibernateFactory.getSession();
+//        session.beginTransaction();
+//        if(isUsernameExist(user.getUsername())){
+//            user.setPerDes(description);
+//            session.save(user);
+//            session.getTransaction().commit();
+//            return true;
+//
+//        }
+//
+//
+//        return false;
+//    }
+//
+//    @Override
+//    public Boolean setContactInfo(UserEntity user, String contactInfo) {
+//        Session session = HibernateFactory.getSession();
+//        session.beginTransaction();
+//        if(isUsernameExist(user.getUsername())){
+//            user.setContactIno(contactInfo);
+//            session.save(user);
+//            session.getTransaction().commit();
+//            return true;
+//
+//        }
+//
+//
+//        return false;
+//    }
 }

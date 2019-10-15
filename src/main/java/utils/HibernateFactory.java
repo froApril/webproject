@@ -1,9 +1,6 @@
 package utils;
 
-import org.hibernate.HibernateException;
-import org.hibernate.SessionFactory;
-import org.hibernate.Session;
-import org.hibernate.Query;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.metadata.ClassMetadata;
 
@@ -45,4 +42,7 @@ public class HibernateFactory {
             session.close();
         }
     }
+
+
+
 }

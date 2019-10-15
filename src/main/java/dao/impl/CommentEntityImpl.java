@@ -42,7 +42,15 @@ public class CommentEntityImpl implements CommentEntityDao {
             Query query = session
                     .createQuery("from CommentEntity where topicId= "+topicId);
             findcomments.addAll(query.list());
+            List<CommentEntity> finallist=new ArrayList<CommentEntity>();
+            for(CommentEntity c: findcomments){
+                if(c.getParentId()==null){
+                    finallist.add(c);
+                }
+            }
             transaction.commit();
+            session.close();
+            return finallist;
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -51,4 +59,26 @@ public class CommentEntityImpl implements CommentEntityDao {
         }
         return findcomments;
     }
+
+    @Override
+    public List<CommentEntity> getCommentByTopicAndTitle(int parent_id, String title) {
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        List<CommentEntity> findComment = null;
+        try{
+            Query query = session
+                    .createQuery("from CommentEntity where parentId= " +parent_id+" and " +
+                            "commentTitle="+ '\''+title+'\'');
+            findComment = query.list();
+            transaction.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            session.close();
+        }
+        return findComment;
+
+    }
+
 }
