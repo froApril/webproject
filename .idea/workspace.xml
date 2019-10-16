@@ -8,6 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/zerogrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/zerogrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/testBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/testBootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/css/zerogrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/css/zerogrid.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +31,17 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="webApplication@35.189.58.102" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="webApplication@35.189.58.102" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -38,11 +53,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,6 +92,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567673539785" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/dao/impl" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -122,7 +139,7 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.433">
     <configuration name="Tomcat 8.5.433" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.433" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/webproject_war/addTopic.html" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/webproject_war/testBootstrap.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webproject:war">
@@ -310,6 +327,7 @@
       <workItem from="1570672193834" duration="84000" />
       <workItem from="1570678349647" duration="2477000" />
       <workItem from="1570682414805" duration="4702000" />
+      <workItem from="1571183913794" duration="19689000" />
     </task>
     <servers />
   </component>
