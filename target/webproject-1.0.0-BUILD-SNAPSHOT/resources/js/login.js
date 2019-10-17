@@ -18,6 +18,7 @@
             var param = {};
             param.username = $("input[name='username']").val();
             param.password = $("input[name='pass']").val();
+
             $.ajax({
                 url: "login",
                 type: "post",
@@ -26,17 +27,10 @@
                 success: function (state) {
                     if (state.result == 'SUCCESS') {
                         console.log("Success");
-                        document.cookie = param.username
+                        document.cookie ="username:"+ param.username + "id:" + state.id
 
                         window.location.href = "/main"
-                        // $.ajax({
-                        //     url:"test",
-                        //     type:"get",
-                        //     datatype:"json",
-                        //     success:function (state) {
-                        //
-                        //     }
-                        // })
+
 
 
                     } else if (state.result == "Fail") {

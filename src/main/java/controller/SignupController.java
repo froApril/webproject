@@ -63,11 +63,12 @@ public class SignupController {
 //            userEntity.setPerDes(null);
 //            userEntity.setNickname(null);
             userEntity.setGender("Male");
+            userEntity.setPerDes("This is personal Description");
             userEntityDao.addUser(userEntity);
             result.put("result","SUCCESS");
         }
 
-
+        result.put("id",userEntityDao.getUserByName(username).getId());
         return result;
     }
 
