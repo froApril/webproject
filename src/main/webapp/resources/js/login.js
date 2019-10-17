@@ -26,6 +26,7 @@
                 datatype: "json",
                 success: function (state) {
                     if (state.result == 'SUCCESS') {
+
                         console.log("Success");
 
                         $.cookie("username",param.username,{expires:7, path:'/'});
