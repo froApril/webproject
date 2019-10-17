@@ -95,7 +95,9 @@ public class BoardController {
 
         CommentEntityDao commentEntityDao = new CommentEntityImpl();
         if(!commentEntityDao.addNewThread(commentEntity)){
-            return null;
+            commentEntity = null;
+
+            return commentEntity;
         }
         return commentEntity;
     }
