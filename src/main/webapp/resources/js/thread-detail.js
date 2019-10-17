@@ -122,7 +122,7 @@ function getCommentDetails(title){
                     "</div>" +
                     "</div>" +
                     "</div>";
-                $("#text-area-block").before(newComment);
+                $("#replies-to-comment").append(newComment);
                 $("#textarea-id").val("");
             }
 

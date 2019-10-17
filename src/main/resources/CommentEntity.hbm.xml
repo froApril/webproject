@@ -9,7 +9,7 @@
             <column name="id" sql-type="int(11) unsigned"/>
         </id>
         <property name="parentId">
-            <column name="parent_id" sql-type="int(11)" not-null="true"/>
+            <column name="parent_id" sql-type="int(11)" />
         </property>
         <property name="commentTitle">
             <column name="commentTitle" sql-type="varchar(11)" length="11"/>
