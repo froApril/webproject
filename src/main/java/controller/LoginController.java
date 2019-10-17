@@ -33,9 +33,9 @@ public class LoginController {
         return "Homepage";
     }
 
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    @RequestMapping(value = "/signup",method = RequestMethod.GET)
     public String Page(){
-        return "login";
+        return "signup";
     }
 
     @RequestMapping(value= "/login",method = RequestMethod.POST)

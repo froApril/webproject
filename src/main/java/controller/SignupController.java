@@ -27,6 +27,10 @@ public class SignupController {
 //    public String Page(){
 //        return "signup";
 //    }
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public String Page(){
+        return "login";
+    }
 
     @RequestMapping(value= "/signup",method = RequestMethod.POST)
     @ResponseBody
