@@ -110,23 +110,10 @@ public class CommentEntityImpl implements CommentEntityDao {
 
     }
 
-    public CommentEntity getTopicCommentByTitle(String commentTitle) {
-        CommentEntity findcomment=null ;
-        Session session = HibernateFactory.getSession();
-        Transaction transaction = session.beginTransaction();
-        try{
-            Query query = session
-                    .createQuery("from CommentEntity where commentTitle= "
-                    +"\'"+commentTitle+"\'");
-            findcomment = (CommentEntity) query.uniqueResult();
-            transaction.commit();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        finally {
-            session.close();
-        }
-
-        return findcomment;
+    @Override
+    public boolean addNewThread(CommentEntity commentEntity) {
+        return false;
     }
+
+
 }

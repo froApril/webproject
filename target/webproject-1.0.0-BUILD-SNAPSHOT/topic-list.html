@@ -22,11 +22,45 @@
 		  <div class="input-group-prepend">
 		    <button class="btn btn-outline-secondary" type="button">Search</button>
 		  </div>
-            <button id="new-thread-btn" class="btn btn-outline-secondary" type="button">New thread</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newThread" >New thread</button>
+            <div class="modal fade" id="newThread" tabindex="-1" role="dialog" aria-labelledby="ThreadLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ThreadLabel">New Comment</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="ThreadTitle" class="col-form-label">Title:</label>
+                                    <input type="text" class="form-control" id="ThreadTitle">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Threadtext" class="col-form-label">Comments:</label>
+                                    <textarea class="form-control" id="Threadtext"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary sendNewThread">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <script>
-                $("#new-thread-btn").click(function () {
-                    console.log("111111");
-                });
+                $('#newThread').on('show.bs.modal', function (event) {
+                    // var button = $(event.relatedTarget);
+                    var modal = $(this)
+                    modal.find('.modal-title').text('New comment to ' + getTopic())
+                    modal.find('.sendNewThread').on('click',function () {
+                        console.log(modal.find('#ThreadTitle').val());
+                        console.log(modal.find('#Threadtext').val());
+                    });
+                })
             </script>
         </div>
 		<div class="main-list">

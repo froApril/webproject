@@ -81,4 +81,8 @@ public class BoardController {
     }
 
 
+    @RequestMapping(value = "/comments/newthread", method = RequestMethod.POST)
+    @ResponseBody
+    
+
 }

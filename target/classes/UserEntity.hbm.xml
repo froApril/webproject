@@ -22,6 +22,7 @@
         </property>
         <property name="gender">
             <column name="gender" sql-type="varchar(10)" length="10" not-null="true"/>
+
         </property>
         <property name="contactIno">
             <column name="contactIno" sql-type="varchar(225)" length="225" not-null="true"/>

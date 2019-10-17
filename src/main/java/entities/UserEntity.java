@@ -86,15 +86,6 @@ public class UserEntity {
         this.iSstaff = iSstaff;
     }
 
-    @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "ISstaff", nullable = true)
