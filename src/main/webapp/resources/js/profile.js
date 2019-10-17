@@ -46,14 +46,8 @@ class currentCirle extends Circle {
     }
 
     drawCircle(ctx) {
-        ctx.beginPath();
-        this.r = 8;
-        ctx.arc(this.x, this.y, this.r, 0, 360);
-        ctx.closePath();
-        //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-        ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
-        ctx.fill();
 
+        ctx.fill();
     }
 }
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
