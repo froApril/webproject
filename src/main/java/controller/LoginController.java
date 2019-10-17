@@ -61,7 +61,7 @@ public class LoginController {
 
         }
 
-        result.put("id",userEntityDao.getUserByName(username).getId());
+       
         return result;
     }
 
