@@ -28,7 +28,8 @@
                 success: function (state) {
                     if (state.result == 'SUCCESS') {
                         console.log("Success");
-                        document.cookie ="username:"+ param.username + "id:" + state.id
+
+                        $.cookie("username",param.username,{expires:7, path:'/'});
 
                         window.location.href = "/main"
                     } else {
