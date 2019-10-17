@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
 
+
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" afterDir="false" />
@@ -25,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/comments-loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/comments-loading.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/thread-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/thread-detail.js" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +83,7 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/comments-loading.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,6 +102,7 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/thread-detail.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,6 +117,7 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,6 +135,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -149,7 +155,24 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/test.html" />
+
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/1.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/staffHomepage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/staffLogin.html" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/staffLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Homepage.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/profile.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/profile.js" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/test.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/staffLogin.js" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/SignupController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/signup.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/signup.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/login.js" />
@@ -200,6 +223,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+
     <option name="x" value="-25" />
     <option name="y" value="23" />
     <option name="width" value="1359" />
@@ -209,6 +233,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+
   <component name="PropertiesComponent">
     <property name="JPA.DatabaseSchemaImportDialog" value="09c6531e-1945-461b-91b0-231a8d70fd38" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -219,6 +244,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/css" />
@@ -391,12 +417,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="" />
+      <changelist id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="" />
       <created>1567562442327</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567562442327</updated>
       <workItem from="1567562448639" duration="1104000" />
+
       <workItem from="1567923038623" duration="10607000" />
       <workItem from="1568349584599" duration="3468000" />
       <workItem from="1570347339683" duration="26266000" />
@@ -404,6 +431,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="84472000" />
   </component>
   <component name="TodoView">
@@ -416,6 +444,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+
     <frame x="-25" y="23" width="1359" height="733" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75454545" visible="true" weight="0.18830676" />
@@ -427,6 +456,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Learn" order="8" />
+
       <window_info id="Web" order="9" sideWeight="0.10313901" side_tool="true" weight="0.19628432" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -444,6 +474,7 @@
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+
       <window_info anchor="bottom" id="Messages" order="16" weight="0.37597504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -451,6 +482,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+
       <window_info anchor="right" id="Database" order="6" weight="0.35079727" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -488,6 +520,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" />
+
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -588,6 +621,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -668,6 +702,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/TopicEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -689,8 +724,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.html">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="257">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
@@ -724,6 +760,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/main/webapp/board.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -773,6 +810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="19">
           <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
@@ -781,6 +819,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/board-loading.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -807,6 +846,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/thread-detail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">

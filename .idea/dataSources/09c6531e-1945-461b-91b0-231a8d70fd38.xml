@@ -24,6 +24,7 @@
     </schema>
     <schema id="7" parent="1" name="webApplication">
       <Current>1</Current>
+
       <Collation>utf8_general_ci</Collation>
     </schema>
     <collation id="8" parent="1" name="armscii8_bin">
@@ -914,6 +915,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+
     <table id="230" parent="7" name="Comment"/>
 
     <table id="231" parent="7" name="Topics"/>
@@ -925,6 +927,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+
 
     <column id="234" parent="230" name="parent_id">
       <Position>2</Position>
@@ -993,6 +996,7 @@
       <Primary>1</Primary>
     </key>
 
+
     <column id="244" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
@@ -1016,6 +1020,7 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+
 
     <column id="247" parent="232" name="nickname">
       <Position>4</Position>

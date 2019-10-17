@@ -505,6 +505,7 @@ input.input100 {
   transition: opacity 0.4s;
 }
 
+
 .alert-validate::after {
   content: "\f12a";
   font-family: FontAwesome;
@@ -519,6 +520,9 @@ input.input100 {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 18px;
+}
+.errormessage{
+  color:#FF3333;
 }
 
 .alert-validate:hover:before {

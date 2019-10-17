@@ -14,8 +14,49 @@
                 check=false;
             }
         }
-        // TODO: check if the info is correct in format, if true, use ajax to request
-        // validation from server
+        if(check) {
+            var param = {};
+            param.username = $("input[name='username']").val();
+            param.password = $("input[name='pass']").val();
+            $.ajax({
+                url: "login",
+                type: "post",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    if (state.result == 'SUCCESS') {
+                        console.log("Success");
+                        document.cookie = param.username
+
+                        window.location.href = "/webproject_war/HomePage"
+                        // $.ajax({
+                        //     url:"test",
+                        //     type:"get",
+                        //     datatype:"json",
+                        //     success:function (state) {
+                        //
+                        //     }
+                        // })
+
+
+                    } else if (state.result == "Fail") {
+
+                        if ($('#erruser').css("display") == "block")
+                            $('#erruser').css("display", "none")
+
+                        $('#errpss').css('display', 'block');
+
+                    } else {
+                        if ($('#errpss').css("display") == "block")
+                            $('#errpss').css("display", "none")
+                        $('#erruser').css('display', 'block');
+                    }
+
+
+                }
+            })
+        }
+
 
     });
 

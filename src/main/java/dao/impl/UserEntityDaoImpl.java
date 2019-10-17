@@ -55,103 +55,239 @@ public class UserEntityDaoImpl implements UserEntityDao {
     @Override
     public Boolean isUsernameExist(String username) {
 
-        if (getUserByName(username) == null) {
-            return false;
-        } else
-            return true;
+      return this.getUserByName(username) != null;
     }
 
     @Override
     public Boolean addUser(UserEntity user) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-        if (isUsernameExist(user.getUsername())) {
+
+        if(isUsernameExist(user.getUsername())){
             return false;
         }
-        session.save(user);
-        session.getTransaction().commit();
+
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            session.save(user);
+            session.getTransaction().commit();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean isStaff(String username) {
+        UserEntity userEntity = this.getUserByName(username);
+        if(userEntity.getiSstaff() == 1){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean setNewnickname(String username, String name) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+
+            userEntity.setNickname(name);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean setNewpassword(String username, String password) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+
+            userEntity.setPassword(password);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean setGender(String username, String gender) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+
+            userEntity.setGender(gender);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean setDes(String username, String description) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+
+            userEntity.setPerDes(description);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean setContactInfo(String username, String contactInfo) {
+        Session session = null;
+        try {
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if (!isUsernameExist(userEntity.getUsername())) {
+                return false;
+            }
+
+            userEntity.setContactIno(contactInfo);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        } finally {
+            session.close();
+        }
+        return true;
+    }
+    @Override
+    public Boolean setNewphoto(String username, String photoUrl) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+
+            userEntity.setPhotoPro(photoUrl);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean deleteUser(String username) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(userEntity==null){
+                return false;
+            }
+            session.delete(userEntity);
+            session.getTransaction().commit();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally{
+            session.close();
+        }
 
         return true;
     }
 
     @Override
-    public Boolean isStaff(UserEntity user) {
-        if (user.getiSstaff() == 1) {
-            return true;
+    public Boolean isUsercanlogin(String username, String password) {
+        Session session = null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if(userEntity==null){
+                return false;
+            }
+           String rightPassword = userEntity.getPassword();
+            return rightPassword.equals(password);
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
         }
-        return false;
+        finally{
+            session.close();
+        }
+
+
     }
 
-    @Override
-    public Boolean setNewnickname(UserEntity user, String name) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-
-        if (isUsernameExist(user.getUsername())) {
-            user.setNickname(name);
-            session.save(user);
-            session.getTransaction().commit();
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public Boolean setNewpassword(UserEntity user, String password) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-        if (isUsernameExist(user.getUsername())) {
-            user.setPassword(password);
-            session.save(user);
-            session.getTransaction().commit();
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public Boolean setGender(UserEntity user, String gender) {
-        Session session = HibernateFactory.getSession();
-        session.beginTransaction();
-        if (isUsernameExist(user.getUsername())) {
-            user.setGender(gender);
-            session.save(user);
-            session.getTransaction().commit();
-            return true;
-        }
-        return false;
-    }
-
-
-//    @Override
-//    public Boolean setDes(UserEntity user, String description) {
-//        Session session = HibernateFactory.getSession();
-//        session.beginTransaction();
-//        if(isUsernameExist(user.getUsername())){
-//            user.setPerDes(description);
-//            session.save(user);
-//            session.getTransaction().commit();
-//            return true;
-//
-//        }
-//
-//
-//        return false;
-//    }
-//
-//    @Override
-//    public Boolean setContactInfo(UserEntity user, String contactInfo) {
-//        Session session = HibernateFactory.getSession();
-//        session.beginTransaction();
-//        if(isUsernameExist(user.getUsername())){
-//            user.setContactIno(contactInfo);
-//            session.save(user);
-//            session.getTransaction().commit();
-//            return true;
-//
-//        }
-//
-//
-//        return false;
-//    }
 }

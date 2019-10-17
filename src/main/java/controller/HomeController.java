@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+
 import dao.TopicEntityDao;
 import dao.impl.TopicEntityDaoImpl;
 import entities.TopicsEntity;
@@ -25,16 +26,46 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class HomeController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+        UserEntityDaoImpl user = new UserEntityDaoImpl();
+//        user.setNewnickname("1278007","qqq");
+//        user.setNewphoto("1278007","photo");
+//        user.setGender("1278007","0");
+//        user.setContactInfo("1278007","@");
+//        user.setDes("1278007","this");
+//        user.deleteUser("ssqq1");
 
-		return "login";
+//
+//        userEntity.setPassword("1111111111");
+//        if(userEntity==null){
+//            model.addAttribute("user", "null");
+//        }
+//        else{
+//            model.addAttribute("user", userEntity.getUsername());
+//        }
+//
+//        UserEntity test = new UserEntity();
+//        test.setUsername("11");
+//        test.setEmail("1");
+//        test.setPassword("asd");
+//        test.setNickname("asd");
+//        test.setGender("asd");
+//        test.setiSstaff(0);
+//        test.setPerDes("sad");
+//        test.setPhotoPro("asd");
+//        test.setContactIno("asd");
+//        user.addUser(test);
+
+
+
+        return "login";
 	}
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
@@ -42,6 +73,7 @@ public class HomeController {
 
         return "login";
     }
+
 
 
     @RequestMapping(value="/test", method = RequestMethod.GET)
@@ -59,5 +91,8 @@ public class HomeController {
     public String test1(){
 	    return "test";
     }
-	
 }
+
+
+
+
