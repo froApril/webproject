@@ -1,10 +1,12 @@
 package dao;
 
 import entities.UserEntity;
+import java.util.List;
 
 public interface UserEntityDao {
 
     UserEntity getUserByName(String username);
+    UserEntity getUserById(int id);
 
     Boolean isUsernameExist(String username);
     Boolean isStaff(String username);
@@ -17,6 +19,7 @@ public interface UserEntityDao {
     Boolean setNewphoto(String username, String photoUrl);
     Boolean deleteUser(String username);
     Boolean isUsercanlogin(String username, String password);
+
     
 
 }

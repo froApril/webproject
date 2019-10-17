@@ -37,7 +37,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "email", nullable = false, length = 50)
+    @Column(name = "email", nullable = true, length = 20)
     public String getEmail() {
         return email;
     }
@@ -77,13 +77,23 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "contactIno", nullable = true, length = 225)
-    public String getContactIno() {
-        return contactIno;
+    @Column(name = "iSstaff", nullable = true)
+    public Integer getiSstaff() {
+        return iSstaff;
     }
 
-    public void setContactIno(String contactIno) {
-        this.contactIno = contactIno;
+    public void setiSstaff(Integer iSstaff) {
+        this.iSstaff = iSstaff;
+    }
+
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Basic
@@ -127,8 +137,6 @@ public class UserEntity {
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
-        if (perDes != null ? !perDes.equals(that.perDes) : that.perDes != null) return false;
-        if (photoPro != null ? !photoPro.equals(that.photoPro) : that.photoPro != null) return false;
         if (gender != null ? !gender.equals(that.gender) : that.gender != null) return false;
         if (contactIno != null ? !contactIno.equals(that.contactIno) : that.contactIno != null) return false;
         if (iSstaff != null ? !iSstaff.equals(that.iSstaff) : that.iSstaff != null) return false;
@@ -142,8 +150,6 @@ public class UserEntity {
         int result = password != null ? password.hashCode() : 0;
         result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (perDes != null ? perDes.hashCode() : 0);
-        result = 31 * result + (photoPro != null ? photoPro.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (contactIno != null ? contactIno.hashCode() : 0);
         result = 31 * result + (iSstaff != null ? iSstaff.hashCode() : 0);

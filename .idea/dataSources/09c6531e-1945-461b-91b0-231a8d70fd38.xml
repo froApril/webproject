@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="webApplication@35.189.58.102">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.15">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
     <root id="1">
       <ServerVersion>5.7.14</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -24,7 +24,7 @@
     </schema>
     <schema id="7" parent="1" name="webApplication">
       <Current>1</Current>
-      <Visible>1</Visible>
+
       <Collation>utf8_general_ci</Collation>
     </schema>
     <collation id="8" parent="1" name="armscii8_bin">
@@ -915,9 +915,11 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="230" parent="7" name="Topic"/>
-    <table id="231" parent="7" name="User"/>
-    <table id="232" parent="7" name="test"/>
+
+    <table id="230" parent="7" name="Comment"/>
+
+    <table id="231" parent="7" name="Topics"/>
+    <table id="232" parent="7" name="User"/>
     <column id="233" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
@@ -925,105 +927,126 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="230" name="topicName">
+
+
+    <column id="234" parent="230" name="parent_id">
       <Position>2</Position>
-      <DataType>char(30)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+
+    <column id="235" parent="230" name="commentTitle">
+      <Position>3</Position>
+      <DataType>varchar(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+
+    <column id="236" parent="230" name="authorName">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="230" name="commentNum">
-      <Position>3</Position>
-      <DataType>int(255)|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="236" parent="230" name="score">
-      <Position>4</Position>
-      <DataType>int(11) unsigned|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="237" parent="230" name="times">
+    <column id="237" parent="230" name="commentMessage">
       <Position>5</Position>
-      <DataType>int(11) unsigned|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
+      <DataType>varchar(140)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="238" parent="230" name="PRIMARY">
+
+    <column id="238" parent="230" name="topic_id">
+      <Position>6</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="239" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="239" parent="231" name="password">
+
+    <column id="240" parent="231" name="id">
       <Position>1</Position>
-      <DataType>char(16)|0s</DataType>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="231" name="nickname">
+
+    <column id="241" parent="231" name="topicName">
       <Position>2</Position>
-      <DataType>char(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="241" parent="231" name="email">
-      <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="231" name="perDes">
+
+    <column id="242" parent="231" name="commentNum">
+      <Position>3</Position>
+      <DataType>int(100) unsigned|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="243" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+
+
+    <column id="244" parent="232" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+
+    <column id="245" parent="232" name="username">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+
+    <column id="246" parent="232" name="password">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+
+
+    <column id="247" parent="232" name="nickname">
       <Position>4</Position>
-      <DataType>varchar(225)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DataType>varchar(20)|0s</DataType>
+      <DefaultExpression>&apos;nickname&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="231" name="photoPro">
+
+    <column id="248" parent="232" name="email">
       <Position>5</Position>
-      <DataType>varchar(225)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="231" name="gender">
+
+    <column id="249" parent="232" name="gender">
       <Position>6</Position>
       <DataType>varchar(10)|0s</DataType>
+      <DefaultExpression>&apos;male&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="231" name="contactIno">
+
+    <column id="250" parent="232" name="iSstaff">
       <Position>7</Position>
-      <DataType>varchar(225)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="246" parent="231" name="ISstaff">
-      <Position>8</Position>
-      <DataType>int(1)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="247" parent="231" name="id">
-      <Position>9</Position>
-      <DataType>int(255) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="248" parent="231" name="username">
-      <Position>10</Position>
-      <DataType>char(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="249" parent="231" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="250" parent="232" name="id">
-      <Position>1</Position>
-      <DataType>int(11) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int(1) unsigned|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="251" parent="232" name="PRIMARY">

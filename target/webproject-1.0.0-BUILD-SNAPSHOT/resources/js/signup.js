@@ -59,6 +59,7 @@
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@+uni\.sydney\.edu\.au/) == null) {
+
                 return false;
             }
         }

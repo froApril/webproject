@@ -7,6 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class UserEntityDaoImpl implements UserEntityDao {
     @Override
@@ -14,16 +17,35 @@ public class UserEntityDaoImpl implements UserEntityDao {
         UserEntity findUser = null;
         Session session = HibernateFactory.getSession();
         Transaction transaction = session.beginTransaction();
-        try{
+        try {
             Query query = session
-                    .createQuery("from UserEntity where username= " +"\'" +user+"\'");
+                    .createQuery("from UserEntity where username= " + "\'" + user + "\'");
             findUser = (UserEntity) query.uniqueResult();
             transaction.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        finally {
+
+        return findUser;
+    }
+
+    @Override
+    public UserEntity getUserById(int id) {
+        UserEntity findUser = null;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Query query = session
+                    .createQuery("from UserEntity where id= " + "\'" + id + "\'");
+            findUser = (UserEntity) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
             session.close();
         }
 
@@ -34,11 +56,11 @@ public class UserEntityDaoImpl implements UserEntityDao {
     public Boolean isUsernameExist(String username) {
 
       return this.getUserByName(username) != null;
-
     }
 
     @Override
     public Boolean addUser(UserEntity user) {
+
         if(isUsernameExist(user.getUsername())){
             return false;
         }
@@ -267,4 +289,5 @@ public class UserEntityDaoImpl implements UserEntityDao {
 
 
     }
+
 }

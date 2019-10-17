@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>message</title>
+
+    <link rel="stylesheet" type="text/css" href="resources/css/qq-layout.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="resources/css/board.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="resources/images/icons/brand-icon.svg" alt=""
+             class="d-inline-block align-top" width="30" height="30">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    User
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="message.html">Message</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="qqBox">
+    <div class="BoxHead">
+        <div class="headImg">
+            <img src="resources/images/portrait.jpg"/>
+        </div>
+        <div class="internetName">student1</div>
+    </div>
+    <div class="context">
+        <div class="conLeft">
+            <ul id="ulid">
+                <li onclick="deleteMessage('1')">
+                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
+                    <div class="liRight">
+                        <span class="intername">student</span>
+<!--                        <span class="infor">good job</span>-->
+                    </div>
+                </li>
+
+                <li class="bg">
+                    <div class="liLeft"><img src="resources/images/portrait-3.jpg"/></div>
+                    <div class="liRight">
+                        <span  class="intername">jason</span>
+<!--                        <span class="infor">try</span>-->
+                    </div>
+                </li>
+                <li>
+                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
+                    <div class="liRight">
+                        <span  class="intername">lucy</span>
+                        <span class="infor">666</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
+                    <div class="liRight">
+                        <span  class="intername">jquery</span>
+                        <span class="infor">...</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
+                    <div class="liRight">
+                        <span  class="intername">...</span>
+                        <span class="infor">3232</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="liLeft"><img src="resources/images/portrait-1.jpg"/></div>
+                    <div class="liRight">
+                        <span  class="intername">5619</span>
+                        <span class="infor">hi</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="conRight">
+            <div class="Righthead">
+                <div class="headName">jason</div>
+            </div>
+            <div class="RightCont">
+                <ul class="newsList">
+                </ul>
+            </div>
+            <div class="RightFoot">
+                <div class="emjon">
+                    <ul>
+                        <li><img src="resources/images/emoji/em1.jpg"/></li>
+                        <li><img src="resources/images/emoji/em2.jpg"/></li>
+                        <li><img src="resources/images/emoji/em3.jpg"/></li>
+                        <li><img src="resources/images/emoji/em4.jpg"/></li>
+                        <li><img src="resources/images/emoji/em5.jpg"/></li>
+                        <li><img src="resources/images/emoji/em6.jpg"/></li>
+                        <li><img src="resources/images/emoji/em7.jpg"/></li>
+                        <li><img src="resources/images/emoji/em8.jpg"/></li>
+                        <li><img src="resources/images/emoji/em9.jpg"/></li>
+                        <li><img src="resources/images/emoji/em10.jpg"/></li>
+                        <li><img src="resources/images/emoji/em11.jpg"/></li>
+                        <li><img src="resources/images/emoji/em12.jpg"/></li>
+                        <li><img src="resources/images/emoji/em13.jpg"/></li>
+                        <li><img src="resources/images/emoji/em14.jpg"/></li>
+                        <li><img src="resources/images/emoji/em15.jpg"/></li>
+                        <li><img src="resources/images/emoji/em16.jpg"/></li>
+                        <li><img src="resources/images/emoji/em17.jpg"/></li>
+                        <li><img src="resources/images/emoji/em18.jpg"/></li>
+                        <li><img src="resources/images/emoji/em19.jpg"/></li>
+                        <li><img src="resources/images/emoji/em20.jpg"/></li>
+                        <li><img src="resources/images/emoji/em21.jpg"/></li>
+                    </ul>
+                </div>
+                <div class="footTop">
+                    <ul>
+                        <li class="ExP"><img src="resources/images/emoji.jpg"/></li>
+                    </ul>
+                </div>
+                <div class="inputBox">
+                    <textarea id="dope" style="width: 99%;height: 75px; border: none;outline: none;" name="" rows="" cols=""></textarea>
+                    <button class="sendBtn">sent(s)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--===============================================================================================-->
+<script type="text/javascript" src="resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="resources/js/chat.js"></script>
+<script>
+    function deleteMessage(id){
+        $("ul li:eq("+id+")").remove()
+    }
+</script>
+<!--===============================================================================================-->
+</body>
+</html>

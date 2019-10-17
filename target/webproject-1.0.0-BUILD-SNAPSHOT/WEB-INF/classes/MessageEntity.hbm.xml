@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.MessageEntity" table="Message" schema="webApplication">
+        <id name="id" column="id"/>
+        <property name="posterId" column="poster_id"/>
+        <property name="receiverId" column="receiver_id"/>
+        <property name="messageDetail" column="message_detail"/>
+    </class>
+</hibernate-mapping>
