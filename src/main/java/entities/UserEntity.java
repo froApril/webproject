@@ -85,25 +85,7 @@ public class UserEntity {
         this.iSstaff = iSstaff;
     }
 
-    @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Basic
-    @Column(name = "username", nullable = false, length = 50)
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     @Override
     public boolean equals(Object o) {

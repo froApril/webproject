@@ -1,6 +1,9 @@
 
+var topic_temp = "";
 
 function sethtml(html,topic){
+    topic_temp = topic;
+
     $("#accordion").html(html);
 
     $(".btn-link").on("click",function (event) {
@@ -32,4 +35,8 @@ function getQueryVariable(variable)
         if(pair[0] == variable){return pair[1];}
     }
     return(false);
+}
+
+function getTopic() {
+    return topic_temp;
 }

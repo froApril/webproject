@@ -6,7 +6,8 @@
 
     <class name="entities.UserEntity" table="User" schema="webApplication">
         <id name="id">
-            <column name="id" sql-type="int(11) unsigned"/>
+     
+           <column name="id" sql-type="int(11) unsigned"/>
         </id>
         <property name="username">
             <column name="username" sql-type="varchar(30)" length="30"/>
@@ -22,6 +23,7 @@
         </property>
         <property name="gender">
             <column name="gender" sql-type="varchar(10)" length="10" not-null="true"/>
+
         </property>
         <property name="iSstaff">
             <column name="iSstaff" sql-type="int(1) unsigned" not-null="true"/>
