@@ -42,20 +42,22 @@ function getTopic() {
 }
 
 
-function addNewThread(title,message) {
+function addNewThread(title,message,modal) {
     $.ajax({
         url:"comments/newthread?author="+$.cookie("username")+"&commentTitle="+title+"&topic="+topic_temp+"&message="+message,
         type:"post",
         datatype:"json",
         async:false,
         success: function (data) {
-            if(data==null){
+            console.log(data.commetTitle);
+            if(data.commentTitle == null){
                 window.parent.alert("This title is existing.Please change");
-            }
-            else{
-                window.location.reload();
+            }else{
+                modal.find('#ThreadTitle').val("");
+                modal.find('#Threadtext').val("");
             }
         }
     })
+    window.location.reload();
 
 }
