@@ -38,6 +38,11 @@ public class LoginController {
         return "signup";
     }
 
+    @RequestMapping(value = "/logout",method = RequestMethod.GET)
+    public String logout(){
+        return "login";
+    }
+
     @RequestMapping(value= "/login",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> login(String username, String password){
