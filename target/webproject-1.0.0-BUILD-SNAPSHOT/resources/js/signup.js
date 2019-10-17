@@ -1,30 +1,52 @@
 
 (function ($) {
+
+
     var input = $('.validate-input .account-info');
 
-    $('#submit_btn').on('click',function(){
+    $('.login100-form-btn').on('click',function(){
         var check = true;
-
+        console.log("111");
         for(var i=0; i<input.length; i++) {
-            if(validate(input[i]) == false){
+            if (validate(input[i]) == false) {
                 showValidate(input[i]);
-                check=false;
+                check = false;
             }
         }
-        // TODO: check if the info is correct in format, if true, use ajax to post request
-        // to sever with data
+        if(check) {
+
+
+            var param = {};
+            param.username = $("input[name='username']").val();
+            param.password = $("input[name='pass']").val();
+            param.email = $("input[name='email']").val();
+            $.ajax({
+                url: "signup",
+                type: "post",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    if (state.result == 'SUCCESS') {
+                        console.log("Success");
+                        document.cookie = param.username
+
+                        window.location.href = "/webproject_war/HomePage"
+                    } else {
+                        alert(state.result)
+                        $('#errlog').css("display", "block")
+                    }
+
+                }
+            })
+        }
 
 
     });
+    $('.verify-code').on('click',function () {
+        getTimeRemaining(60);
+        updateClock();
+    })
 
-    $('.resend_button').on('click', function () {
-        // TODO: send vaildate code to the email address.
-    });
-
-    
-    $('[data-toggle="popover"]').popover({
-        trigger: 'foucs' 
-    });
 
 
 
@@ -36,7 +58,8 @@
 
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@+uni\.sydney\.edu\.au/) == null) {
+
                 return false;
             }
         }

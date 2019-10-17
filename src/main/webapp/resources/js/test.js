@@ -1,24 +1,8 @@
-window.onload =function () {
-    clickListener();
-}
+(function($){
+    $('.login100-form-btn').on('click',function(){
 
-function clickListener() {
-    $("#btn1").click(
-        function(){
-            $.ajax({
-                url:"test",
-                type:"get",
-                dataType:"json",
-                success: function(data) {
-                    console.log(data);
-                    $("#test").html(data.topicName+ " "+ data.id);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
-                },
-            });
-        }
-    )
-}
+        window.location.href ="/webproject_war/profile"
+    }
+);
+})(jQuery);
+
