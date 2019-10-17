@@ -29,6 +29,7 @@ function test(data) {
 
 
 function initData(){
+    // $.cookie("username", "xiaoming",{ expires: 7, path: '/' });
     var ht="";
     $.ajax({
         url:"/comments/all"+"?topic="+getQueryVariable("topic"),

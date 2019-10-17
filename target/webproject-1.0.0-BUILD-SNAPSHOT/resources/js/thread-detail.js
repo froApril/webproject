@@ -1,8 +1,3 @@
-
-
-
-
-
 var parent_comment;
 
 function getTopicComment(comment) {
@@ -94,10 +89,11 @@ function getCommentDetails(title){
     });
 
     $("form").submit(function(e){
+
         $.ajax({
             type:"post",
             url:"/comments/add",
-            data:{author:"test user",parent_id:parent_comment.id
+            data:{author:$.cookie("username"),parent_id:parent_comment.id
                 ,message:$("#textarea-id").val(),topic_id: parent_comment.topicId},
             datatype:"json",
             async: false,
@@ -122,7 +118,7 @@ function getCommentDetails(title){
                     "</div>" +
                     "</div>" +
                     "</div>";
-                $("#text-area-block").before(newComment);
+                $("#replies-to-comment").append(newComment);
                 $("#textarea-id").val("");
             }
 

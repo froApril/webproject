@@ -43,6 +43,19 @@ function getTopic() {
 
 
 function addNewThread(title,message) {
-
+    $.ajax({
+        url:"comments/newthread?author="+$.cookie("username")+"&commentTitle="+title+"&topic="+topic_temp+"&message="+message,
+        type:"post",
+        datatype:"json",
+        async:false,
+        success: function (data) {
+            if(data==null){
+                window.parent.alert("This title is existing.Please change");
+            }
+            else{
+                window.location.reload();
+            }
+        }
+    })
 
 }
