@@ -30,7 +30,7 @@
                         console.log("Success");
                         document.cookie = param.username
 
-                        window.location.href = "/webproject_war/HomePage"
+                        window.location.href = "/main"
                     } else {
                         alert(state.result)
                         $('#errlog').css("display", "block")
