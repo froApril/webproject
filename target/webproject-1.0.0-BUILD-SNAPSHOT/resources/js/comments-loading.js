@@ -40,3 +40,9 @@ function getQueryVariable(variable)
 function getTopic() {
     return topic_temp;
 }
+
+
+function addNewThread(title,message) {
+
+
+}

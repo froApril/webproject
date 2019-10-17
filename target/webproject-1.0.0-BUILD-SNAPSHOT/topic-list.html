@@ -57,8 +57,7 @@
                     var modal = $(this)
                     modal.find('.modal-title').text('New comment to ' + getTopic())
                     modal.find('.sendNewThread').on('click',function () {
-                        console.log(modal.find('#ThreadTitle').val());
-                        console.log(modal.find('#Threadtext').val());
+                        addNewThread(modal.find('#ThreadTitle').val(),modal.find('#Threadtext').val());
                     });
                 })
             </script>

@@ -83,6 +83,22 @@ public class BoardController {
 
     @RequestMapping(value = "/comments/newthread", method = RequestMethod.POST)
     @ResponseBody
+    public CommentEntity addNewThread(String author, String commentTitle,String topic,String message){
+        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicsEntity topicsEntity = topicEntityDao.getTopicByName(topic);
+        CommentEntity commentEntity = new CommentEntity();
+
+        commentEntity.setAuthorName(author);
+        commentEntity.setTopicId(topicsEntity.getId());
+        commentEntity.setCommentMessage(message);
+        commentEntity.setCommentTitle(commentTitle);
+
+        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        if(!commentEntityDao.addNewThread(commentEntity)){
+            return null;
+        }
+        return commentEntity;
+    }
     
 
 }

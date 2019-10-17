@@ -6,9 +6,9 @@
 
     $('.login100-form-btn').on('click',function(){
         var check = true;
-        console.log("111");
+
         for(var i=0; i<input.length; i++) {
-            if (validate(input[i]) == false) {
+            if (validate(input[i]) == false ) {
                 showValidate(input[i]);
                 check = false;
             }
@@ -42,11 +42,6 @@
 
 
     });
-    $('.verify-code').on('click',function () {
-        getTimeRemaining(60);
-        updateClock();
-    })
-
 
 
 
@@ -59,7 +54,16 @@
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@+uni\.sydney\.edu\.au/) == null) {
-
+                return false;
+            }
+        }
+        if($(input).attr('name') == 'pass') {
+            if($(input).val().length < 8) {
+                return false;
+            }
+        }
+        if($(input).attr('name') == 'confirmPassword') {
+            if($(input).val() != $("input[name='pass']").val()) {
                 return false;
             }
         }

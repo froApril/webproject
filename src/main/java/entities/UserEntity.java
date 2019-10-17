@@ -86,15 +86,12 @@ public class UserEntity {
         this.iSstaff = iSstaff;
     }
 
-
-    @Basic
-    @Column(name = "ISstaff", nullable = true)
-    public Integer getiSstaff() {
-        return iSstaff;
+    public String getContactIno() {
+        return contactIno;
     }
 
-    public void setiSstaff(Integer iSstaff) {
-        this.iSstaff = iSstaff;
+    public void setContactIno(String contactIno) {
+        this.contactIno = contactIno;
     }
 
     @Id

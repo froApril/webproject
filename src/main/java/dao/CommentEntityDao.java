@@ -15,4 +15,5 @@ public interface CommentEntityDao {
 
     boolean addNewThread(CommentEntity commentEntity);
 
+
 }

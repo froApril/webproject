@@ -112,7 +112,24 @@ public class CommentEntityImpl implements CommentEntityDao {
 
     @Override
     public boolean addNewThread(CommentEntity commentEntity) {
-        return false;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Query query = session.createQuery("from CommentEntity where commentTitle ="
+                    + commentEntity.getCommentTitle());
+            if(query.list().size()!=0){
+                session.close();
+                return false;
+            }
+            session.save(commentEntity);
+            transaction.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            session.close();
+        }
+        return true;
     }
 
 

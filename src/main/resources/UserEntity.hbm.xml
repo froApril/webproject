@@ -29,9 +29,5 @@
         <property name="iSstaff">
             <column name="ISstaff" sql-type="int(1)" not-null="true"/>
         </property>
-        <property name="username">
-            <column name="username" sql-type="char(50)" length="50"/>
-
-        </property>
     </class>
 </hibernate-mapping>

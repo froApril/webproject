@@ -194,27 +194,32 @@ public class UserEntityDaoImpl implements UserEntityDao {
 
     @Override
     public Boolean setContactInfo(String username, String contactInfo) {
-        Session session = null;
-        try {
-            session = HibernateFactory.getSession();
-            session.beginTransaction();
-            UserEntity userEntity = this.getUserByName(username);
-            if (!isUsernameExist(userEntity.getUsername())) {
-                return false;
-            }
-
-            userEntity.setContactIno(contactInfo);
-            session.update(userEntity);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-            session.getTransaction().rollback();
-            return false;
-        } finally {
-            session.close();
-        }
-        return true;
+        return null;
     }
+
+    //    @Override
+//    public Boolean setContactInfo(String username, String contactInfo) {
+//        Session session = null;
+//        try {
+//            session = HibernateFactory.getSession();
+//            session.beginTransaction();
+//            UserEntity userEntity = this.getUserByName(username);
+//            if (!isUsernameExist(userEntity.getUsername())) {
+//                return false;
+//            }
+//
+//            userEntity.setContactIno(contactInfo);
+//            session.update(userEntity);
+//            session.getTransaction().commit();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            session.getTransaction().rollback();
+//            return false;
+//        } finally {
+//            session.close();
+//        }
+//        return true;
+//    }
     @Override
     public Boolean setNewphoto(String username, String photoUrl) {
         Session session =null;
