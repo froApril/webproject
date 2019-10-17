@@ -44,7 +44,7 @@ function getTopic() {
 
 function addNewThread(title,message) {
     $.ajax({
-        url:"comments/newthread?author=xiaoming&commentTitle="+title+"&topic="+topic_temp+"&message="+message,
+        url:"comments/newthread?author="+$.cookie("username")+"&commentTitle="+title+"&topic="+topic_temp+"&message="+message,
         type:"post",
         datatype:"json",
         async:false,
