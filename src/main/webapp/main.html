@@ -35,7 +35,12 @@
 					<a class="dropdown-item" href=/profile>Profile</a>
 					<a class="dropdown-item" href="message.html">Message</a>
 				  	<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Log out</a>
+					<a class="dropdown-item" href=/logout onclick="logout()" >Log out</a>
+					<script>
+						function logout() {
+							$.cookie("username") = null;
+						}
+					</script>
 				</div>
 			</li>
     	</ul>

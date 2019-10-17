@@ -102,7 +102,7 @@ window.onmouseout = function () {
 };
 
 (function($){
-    $('.login100-form-btn').on('click',function(){
+    $('#in').on('click',function(){
         console.log($.cookie("username"));
     }
 );
