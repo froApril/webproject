@@ -2,7 +2,12 @@
 html{height: 100%}
 body{margin: 0;height: 100%;
   background: #fff;}
-canvas{display: block;width: 100%;height: 100%;}
+canvas{display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
 nav{
   width: 100%;
   background: transparent;
@@ -12,7 +17,7 @@ nav{
   line-height: 100%;
   /*top: 0;*/
   position: absolute;
-  top: 50%;
+  top:0;
   /*font-size: 50px;*/
 }
 
