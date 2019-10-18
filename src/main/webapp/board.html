@@ -29,7 +29,7 @@
 	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    	<ul class="navbar-nav mr-auto">
 	      		<li class="nav-item active">
-	        		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	        		<a class="nav-link" href=/main>Home <span class="sr-only">(current)</span></a>
 	      		</li>
 	      		<li class="nav-item">
 	        		<a class="nav-link" href="#">Link</a>
@@ -39,10 +39,16 @@
 					  User
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Profile</a>
+						<a class="dropdown-item" href=/profile>Profile</a>
 						<a class="dropdown-item" href="message.html">Message</a>
 					  	<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Log out</a>
+						<a class="dropdown-item" onclick="logout()" href=/logout >Log out</a>
+						<script>
+							function logout() {
+								$.cookie("username", null, { path: '/' });
+								console.log($.cookie("username"));
+							}
+						</script>
 					</div>
 				</li>
 	    	</ul>
