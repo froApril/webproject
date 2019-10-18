@@ -76,33 +76,86 @@
      </nav>
 
      <div class = "contentContainer">
-          <h2>Photo Profile</h2>
-          <div class="comment-user--profile-photo">
-               <img id = "photo" height="200" width="200" />
+
+          <div style="text-align:center">
+          <div class="comment-user--profile-photo" >
+               <img id = "photo" height="200" width="200"/>
           </div>
-          <button type = "button" id = "changePh">Enter a Promo Code to Change Photo Profile</button>
-
-
-          <h2>User name </h2>
-          <h2> <pre id = "username"></pre></h2>
-
-          <h3>Nick name</h3>
-          <h3> <pre id = "nickname"></pre></h3>
-
-          <button type = "button" id = "changeN">Change Your Nick Name</button>
-
-          <button type = "button" id = "changePs">Change Your Password</button>
-
-          <div class="comment-user--profile-photo">
-               <h3>Gender</h3>
-               <img id ="gender" height="50" width="50" />
-
+               <p>
           </div>
 
-          <h2>Contact Details</h2>
-          <h3> <pre id = "contact"></pre></h3>
-          <h2>Personal Description</h2>
-          <h3> <pre id = "userPre"></pre></h3>
+
+               <div style="text-align:center">  <button type = "button" id = "changePh" class="btn btn-primary btn-lg">Enter a Promo Code to Change Photo Profile</button>
+          </div>
+
+          <div>
+          <h3>User Name: <pre id = "username" style="display:inline"></pre></h3>
+               <button type = "button" id = "changePs" class="btn btn-primary btn-lg">Change Your Password</button>
+          </div>
+
+          <br>
+
+          <div>
+          <h3>Nick Name: <pre id = "nickname" style="display:inline"></pre></h3>
+          <button type = "button" id = "changeN" class="btn btn-primary btn-lg">Change Your Nick Name</button>
+          </div>
+
+          <br>
+
+          <div class="comment-user--profile-photo">
+               <h3>Gender   <img id ="gender" style="display:inline" height="30" width="30"/></h3>
+          </div>
+
+          <br>
+          <h3>Contact Details</h3>
+          <h4> <pre id = "contact"></pre></h4>
+
+          <br>
+
+
+<!--          <h2>Modal</h2>-->
+<!--          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--               Add-->
+<!--          </button>-->
+<!--          <button class="btn btn-primary btn-lg" onclick="update_info(8)" data-toggle="modal" data-target="#myModal">-->
+<!--               Change-->
+<!--          </button>-->
+<!--          &lt;!&ndash; 模态框（Modal） &ndash;&gt;-->
+<!--          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+<!--               <div class="modal-dialog">-->
+<!--                    <div class="modal-content">-->
+<!--                         <div class="modal-header">-->
+<!--                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">-->
+<!--                                   &times;-->
+<!--                              </button>-->
+<!--                              <h4 class="modal-title" id="myModalLabel">-->
+<!--                                  modle title-->
+<!--                              </h4>-->
+<!--                         </div>-->
+<!--                         <form id="form_data">-->
+<!--                              <div class="modal-body">-->
+<!--                                   user_id: <input type="text" id="user_id" name="user_id"/>-->
+<!--                                   name: <input type="text" id="user_name" name="user_name"/>-->
+<!--                                   <input type="hidden" id="act" value="add" name="act"/>-->
+<!--                              </div>-->
+<!--                              <div class="modal-footer">-->
+<!--                                   <button type="button" class="btn btn-default" data-dismiss="modal">-->
+<!--                                        Cancel-->
+<!--                                   </button>-->
+<!--                                   <button type="button" onclick="add_info()" class="btn btn-primary">-->
+<!--                                        Submit-->
+<!--                                   </button>-->
+<!--                              </div>-->
+<!--                         </form>-->
+<!--                    </div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--               </div>&lt;!&ndash; /.modal &ndash;&gt;-->
+<!--          </div>-->
+
+
+
+
+          <h3>Personal Description</h3>
+          <h4> <pre id = "userPre"></pre></h4>
 
      </div>
      <button type="button" id = "in">

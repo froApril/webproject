@@ -12,6 +12,7 @@
     </data-source>
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="d2258620-c0fe-4c33-9c7d-62f2d681b4ab">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>
 </project>
