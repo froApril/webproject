@@ -65,7 +65,7 @@ public class SignupController {
                  int number=random.nextInt(62);
                  sb.append(str.charAt(number));
              }
-             String nick = "<UID>" + sb.toString();
+             String nick = "User:" + sb.toString();
 
             userEntity.setUsername(username);
             userEntity.setPassword(password);

@@ -96,7 +96,7 @@ window.onmouseout = function () {
 
 };
 
-    console.log($.cookie("username").toString());
+
 
     var param = {};
 
@@ -127,7 +127,89 @@ window.onmouseout = function () {
     });
 
 
-    $('#in').on('click',function(){
-        console.log($.cookie("username").toString());
+    $('#changePh').on('click',function(){
+
+        var pCode =prompt("Enter Promo Code");
+        if (pCode!=null && pCode!=""){
+            var param = {};
+            param.username = $.cookie("username").toString();
+            param.pCode = pCode;
+            $.ajax({
+                url: "changePh",
+                type: "post",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    var plink = "resources/images/photo/" + state.userImg.toString() +".png";
+                    $('#photo').attr("src",plink.toString());
+                    console.log(state.result);
+                    window.location.reload();
+                }
+            });
+
+        }
     });
+
+
+    $('#changeN').on('click',function(){
+
+        var nick =prompt("Enter New Nick Name");
+        if (nick!=null && nick!=""){
+            var param = {};
+            param.username = $.cookie("username").toString();
+            param.nick = nick;
+            $.ajax({
+                url: "changeN",
+                type: "post",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    $('#nickname').html(state.userN.toString());
+                    console.log(state.result);
+                    window.location.reload();
+                }
+            });
+
+        }
+    });
+    $('#changePs').on('click',function(){
+        var ps =prompt("Enter Old Password");
+        if (ps!=null && ps!=""){
+            var param = {};
+            param.username = $.cookie("username").toString();
+            param.ps = ps;
+            $.ajax({
+                url: "oldPas",
+                type: "get",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+
+                    var nps =prompt("Enter New Password");
+                    var ps = {};
+                    ps.username = $.cookie("username").toString();
+                    ps.ps = nps;
+                    $.ajax({
+                        url: "newPas",
+                        type: "get",
+                        data: ps,
+                        datatype: "json",
+                        success: function (state) {
+                            alert("You Password has Changed")
+                            console.log(state.result);
+                            window.location.reload();
+                        }
+                    });
+
+                }
+            });
+
+        }
+    });
+    // $('#ichangePh').on('click',function(){
+    //     console.log($.cookie("username").toString());
+    // });
+    // $('#ichangePh').on('click',function(){
+    //     console.log($.cookie("username").toString());
+    // });
 })(jQuery);
