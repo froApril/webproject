@@ -227,9 +227,32 @@ window.onmouseout = function () {
         else
             alert("Password shouldn't be Empty")
     });
-    // $('#ichangePh').on('click',function(){
-    //     console.log($.cookie("username").toString());
-    // });
+
+    $('#changeC').on('click',function(){
+        var contactI =prompt("Enter Contact information");
+        if (contactI!=null && contactI!=""){
+            var param = {};
+            param.username = $.cookie("username").toString();
+            param.contactI = contactI;
+            $.ajax({
+                url: "changeC",
+                type: "get",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    if(state.result == "SUCCESS"){
+                        $('#contact').html(state.userCon.toString());
+                        console.log(state.result);
+
+                        window.location.reload();
+                    }
+                    else
+                        alert("Information is Empty ");
+                }
+            });
+
+        }
+    });
     // $('#ichangePh').on('click',function(){
     //     console.log($.cookie("username").toString());
     // });

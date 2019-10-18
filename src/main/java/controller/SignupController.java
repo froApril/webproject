@@ -79,7 +79,7 @@ public class SignupController {
                 userEntity.setGender("Secret");
             userEntity.setPhotoPro(Integer.toString(img));
             userEntity.setNickname(nick);
-            userEntity.setContactIno("Here for contact Details");
+            userEntity.setContactIno(email);
             userEntity.setPerDes("Here for personal Description");
             userEntityDao.addUser(userEntity);
             result.put("result","SUCCESS");

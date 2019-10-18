@@ -129,6 +129,24 @@ public class ProfileController {
 
 
 
+    @RequestMapping(value= "/changeC",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> newC(String username, String contactI){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntity userEntity = userEntityDao.getUserByName(username);
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        if(userEntityDao.setContactInfo(username,contactI))
+        {
+            result.put("userCon",userEntity.getContactIno());
+            result.put("result","SUCCESS");
+        }
+
+
+        return result;
+    }
+
 }
 
 
