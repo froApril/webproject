@@ -114,7 +114,6 @@ public class ProfileController {
     public Map<String,Object> newPas(String username, String ps){
 
         UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
-        UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
         if(userEntityDao.setNewpassword(username,ps))
@@ -140,6 +139,25 @@ public class ProfileController {
         if(userEntityDao.setContactInfo(username,contactI))
         {
             result.put("userCon",userEntity.getContactIno());
+            result.put("result","SUCCESS");
+        }
+
+
+        return result;
+    }
+
+
+    @RequestMapping(value= "/changePre",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> newPre(String username, String pre){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntity userEntity = userEntityDao.getUserByName(username);
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        if(userEntityDao.setDes(username,pre))
+        {
+            result.put("userPre",userEntity.getContactIno());
             result.put("result","SUCCESS");
         }
 

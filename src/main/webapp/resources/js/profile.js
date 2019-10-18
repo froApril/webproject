@@ -246,14 +246,37 @@ window.onmouseout = function () {
 
                         window.location.reload();
                     }
-                    else
-                        alert("Information is Empty ");
+
                 }
             });
 
         }
+        else
+            alert("Information is Empty ");
     });
-    // $('#ichangePh').on('click',function(){
-    //     console.log($.cookie("username").toString());
-    // });
+
+    $('#changePre').on('click',function(){
+        var pre =prompt("Write Something Here");
+        if (pre!=null || pre!=""){
+            pre =  "I'm an empty person";
+        }
+            var param = {};
+            param.username = $.cookie("username").toString();
+            param.pre = pre;
+            $.ajax({
+                url: "changePre",
+                type: "get",
+                data: param,
+                datatype: "json",
+                success: function (state) {
+                    if (state.result == "SUCCESS") {
+                        $('#contact').html(state.userPre.toString());
+                        console.log(state.result);
+                        window.location.reload();
+                    }
+
+                }
+            });
+
+    });
 })(jQuery);
