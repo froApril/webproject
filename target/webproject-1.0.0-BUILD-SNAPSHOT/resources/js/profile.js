@@ -1,3 +1,4 @@
+(function ($){
 class Circle {
 
     constructor(x, y) {
@@ -95,9 +96,33 @@ window.onmouseout = function () {
 
 };
 
-(function($){
+    console.log($.cookie("username").toString());
+
+    var param = {};
+
+    param.username = $.cookie("username").toString();
+
+    $.ajax({
+        url: "getProfile",
+        type: "post",
+        data: param,
+        datatype: "json",
+        success: function (state) {
+
+            $('#username').html(state.username);
+            $('#nickname').html(state.userN);
+            $('#contact').html(state.userCon);
+            $('#userPre').html(state.userPre);
+
+            console.log(state.userImgs)
+
+
+
+        }
+    });
+
+
     $('#in').on('click',function(){
-        console.log($.cookie("username"));
-    }
-);
+        console.log($.cookie("username").toString());
+    });
 })(jQuery);
