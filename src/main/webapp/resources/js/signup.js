@@ -34,7 +34,7 @@
 
                         window.location.href = "/main"
                     } else {
-                        alert(state.result)
+
                         $('#errlog').css("display", "block")
                     }
 

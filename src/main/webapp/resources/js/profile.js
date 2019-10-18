@@ -53,19 +53,19 @@ class currentCirle extends Circle {
 }
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-let canvas = document.getElementById('canvas');
-let ctx = canvas.getContext('2d');
-let w = canvas.width = canvas.offsetWidth;
-let h = canvas.height = canvas.offsetHeight;
-let circles = [];
-let current_circle = new currentCirle(0, 0)
+var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width = canvas.offsetWidth;
+    var h = canvas.height = canvas.offsetHeight;
+    var circles = [];
+    var current_circle = new currentCirle(0, 0)
 
-let draw = function () {
+    var draw = function () {
     ctx.clearRect(0, 0, w, h);
-    for (let i = 0; i < circles.length; i++) {
+    for (var i = 0; i < circles.length; i++) {
         circles[i].move(w, h);
         circles[i].drawCircle(ctx);
-        for (j = i + 1; j < circles.length; j++) {
+        for (var j = i + 1; j < circles.length; j++) {
             circles[i].drawLine(ctx, circles[j])
         }
     }
@@ -76,20 +76,20 @@ let draw = function () {
         }
     }
     requestAnimationFrame(draw)
-}
+};
 
-let init = function (num) {
+    var init = function (num) {
     for (var i = 0; i < num; i++) {
         circles.push(new Circle(Math.random() * w, Math.random() * h));
     }
     draw();
-}
+};
 window.addEventListener('load', init(60));
 window.onmousemove = function (e) {
     e = e || window.event;
     current_circle.x = e.clientX;
     current_circle.y = e.clientY;
-}
+};
 window.onmouseout = function () {
     current_circle.x = null;
     current_circle.y = null;

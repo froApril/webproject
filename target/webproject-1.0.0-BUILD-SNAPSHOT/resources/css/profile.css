@@ -21,7 +21,10 @@ nav{
   /*font-size: 50px;*/
 }
 
-
+#profile-photo{ margin:10px auto}
+#profile-photo img{ border-radius:50%}
+#gender-photo{ margin:10px auto}
+#gender-photo img{ border-radius:50%}
 
 
 
