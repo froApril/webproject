@@ -20,6 +20,7 @@
             param.username = $("input[name='username']").val();
             param.password = $("input[name='pass']").val();
             param.email = $("input[name='email']").val();
+            param.gen = $("#ss").children("option:selected").val();
             $.ajax({
                 url: "signup",
                 type: "post",
@@ -65,11 +66,6 @@
         }
         if($(input).attr('name') == 'confirmPassword') {
             if($(input).val() != $("input[name='pass']").val()) {
-                return false;
-            }
-        }
-        if($(input).attr('name') == 'select') {
-            if($(input).text() != "Male") {
                 return false;
             }
         }

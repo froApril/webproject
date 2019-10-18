@@ -20,6 +20,7 @@
             param.username = $("input[name='username']").val();
             param.password = $("input[name='pass']").val();
             param.email = $("input[name='email']").val();
+            param.gen = $("#ss").children("option:selected").val();
             $.ajax({
                 url: "signup",
                 type: "post",

@@ -35,7 +35,7 @@ public class SignupController {
 
     @RequestMapping(value= "/signup",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> signup(String username, String password, String email){
+    public Map<String,Object> signup(String username, String password, String email, String gen){
         UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
         UserEntity userEntity = new UserEntity();
         Map<String, Object> result = new HashMap<String, Object>();
@@ -65,13 +65,18 @@ public class SignupController {
                  int number=random.nextInt(62);
                  sb.append(str.charAt(number));
              }
-             String nick = "User:" + sb.toString();
+             String nick = "UseR" + sb.toString();
 
             userEntity.setUsername(username);
             userEntity.setPassword(password);
             userEntity.setEmail(email);
             userEntity.setiSstaff(0);
-            userEntity.setGender("Male");
+            if(gen.equals("1"))
+                userEntity.setGender("Male");
+            if(gen.equals("2"))
+                userEntity.setGender("Female");
+            if(gen.equals("0"))
+                userEntity.setGender("Secret");
             userEntity.setPhotoPro(Integer.toString(img));
             userEntity.setNickname(nick);
             userEntity.setContactIno("Here for contact Details");
