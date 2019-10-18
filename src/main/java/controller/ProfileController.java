@@ -53,8 +53,76 @@ public class ProfileController {
         return result;
     }
 
+    @RequestMapping(value= "/changePh",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> changePh(String username, String pCode){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+
+        Map<String, Object> result = new HashMap<String, Object>();
+
+       if(userEntityDao.setNewphoto(username,pCode))
+       {
+           UserEntity userEntity = userEntityDao.getUserByName(username);
+           result.put("userImg",userEntity.getPhotoPro());
+           result.put("result","SUCCESS");
+       }
 
 
+        return result;
+    }
+
+    @RequestMapping(value= "/changeN",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> changeN(String username, String nick){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        if(userEntityDao.setNewnickname(username,nick))
+        {
+            UserEntity userEntity = userEntityDao.getUserByName(username);
+            result.put("userN",userEntity.getNickname());
+            result.put("result","SUCCESS");
+        }
+
+
+        return result;
+    }
+
+    @RequestMapping(value= "/oldPas",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> oldPas(String username, String ps){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntity userEntity = userEntityDao.getUserByName(username);
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        if(userEntity.getPassword() == ps)
+        {
+            result.put("result","SUCCESS");
+        }
+
+
+        return result;
+    }
+    @RequestMapping(value= "/newPas",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> newPas(String username, String ps){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntity userEntity = userEntityDao.getUserByName(username);
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        if(userEntityDao.setNewpassword(username,ps))
+        {
+            result.put("result","SUCCESS");
+        }
+
+
+        return result;
+    }
 
 
 
