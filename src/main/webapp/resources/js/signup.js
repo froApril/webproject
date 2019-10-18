@@ -68,6 +68,11 @@
                 return false;
             }
         }
+        if($(input).attr('name') == 'select') {
+            if($(input).text() != "Male") {
+                return false;
+            }
+        }
         else {
             if($(input).val().trim() == ''){
                 return false;
