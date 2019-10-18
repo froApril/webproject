@@ -3,11 +3,12 @@ package entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Topics", schema = "webApplication", catalog = "")
+@Table(name = "Topics", schema = "webApplication")
 public class TopicsEntity {
     private int id;
     private String topicName;
     private Integer commentNum;
+    private String topicDescription;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -28,6 +29,15 @@ public class TopicsEntity {
     public void setTopicName(String topicName) {
         this.topicName = topicName;
     }
+
+    @Basic
+    @Column(name = "topicDescription", nullable = false)
+    public String getTopicDescription() {
+        return topicDescription;
+    }
+    public void setTopicDescription(String topicDescription) {this.topicDescription = topicDescription;}
+
+
 
     @Basic
     @Column(name = "commentNum", nullable = true)

@@ -6,6 +6,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateFactory;
+
+import java.util.List;
+
 /**
  * @author XUYIFEI
  *
@@ -35,6 +38,27 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         }
 
         return findTopic;
+    }
+
+    @Override
+    public List<TopicsEntity> getAllTopic() {
+
+        List<TopicsEntity> allTopic = null ;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Query query = session
+                    .createQuery("from TopicsEntity");
+            allTopic.addAll(query.list());
+            transaction.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            session.close();
+        }
+
+        return allTopic;
     }
 
     @Override
