@@ -7,7 +7,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
 
 	<link rel="stylesheet" href="resources/css/mainpage.css">
 
@@ -63,12 +62,11 @@
 		<h1>Choose one of the topics to see the details</h1>
 	</div>
 
-
 	<div class="topic-list">
 		<div class="row">
 			<div class="col-2">
 				<div id="topics-list" class="list-group">
-					<a class="list-group-item list-group-item-action" href="#list-item-1">comp2017</a>
+					<a class="list-group-item list-group-item-action" href="#list-item-1" >comp2017</a>
 					<a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
 					<a class="list-group-item list-group-item-action" href="#list-item-3">Item 4</a>
 					<a class="list-group-item list-group-item-action" href="#list-item-4">Item 1</a>
@@ -96,9 +94,18 @@
 		</div>
 	</div>
 
+	<script>
+		document.getElementById('topics-list').onload= function(){
+			document.getElementById('topics-list').innerHTML = initData();
+			// setClickNewThread();
+		}
+	</script>
 
+
+	<script src="resources/js/topic-loading.js"></script>
 
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
 
 </body>
 </html>

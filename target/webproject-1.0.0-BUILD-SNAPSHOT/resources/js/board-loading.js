@@ -27,7 +27,6 @@ function test(data) {
     console.log(data)
 }
 
-
 function initData(){
     // $.cookie("username", "xiaoming",{ expires: 7, path: '/' });
     var ht="";
