@@ -74,7 +74,8 @@ public class SignupController {
             userEntity.setGender("Male");
             userEntity.setPhotoPro(Integer.toString(img));
             userEntity.setNickname(nick);
-            userEntity.setPerDes("This is personal Description");
+            userEntity.setContactIno("Here for contact Details");
+            userEntity.setPerDes("Here for personal Description");
             userEntityDao.addUser(userEntity);
             result.put("result","SUCCESS");
         }
