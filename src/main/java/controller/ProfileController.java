@@ -67,6 +67,8 @@ public class ProfileController {
            result.put("userImg",userEntity.getPhotoPro());
            result.put("result","SUCCESS");
        }
+       else
+           result.put("result","Fail");
 
 
         return result;
@@ -99,7 +101,7 @@ public class ProfileController {
         UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
-        if(userEntity.getPassword() == ps)
+        if(userEntity.getPassword().equals(ps))
         {
             result.put("result","SUCCESS");
         }

@@ -119,35 +119,37 @@ window.onmouseout = function () {
             $('#gender').attr("src",link.toString());
 
 
-
-
-
-
         }
     });
 
 
     $('#changePh').on('click',function(){
 
-        var pCode =prompt("Enter Promo Code");
-        if (pCode!=null && pCode!=""){
-            var param = {};
-            param.username = $.cookie("username").toString();
-            param.pCode = pCode;
-            $.ajax({
-                url: "changePh",
-                type: "post",
-                data: param,
-                datatype: "json",
-                success: function (state) {
-                    var plink = "resources/images/photo/" + state.userImg.toString() +".png";
-                    $('#photo').attr("src",plink.toString());
-                    console.log(state.result);
-                    window.location.reload();
-                }
-            });
+            var pCode =prompt("Enter Redemption Code");
+            if (pCode!=null && pCode!=""){
+                var param = {};
+                param.username = $.cookie("username").toString();
+                param.pCode = pCode;
+                $.ajax({
+                    url: "changePh",
+                    type: "post",
+                    data: param,
+                    datatype: "json",
+                    success: function (state) {
+                        if(state.result == "SUCCESS"){
+                            var plink = "resources/images/photo/" + state.userImg.toString() +".png";
+                            $('#photo').attr("src",plink.toString());
+                            console.log(state.result);
 
-        }
+                            window.location.reload();
+                        }
+                        else
+                            alert("Invalid Redemption Code")
+                    }
+                });
+
+            }
+
     });
 
 
@@ -173,6 +175,7 @@ window.onmouseout = function () {
         }
     });
     $('#changePs').on('click',function(){
+
         var ps =prompt("Enter Old Password");
         if (ps!=null && ps!=""){
             var param = {};
@@ -184,27 +187,45 @@ window.onmouseout = function () {
                 data: param,
                 datatype: "json",
                 success: function (state) {
+                    if(state.result == "SUCCESS"){
+                        while(1){
+                            var nps =prompt("Enter New Password");
+                            if(nps.toString().length < 8)
+                            {
+                                alert("At least eight characters length password ");
 
-                    var nps =prompt("Enter New Password");
-                    var ps = {};
-                    ps.username = $.cookie("username").toString();
-                    ps.ps = nps;
-                    $.ajax({
-                        url: "newPas",
-                        type: "get",
-                        data: ps,
-                        datatype: "json",
-                        success: function (state) {
-                            alert("You Password has Changed")
-                            console.log(state.result);
-                            window.location.reload();
+                            }
+                            else
+                                break;
                         }
-                    });
+
+                        var ps = {};
+                        ps.username = $.cookie("username").toString();
+                        ps.ps = nps;
+                        $.ajax({
+                            url: "newPas",
+                            type: "get",
+                            data: ps,
+                            datatype: "json",
+                            success: function (state) {
+                                alert("You Password has Changed")
+                                console.log(state.result);
+                                window.location.reload();
+                            }
+                        });
+
+                    }
+                    else
+                    {
+                        alert("Wrong Password");
+                    }
 
                 }
             });
 
         }
+        else
+            alert("Password shouldn't be Empty")
     });
     // $('#ichangePh').on('click',function(){
     //     console.log($.cookie("username").toString());

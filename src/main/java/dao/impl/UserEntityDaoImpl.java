@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import utils.HibernateFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -192,34 +193,31 @@ public class UserEntityDaoImpl implements UserEntityDao {
         return true;
     }
 
-    @Override
+
+        @Override
     public Boolean setContactInfo(String username, String contactInfo) {
-        return null;
+        Session session = null;
+        try {
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            UserEntity userEntity = this.getUserByName(username);
+            if (!isUsernameExist(userEntity.getUsername())) {
+                return false;
+            }
+
+            userEntity.setContactIno(contactInfo);
+            session.update(userEntity);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        } finally {
+            session.close();
+        }
+        return true;
     }
 
-    //    @Override
-//    public Boolean setContactInfo(String username, String contactInfo) {
-//        Session session = null;
-//        try {
-//            session = HibernateFactory.getSession();
-//            session.beginTransaction();
-//            UserEntity userEntity = this.getUserByName(username);
-//            if (!isUsernameExist(userEntity.getUsername())) {
-//                return false;
-//            }
-//
-//            userEntity.setContactIno(contactInfo);
-//            session.update(userEntity);
-//            session.getTransaction().commit();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            session.getTransaction().rollback();
-//            return false;
-//        } finally {
-//            session.close();
-//        }
-//        return true;
-//    }
     @Override
     public Boolean setNewphoto(String username, String photoUrl) {
         Session session =null;
@@ -228,6 +226,10 @@ public class UserEntityDaoImpl implements UserEntityDao {
             session.beginTransaction();
             UserEntity userEntity = this.getUserByName(username);
             if(!isUsernameExist(userEntity.getUsername())){
+                return false;
+            }
+            List<String> sep = Arrays.asList("Joker", "SSGS", "UMR");
+            if(!sep.contains(photoUrl)){
                 return false;
             }
 
