@@ -1,6 +1,7 @@
 package controller;
 
 import dao.impl.UserEntityDaoImpl;
+import entities.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,6 +32,27 @@ public class ProfileController {
     public String profile(){
         return "profile";
     }
+
+    @RequestMapping(value= "/getProfile",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> getPro(String username){
+
+        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntity userEntity = userEntityDao.getUserByName(username);
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        result.put("username",userEntity.getUsername());
+        result.put("userN",userEntity.getNickname());
+        result.put("userImg",userEntity.getPhotoPro());
+        result.put("userGen",userEntity.getGender());
+        result.put("userCon",userEntity.getContactIno());
+        result.put("userPre",userEntity.getPerDes());
+        result.put("userPs",userEntity.getPassword());
+        result.put("result","SUCCESS");
+
+        return result;
+    }
+
 
 
 
