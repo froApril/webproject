@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 //import dao.impl.TopicEntityDaoImpl;
 //import entities.TopicEntity;
@@ -54,15 +55,25 @@ public class SignupController {
             result.put("result","fail, no email exist");
         }
         else{
+
+             Random random = new Random(System.currentTimeMillis());
+             int img = random.nextInt(5) + 1;
+             String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+             StringBuffer sb=new StringBuffer();
+             for(int i=0;i<5;i++){
+                 int number=random.nextInt(62);
+                 sb.append(str.charAt(number));
+             }
+             String nick = "<UID>" + sb.toString();
+
             userEntity.setUsername(username);
             userEntity.setPassword(password);
             userEntity.setEmail(email);
             userEntity.setiSstaff(0);
-//            userEntity.setPhotoPro(null);
-//            userEntity.setContactIno(null);
-//            userEntity.setPerDes(null);
-//            userEntity.setNickname(null);
             userEntity.setGender("Male");
+            userEntity.setPhotoPro(Integer.toString(img));
+            userEntity.setNickname(nick);
             userEntity.setPerDes("This is personal Description");
             userEntityDao.addUser(userEntity);
             result.put("result","SUCCESS");

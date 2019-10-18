@@ -109,12 +109,17 @@ window.onmouseout = function () {
         datatype: "json",
         success: function (state) {
 
-            $('#username').html(state.username);
-            $('#nickname').html(state.userN);
-            $('#contact').html(state.userCon);
-            $('#userPre').html(state.userPre);
+            const plink = "resources/images/photo/" + state.userImg.toString() +".png";
+            $('#photo').attr("src",plink.toString());
+            $('#username').html(state.username.toString());
+            $('#nickname').html(state.userN.toString());
+            $('#contact').html(state.userCon.toString());
+            $('#userPre').html(state.userPre.toString());
+            const link = "resources/images/gender/" + state.userGen.toString() +".png";
+            $('#gender').attr("src",link.toString());
 
-            console.log(state.userImgs)
+
+
 
 
 
