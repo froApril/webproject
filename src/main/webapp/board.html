@@ -16,6 +16,7 @@
 
 
 	<link href="resources/css/board.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="resources/css/profile.css">
 
 </head>
 <body>
@@ -32,7 +33,24 @@
 	        		<a class="nav-link" href=/main>Home <span class="sr-only">(current)</span></a>
 	      		</li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="#">Link</a>
+					<a class="nav-link" href=/profile><img id = "photoh" class="round_icon"></a>
+					<script>
+						var param = {};
+						param.username = $.cookie("username").toString();
+						$.ajax({
+							url: "getProfile",
+							type: "post",
+							data: param,
+							datatype: "json",
+							success: function (state) {
+
+								var plink = "resources/images/photo/" + state.userImg.toString() + ".png";
+								$('#photoh').attr("src", plink.toString());
+
+
+							}
+						})
+					</script>
 	      		</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

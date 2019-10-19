@@ -13,9 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link href="resources/css/board.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/profile.css">
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <img src="resources/images/icons/brand-icon.svg" alt=""
@@ -28,7 +29,24 @@
                 <a class="nav-link" href=/main>Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href=/profile><img id = "photoh" class="round_icon"></a>
+                <script>
+                    var param = {};
+                    param.username = $.cookie("username").toString();
+                    $.ajax({
+                        url: "getProfile",
+                        type: "post",
+                        data: param,
+                        datatype: "json",
+                        success: function (state) {
+
+                            var plink = "resources/images/photo/" + state.userImg.toString() + ".png";
+                            $('#photoh').attr("src", plink.toString());
+
+
+                        }
+                    })
+                </script>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

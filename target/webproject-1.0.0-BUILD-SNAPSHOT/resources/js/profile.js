@@ -110,6 +110,7 @@ window.onmouseout = function () {
         success: function (state) {
 
             var plink = "resources/images/photo/" + state.userImg.toString() +".png";
+            $('#photoh').attr("src",plink.toString());
             $('#photo').attr("src",plink.toString());
             $('#username').html(state.username.toString());
             $('#nickname').html(state.userN.toString());

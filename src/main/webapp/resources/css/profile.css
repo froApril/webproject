@@ -35,7 +35,15 @@ h1,h2,h3,h4,h5,h6 {
   justify-content: center;
   overflow: hidden;
 }
-
+#photoh{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
 
 .jumbotron{
