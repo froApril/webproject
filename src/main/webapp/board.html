@@ -58,7 +58,6 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href=/profile>Profile</a>
-						<a class="dropdown-item" href="message.html">Message</a>
 					  	<div class="dropdown-divider"></div>
 						<a class="dropdown-item" onclick="logout()" href=/logout >Log out</a>
 						<script>
@@ -70,10 +69,10 @@
 					</div>
 				</li>
 	    	</ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id ="searchI">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id = "searchB">Search</button>
+			</form>
 	  </div>
 	</nav>
 
@@ -103,6 +102,7 @@
 	<script src="resources/js/board-loading.js"></script>
 	<script type="text/javascript">
 	</script>
+	<script src="resources/js/search.js"></script>
 </footer>
 
 </html>

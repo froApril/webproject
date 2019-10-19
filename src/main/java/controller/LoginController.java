@@ -1,6 +1,8 @@
 package controller;
 
+import dao.impl.TopicEntityDaoImpl;
 import dao.impl.UserEntityDaoImpl;
+import entities.TopicsEntity;
 import entities.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -71,6 +73,24 @@ public class LoginController {
     }
 
 
+    @RequestMapping(value= "/getT",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> getTopic(String topic){
+        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        Map<String, Object> result = new HashMap<String, Object>();
+
+        TopicsEntity topicsEntity = topicEntityDao.getTopicByName(topic);
+
+       if(topicsEntity == null)
+           result.put("result","fail");
+       else{
+           result.put("link","/comments?topic=" + topicsEntity.getTopicName());
+           result.put("result","SUCCESS");
+       }
+
+
+        return result;
+    }
 
 
 
