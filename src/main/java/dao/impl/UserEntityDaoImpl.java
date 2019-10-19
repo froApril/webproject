@@ -301,4 +301,23 @@ public class UserEntityDaoImpl implements UserEntityDao {
         UserEntity userEntity = this.getUserByName(username);
         return userEntity.getNickname();
     }
+
+    public UserEntity getEntityByNickname(String nickname){
+        UserEntity findUser = null;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Query query = session
+                    .createQuery("from UserEntity where nickname= " + "\'" + nickname + "\'");
+            findUser = (UserEntity) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return findUser;
+    }
 }

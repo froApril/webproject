@@ -12,7 +12,10 @@
             <column name="topicName" sql-type="varchar(30)" length="30"/>
         </property>
         <property name="commentNum">
-            <column name="commentNum" sql-type="int(100) unsigned" not-null="true"/>
+            <column name="commentNum" sql-type="int(100) unsigned" />
+        </property>
+        <property name="topicDescription">
+            <column name="topicDescription" sql-type="varchar(255)"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -2,6 +2,8 @@ package dao;
 
 import entities.TopicsEntity;
 
+import java.util.List;
+
 /**
  * @author XUYIFEI
  *
@@ -59,6 +61,8 @@ public interface TopicEntityDao {
      * exist, create one with new name.
      */
     boolean updateTopic(String oldName,String newName);
+
+    List<TopicsEntity> getAllTopics();
 
 
 }

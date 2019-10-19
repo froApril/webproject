@@ -12,6 +12,8 @@
 
 	<link href="resources/css/mainpage.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="resources/css/profile.css">
+    <script src="resources/js/topics_loading.js"></script>
+
 
 </head>
 <body>
@@ -87,39 +89,21 @@
 		<div class="row">
 			<div class="col-2">
 				<div id="topics-list" class="list-group">
-					<a class="list-group-item list-group-item-action" href="#list-item-1">comp2017</a>
-					<a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-					<a class="list-group-item list-group-item-action" href="#list-item-3">Item 4</a>
-					<a class="list-group-item list-group-item-action" href="#list-item-4">Item 1</a>
 				</div>
 			</div>
 			<div class="col-10">
 				<div data-spy="scroll" data-target="#topics-list" data-offset="0" class="topics-details" >
-					<h4 id="list-item-1">Comp2017</h4>
-					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
-					<a href="/comments?topic=comp2017" class="detail-link">Discuss board</a>
-					
 
-					<h4 id="list-item-2" class="margin-class">Item 2</h4>
-					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
-					<a href="#" class="detail-link">Discuss board</a>
-
-					<h4 id="list-item-3" class="margin-class">Item 3</h4>
-					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
-					<a href="#" class="detail-link">Discuss board</a>
-					<h4 id="list-item-4" class="margin-class">Item 4</h4>
-					<p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
-					<a href="#" class="detail-link">Discuss board</a>
 				</div>
 			</div>
 		</div>
+        <script>
+            getAllTopics();
+        </script>
 	</div>
 
-
-
-
-
-
-	<script src="resources/js/search.js"></script>
 </body>
+<footer>
+  	<script src="resources/js/search.js"></script>
+</footer>
 </html>

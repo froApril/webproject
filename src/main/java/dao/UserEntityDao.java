@@ -21,6 +21,7 @@ public interface UserEntityDao {
     Boolean isUsercanlogin(String username, String password);
 
     String getNicknameByUsername(String username);
+    UserEntity getEntityByNickname(String nickname);
 
     
 

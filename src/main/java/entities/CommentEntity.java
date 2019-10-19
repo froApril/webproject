@@ -11,6 +11,7 @@ public class CommentEntity {
     private String authorName;
     private String commentMessage;
     private int topicId;
+    private String imgUrl;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -33,7 +34,7 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "commentTitle", length = 100)
+    @Column(name = "commentTitle", nullable = true, length = 100)
     public String getCommentTitle() {
         return commentTitle;
     }
@@ -43,7 +44,7 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "authorName", nullable = false, length = 100)
+    @Column(name = "authorName", nullable = false, length = 30)
     public String getAuthorName() {
         return authorName;
     }
@@ -72,6 +73,16 @@ public class CommentEntity {
         this.topicId = topicId;
     }
 
+    @Basic
+    @Column(name = "imgURL", nullable = true)
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,6 +97,7 @@ public class CommentEntity {
         if (authorName != null ? !authorName.equals(that.authorName) : that.authorName != null) return false;
         if (commentMessage != null ? !commentMessage.equals(that.commentMessage) : that.commentMessage != null)
             return false;
+        if (imgUrl != null ? !imgUrl.equals(that.imgUrl) : that.imgUrl != null) return false;
 
         return true;
     }
@@ -98,6 +110,7 @@ public class CommentEntity {
         result = 31 * result + (authorName != null ? authorName.hashCode() : 0);
         result = 31 * result + (commentMessage != null ? commentMessage.hashCode() : 0);
         result = 31 * result + topicId;
+        result = 31 * result + (imgUrl != null ? imgUrl.hashCode() : 0);
         return result;
     }
 }
