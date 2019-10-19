@@ -1,5 +1,6 @@
 package controller;
 
+import dao.UserEntityDao;
 import dao.impl.UserEntityDaoImpl;
 import entities.UserEntity;
 import org.springframework.stereotype.Controller;
@@ -164,6 +165,19 @@ public class ProfileController {
 
         return result;
     }
+
+    @RequestMapping(value="/getNickname",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,String>getNickname(String username){
+        UserEntityDao userEntityDao = new UserEntityDaoImpl();
+        Map<String,String>result = new HashMap<String, String>();
+
+        result.put("nickname",((UserEntityDaoImpl) userEntityDao).getNicknameByUsername(username));
+
+        return result;
+
+    }
+
 
 }
 

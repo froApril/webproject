@@ -89,37 +89,46 @@ function getCommentDetails(title){
     });
 
     $("form").submit(function(e){
-
         $.ajax({
-            type:"post",
-            url:"/comments/add",
-            data:{author:$.cookie("username"),parent_id:parent_comment.id
-                ,message:$("#textarea-id").val(),topic_id: parent_comment.topicId},
+            url:"/getNickname?username="+$.cookie("username"),
+            type:"get",
             datatype:"json",
-            async: false,
-            success: function(data){
-                var newComment = "";
-                newComment+="<div class=\"container requester\">" +
-                    "<div class=\"row\">" +
-                    "<div class=\"col-2\">" +
-                    "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
-                    "</div>" +
-                    "<div class=\"col-10 user-info\">" +
-                    "<p class=\"user-name\">"+data.authorName+"</p>" +
-                    "</div>" +
-                    "</div>" +
-                    "<div class=\"row thread-message \">" +
-                    "<div class=\"col-2\">" +
-                    "</div>" +
-                    "<div class=\"col-10\">" +
-                    "<p>" +
-                    TransferString(data.commentMessage) +
-                    "</p>" +
-                    "</div>" +
-                    "</div>" +
-                    "</div>";
-                $("#replies-to-comment").append(newComment);
-                $("#textarea-id").val("");
+            async:false,
+            success:function(data){
+                $.ajax({
+                    type:"post",
+                    url:"/comments/add",
+                    data:{author:data.nickname,parent_id:parent_comment.id
+                        ,message:$("#textarea-id").val(),topic_id: parent_comment.topicId},
+                    datatype:"json",
+                    async: false,
+                    success: function(data){
+                        var newComment = "";
+                        newComment+="<div class=\"container requester\">" +
+                            "<div class=\"row\">" +
+                            "<div class=\"col-2\">" +
+                            "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+                            "</div>" +
+                            "<div class=\"col-10 user-info\">" +
+                            "<p class=\"user-name\">"+data.authorName+"</p>" +
+                            "</div>" +
+                            "</div>" +
+                            "<div class=\"row thread-message \">" +
+                            "<div class=\"col-2\">" +
+                            "</div>" +
+                            "<div class=\"col-10\">" +
+                            "<p>" +
+                            TransferString(data.commentMessage) +
+                            "</p>" +
+                            "</div>" +
+                            "</div>" +
+                            "</div>";
+                        $("#replies-to-comment").append(newComment);
+                        $("#textarea-id").val("");
+                    }
+
+                });
+
             }
 
         });

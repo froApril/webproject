@@ -297,4 +297,8 @@ public class UserEntityDaoImpl implements UserEntityDao {
 
     }
 
+    public String getNicknameByUsername(String username) {
+        UserEntity userEntity = this.getUserByName(username);
+        return userEntity.getNickname();
+    }
 }
