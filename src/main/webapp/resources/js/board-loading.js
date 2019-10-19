@@ -1,31 +1,3 @@
-// var originURL = sideIframe.location.href
-// var i = document.getElementById('sideIframe')
-// i.onload= function(){//这是异步加载的iframe
-//   sideIframe.window.f();
-// }
-
-// <div class="card">
-//     <div class="card-header" id="headingOne">
-//       <h5 class="mb-0">
-//         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-//         	<!-- max 20 -->
-//         	what's my question
-
-//         </button>
-//       </h5>
-//     </div>
-
-//     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-//       <div class="card-body">
-// 			<p class="author">Author: xyf</p>
-// 			<p class="date">Last edition:5/10/2019</p>
-//       </div>
-//     </div>
-// </div>
-
-function test(data) {
-    console.log(data)
-}
 
 
 function initData(){
