@@ -20,6 +20,8 @@ public interface UserEntityDao {
     Boolean deleteUser(String username);
     Boolean isUsercanlogin(String username, String password);
 
+    String getNicknameByUsername(String username);
+
     
 
 }
