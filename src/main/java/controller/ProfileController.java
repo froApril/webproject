@@ -168,13 +168,9 @@ public class ProfileController {
 
     @RequestMapping(value="/getNickname",method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,String>getNickname(String username){
+    public UserEntity getNickname(String username){
         UserEntityDao userEntityDao = new UserEntityDaoImpl();
-        Map<String,String>result = new HashMap<String, String>();
-
-        result.put("nickname",((UserEntityDaoImpl) userEntityDao).getNicknameByUsername(username));
-
-        return result;
+        return userEntityDao.getUserByName(username);
 
     }
 

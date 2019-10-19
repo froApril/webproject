@@ -3,8 +3,10 @@ package controller;
 
 import dao.CommentEntityDao;
 import dao.TopicEntityDao;
+import dao.UserEntityDao;
 import dao.impl.CommentEntityImpl;
 import dao.impl.TopicEntityDaoImpl;
+import dao.impl.UserEntityDaoImpl;
 import entities.CommentEntity;
 import entities.TopicsEntity;
 import org.springframework.stereotype.Controller;
@@ -75,8 +77,13 @@ public class BoardController {
         commentEntity.setCommentMessage(message);
         commentEntity.setTopicId(topic_id);
         commentEntity.setAuthorName(author);
+        UserEntityDao userEntityDao = new UserEntityDaoImpl();
+        commentEntity.setImgUrl(
+                userEntityDao.getEntityByNickname(author).getPhotoPro());
         CommentEntityDao commentEntityDao = new CommentEntityImpl();
         commentEntityDao.addNewComment(commentEntity);
+
+
         return commentEntity;
     }
 
@@ -92,6 +99,10 @@ public class BoardController {
         commentEntity.setTopicId(topicsEntity.getId());
         commentEntity.setCommentMessage(message);
         commentEntity.setCommentTitle(commentTitle);
+
+        UserEntityDao userEntityDao = new UserEntityDaoImpl();
+        commentEntity.setImgUrl(
+                userEntityDao.getEntityByNickname(author).getPhotoPro());
 
         CommentEntityDao commentEntityDao = new CommentEntityImpl();
         if(!commentEntityDao.addNewThread(commentEntity)){

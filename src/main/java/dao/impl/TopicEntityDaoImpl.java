@@ -6,6 +6,10 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateFactory;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.List;
+
 /**
  * @author XUYIFEI
  *
@@ -119,5 +123,29 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         }
 
         return true;
+    }
+
+    @Override
+    public List<TopicsEntity> getAllTopics() {
+        Session session =null;
+        List<TopicsEntity> list=null;
+        try{
+            session =HibernateFactory.getSession();
+            session.beginTransaction();
+            Query query = session
+                    .createQuery("from TopicsEntity");
+            list = query.list();
+            session.getTransaction().commit();
+            return list;
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return list;
     }
 }

@@ -43,23 +43,6 @@ public class HomeController {
         return "login";
     }
 
-
-
-    @RequestMapping(value="/test", method = RequestMethod.GET)
-    @ResponseBody
-    public TopicsEntity test(String topic){
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
-        if(topicEntityDao.updateTopic("12334","newname1")){
-            System.out.println("ok");
-        }
-
-        return topicEntityDao.getTopicByName("newname1");
-    }
-
-    @RequestMapping(value = "/test1",method = RequestMethod.GET)
-    public String test1(){
-	    return "test";
-    }
 }
 
 

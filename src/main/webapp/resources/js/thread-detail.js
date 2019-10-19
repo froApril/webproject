@@ -3,6 +3,7 @@ var parent_comment;
 function getTopicComment(comment) {
     var html = "";
     parent_comment = comment;
+    console.log(comment);
 
     html+= "<div class=\"container thread-title thread-main\">"+
         "<h1 style=\"margin-top: 20px\">"+comment.commentTitle+"</h1>"
@@ -10,7 +11,7 @@ function getTopicComment(comment) {
     html += "<div class=\"container requester\">" +
         "<div class=\"row\">" +
         "<div class=\"col-2\">" +
-        "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+        "<img src=\"resources/images/photo/"+comment.imgUrl+".png\"/>" +
         "</div>" +
         "<div class=\"col-10 user-info\">" +
         "<p class=\"user-name\">"+comment.authorName+"</p>" +
@@ -33,8 +34,6 @@ function getTopicComment(comment) {
 
 
 
-
-
 function getCommentDetails(title){
     var t = parent.window.getQueryVariable('topic');
     $.ajax({
@@ -50,7 +49,7 @@ function getCommentDetails(title){
                 temp += "<div class=\"container requester\">" +
                     "<div class=\"row\">" +
                     "<div class=\"col-2\">" +
-                    "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+                    "<img src=\"resources/images/photo/"+data[i].imgUrl+".png\"/>" +
                     "</div>" +
                     "<div class=\"col-10 user-info\">" +
                     "<p class=\"user-name\">"+data[i].authorName+"</p>" +
@@ -95,6 +94,8 @@ function getCommentDetails(title){
             datatype:"json",
             async:false,
             success:function(data){
+
+                var imgURL = data.photoPro;
                 $.ajax({
                     type:"post",
                     url:"/comments/add",
@@ -107,7 +108,7 @@ function getCommentDetails(title){
                         newComment+="<div class=\"container requester\">" +
                             "<div class=\"row\">" +
                             "<div class=\"col-2\">" +
-                            "<img src=\"resources/images/icons/user.svg\" alt=\"\">" +
+                            "<img src=\"resources/images/photo/"+ imgURL+".png\"/>" +
                             "</div>" +
                             "<div class=\"col-10 user-info\">" +
                             "<p class=\"user-name\">"+data.authorName+"</p>" +
