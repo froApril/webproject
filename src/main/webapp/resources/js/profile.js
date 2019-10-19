@@ -141,7 +141,7 @@ window.onmouseout = function () {
                             $('#photo').attr("src",plink.toString());
                             console.log(state.result);
 
-                            window.location.reload();
+                          //  window.location.reload();
                         }
                         else
                             alert("Invalid Redemption Code")
@@ -155,7 +155,10 @@ window.onmouseout = function () {
 
     $('#changeN').on('click',function(){
 
-        var nick =prompt("Enter New Nick Name");
+        var nick =prompt("Enter New Nickname");
+        if (nick.toString().length > 20){
+            alert("Nickname Should be less than 20 characters ")
+        }
         if (nick!=null && nick!=""){
             var param = {};
             param.username = $.cookie("username").toString();
@@ -168,11 +171,13 @@ window.onmouseout = function () {
                 success: function (state) {
                     $('#nickname').html(state.userN.toString());
                     console.log(state.result);
-                    window.location.reload();
+
                 }
             });
 
         }
+        else
+            alert("Nickname is Empty")
     });
     $('#changePs').on('click',function(){
 
@@ -183,7 +188,7 @@ window.onmouseout = function () {
             param.ps = ps;
             $.ajax({
                 url: "oldPas",
-                type: "get",
+                type: "post",
                 data: param,
                 datatype: "json",
                 success: function (state) {
@@ -204,13 +209,13 @@ window.onmouseout = function () {
                         ps.ps = nps;
                         $.ajax({
                             url: "newPas",
-                            type: "get",
+                            type: "post",
                             data: ps,
                             datatype: "json",
                             success: function (state) {
                                 alert("You Password has Changed")
                                 console.log(state.result);
-                                window.location.reload();
+                               // window.location.reload();
                             }
                         });
 
@@ -243,7 +248,6 @@ window.onmouseout = function () {
                     if(state.result == "SUCCESS"){
                         $('#contact').html(state.userCon.toString());
                         console.log(state.result);
-
                         window.location.reload();
                     }
 
@@ -257,7 +261,7 @@ window.onmouseout = function () {
 
     $('#changePre').on('click',function(){
         var pre =prompt("Write Something Here");
-        if (pre!=null || pre!=""){
+        if (pre ==null || pre ==""){
             pre =  "I'm an empty person";
         }
             var param = {};

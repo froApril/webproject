@@ -93,7 +93,7 @@ public class ProfileController {
         return result;
     }
 
-    @RequestMapping(value= "/oldPas",method = RequestMethod.GET)
+    @RequestMapping(value= "/oldPas",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> oldPas(String username, String ps){
 
@@ -109,7 +109,7 @@ public class ProfileController {
 
         return result;
     }
-    @RequestMapping(value= "/newPas",method = RequestMethod.GET)
+    @RequestMapping(value= "/newPas",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> newPas(String username, String ps){
 
@@ -157,7 +157,7 @@ public class ProfileController {
 
         if(userEntityDao.setDes(username,pre))
         {
-            result.put("userPre",userEntity.getContactIno());
+            result.put("userPre",userEntity.getPerDes());
             result.put("result","SUCCESS");
         }
 

@@ -23,8 +23,17 @@ nav{
 
 #profile-photo{ margin:10px auto}
 #profile-photo img{ border-radius:50%}
-#gender-photo{ margin:10px auto}
-#gender-photo img{ border-radius:50%}
+/*#gender-photo{ margin:10px auto}*/
+/*#gender-photo img{ border-radius:50%}*/
+.round_icon{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
 
 
