@@ -7,7 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09c6531e-1945-461b-91b0-231a8d70fd38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/topicList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/topicList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/webproject.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/webproject.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/Forget.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/META-INF/webproject.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/META-INF/webproject.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topicList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topicList.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,9 +63,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -76,11 +88,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="58" />
-    <option name="width" value="1280" />
-    <option name="height" value="733" />
-  </component>
   <component name="ProjectId" id="1QLux67AqWDeyjStVnPvNn143ew" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -91,6 +98,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571295507743" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
@@ -98,13 +106,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
-    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entities" />
       <recent name="" />
@@ -272,7 +273,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="" />
+      <changelist id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="" />
       <created>1567562442327</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -281,6 +282,7 @@
       <workItem from="1567923038623" duration="10607000" />
       <workItem from="1568349584599" duration="3468000" />
       <workItem from="1570347339683" duration="26266000" />
+      <workItem from="1571585718300" duration="5921000" />
     </task>
     <servers />
   </component>
