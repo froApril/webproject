@@ -21,7 +21,7 @@ function getAllTopics(){
 }
 
 function insertTopicList(data,index){
-    topic_html+="<a class=\"list-group-item list-group-item-action\" href=\"#list-item-"+index+"\">"+data.name+"</a>"
+    topic_html+=
 }
 
 /*function insertTopicDetail(data,index) {
