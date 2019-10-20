@@ -70,49 +70,87 @@ $(function(){
 });*/
 
 
-function initTable() {
-    //先销毁表格
-    $('#cusTable').bootstrapTable('destroy');
-    //初始化表格,动态从服务器加载数据
-    $("#cusTable").bootstrapTable({
-        method: "get",  //使用get请求到服务器获取数据
-        //url: "<c:url value='/SellServlet?act=ajaxGetSellRecord'/>", //获取数据的Servlet地址
-        url: "getTopicTable",
-        striped: true,  //表格显示条纹
-        //pagination: true, //启动分页
-        //pageSize: 1,  //每页显示的记录数
-        //pageNumber:1, //当前第几页
-        //pageList: [5, 10, 15, 20, 25],  //记录数可选列表
-        search: true,  //是否启用查询
-        //showColumns: true,  //显示下拉框勾选要显示的列
-        showRefresh: true,  //显示刷新按钮
-        sidePagination: "server", //表示服务端请求
-        //设置为undefined可以获取pageNumber，pageSize，searchText，sortName，sortOrder
-        //设置为limit可以获取limit, offset, search, sort, order
-        queryParamsType : "undefined",
-        queryParams: function queryParams(params) {   //设置查询参数
-            var param = {
-                pageNumber: params.pageNumber,
-                pageSize: params.pageSize,
-                orderNum : $("#orderNum").val()
-            };
-            return param;
+
+/*$(function(){
+    $('#topic-table').bootstrapTable({
+        ajax : function (request) {
+            $.ajax({
+                type : "GET",
+                url : "aha",
+                contentType: "application/json;charset=utf-8",
+                dataType:"jsonp",
+                data:'',
+                jsonp:'callback',
+                success : function (msg) {
+                    request.success({
+                        row : msg
+                    });
+                    $('#topic-table').bootstrapTable('load', msg);
+                },
+                error:function(){
+                    alert("error");
+                }
+            });
         },
-        onLoadSuccess: function(){  //加载成功时执行
-            layer.msg("加载成功");
-        },
-        onLoadError: function(){  //加载失败时执行
-            layer.msg("加载数据失败", {time : 1500, icon : 2});
-        }
+
+        toolbar:'#toolbar',
+        singleSelect:true,
+        clickToSelect:true,
+        sortName: "create_time",
+        sortOrder: "desc",
+        pageSize: 15,
+        pageNumber: 1,
+        pageList: "[10, 25, 50, 100, All]",
+        showToggle: true,
+        showRefresh: true,
+        showColumns: true,
+        search: true,
+        pagination: true,
+        columns: [{
+            field: 'major',
+            title: 'Major',
+            switchable: true
+        }, {
+            field: 'courseId',
+            title: 'Course ID',
+            switchable: true
+        }, {
+            field: 'name',
+            title: 'Course Name',
+            switchable: true
+        }],
+
     });
+})*/
+
+
+
+
+function getTopics() {
+    $.ajax({
+        url:"/main/allTopics",
+        type:"get",
+        datatype:"json",
+        async : false,
+        success: function(data){
+            var html = "";
+            for(var i=0;i<data.length;i++){
+                html += "<tr>"+
+                    "<td>"+data[i].major+"</td>"+
+                    "<td>"+data[i].courseId+"</td>"+
+                    "<td>"+data[i].name+"</td>"+
+                    "</tr>";
+            }
+            $("#content").html(html);
+
+        }
+    })
+    
 }
 
 
 
-$(document).ready(function () {
-    //调用函数，初始化表格
-    initTable();
 
-    //打点击查询按钮的时候执行
-    $("#search").bind("click", initTable);
-});
+
+
+

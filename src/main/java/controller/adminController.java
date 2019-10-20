@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +62,7 @@ public class adminController {
         }
     }*/
 
-   /* @RequestMapping(value= "/addNewTopic", method = RequestMethod.POST)
+    @RequestMapping(value= "/addNewTopic", method = RequestMethod.POST)
     @ResponseBody
     public String addNewTopic(HttpServletRequest req){
 
@@ -77,13 +80,33 @@ public class adminController {
             topicEntityDao.addNewTopic(topicEntity);
             return "success";
         }
-    }*/
+    }
 
-    @RequestMapping(value = "/sha", method = RequestMethod.POST)
+    @RequestMapping(value = "/aha", method = RequestMethod.GET)
     @ResponseBody
-    public String aaaa(@RequestBody Map name) {
+    public String ahaha(HttpServletRequest req) {
         return "success";
     }
+
+    @RequestMapping(value="/ji1")
+    public void Ajax(HttpServletResponse resp) throws IOException {
+        resp.getWriter().write("hello  ajax");
+    }
+
+    //方式二  通过流的形式
+    @RequestMapping(value="/ji2")
+    public void Ajax1(Writer out) throws IOException{
+        out.write("hello ajax1");
+    }
+
+    //方三  通过注解的形式
+    @RequestMapping(value="/ji3")
+    @ResponseBody  //返回值就是响应的内容
+    public String Ajax2() throws IOException{
+        return "fail";
+    }
+
+
     /*public List<Topic2Entity> getTopics() {
         List<Topic2Entity> topicList = new ArrayList<Topic2Entity>();
         Topic2Entity t1 = new Topic2Entity();

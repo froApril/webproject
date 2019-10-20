@@ -21,6 +21,47 @@
     <script src="resources/js/table-bs.js"></script>
 </head>
 
+
+
+
+<body>
+
+<button οnclick="testAjax0()">Ajax0</button>
+<button οnclick="testAjax1()">Ajax1</button>
+<button οnclick="testAjax2()">Ajax2</button>
+
+
+<script type="text/javascript">
+    function testAjax0(){
+        $.post("ji1",null,function(data){
+            alert(data);
+        });
+    }
+    function testAjax1(){
+        $.post("ji2",null,function(data){
+            alert(data);
+        });
+    }
+    function testAjax2(){
+        $.post("ji3",null,function(data){
+            alert(data);
+        });
+    }
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
 <!--body>
     <div id="kechengguanli" style="width: 80%; margin: 20px;"></div>
 </body-->
@@ -54,8 +95,8 @@
 
 
 
-<input type="button" onclick="ajaxJson()" value="recive Json"/>
-<hr/>
+<!--input type="button" onclick="ajaxJson()" value="recive Json"/>
+<hr/-->
 <!--table width="40%" border="1px" cellspacing="0">
     <tr>
         <td>major</td>
@@ -65,14 +106,14 @@
     <tbody id="content">
     </tbody>
 </table-->
-<script type="text/javascript">
+<!--script type="text/javascript">
     function ajaxJson() {
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "sha",
-            contentType: "application/json",
+
             dataType: "json",
-            data: JSON.stringify({"name":"aha"}),
+
             success: function (data) {
 
             }
@@ -81,7 +122,7 @@
 
 </script>
 
-</body>
+</body-->
 
 <!--script type="text/javascript">
     function ajaxJson(){
