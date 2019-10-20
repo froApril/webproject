@@ -6,19 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/tt.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/tt.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/css/tt.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/css/tt.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/testBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/testBootstrap.html" afterDir="false" />
-    </list>
+    <list default="true" id="c6d2394c-9531-4856-920b-547c8e15758e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +321,7 @@
       <workItem from="1570678349647" duration="2477000" />
       <workItem from="1570682414805" duration="4702000" />
       <workItem from="1571183913794" duration="20362000" />
-      <workItem from="1571490777975" duration="13650000" />
+      <workItem from="1571490777975" duration="13772000" />
     </task>
     <servers />
   </component>
