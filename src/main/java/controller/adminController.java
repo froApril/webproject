@@ -3,14 +3,14 @@ package controller;
 import dao.impl.Topic2EntityDaoImpl;
 import entities.Topic2Entity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -59,7 +59,7 @@ public class adminController {
         }
     }*/
 
-    @RequestMapping(value= "/addNewTopic",method = RequestMethod.POST)
+   /* @RequestMapping(value= "/addNewTopic", method = RequestMethod.POST)
     @ResponseBody
     public String addNewTopic(HttpServletRequest req){
 
@@ -77,7 +77,36 @@ public class adminController {
             topicEntityDao.addNewTopic(topicEntity);
             return "success";
         }
+    }*/
+
+    @RequestMapping(value = "/sha", method = RequestMethod.POST)
+    @ResponseBody
+    public String aaaa(@RequestBody Map name) {
+        return "success";
     }
+    /*public List<Topic2Entity> getTopics() {
+        List<Topic2Entity> topicList = new ArrayList<Topic2Entity>();
+        Topic2Entity t1 = new Topic2Entity();
+        Topic2Entity t2 = new Topic2Entity();
+        Topic2Entity t3 = new Topic2Entity();
+        t1.setId(11);
+        t2.setId(12);
+        t3.setId(13);
+        t1.setName("t1");
+        t2.setName("t2");
+        t3.setName("t3");
+        t1.setCourseId("t1");
+        t2.setCourseId("t2");
+        t3.setCourseId("t3");
+        t1.setMajor("t1");
+        t2.setMajor("t2");
+        t3.setMajor("t3");
+        topicList.add(t1);
+        topicList.add(t2);
+        topicList.add(t3);
+        return topicList;
+    }*/
+
 
 
 
