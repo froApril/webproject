@@ -27,6 +27,8 @@
         <mapping class="entities.TestEntity"/>
         <mapping resource="Topic2Entity.hbm.xml"/>
         <mapping class="entities.Topic2Entity"/>
+        <mapping resource="TopicsEntity.hbm.xml"/>
+        <mapping class="entities.TopicsEntity"/>
 
 
     </session-factory>

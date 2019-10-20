@@ -3,6 +3,8 @@ package dao;
 import entities.Topic2Entity;
 import org.hibernate.SessionFactory;
 
+import java.util.List;
+
 
 public interface Topic2EntityDao {
 
@@ -36,7 +38,7 @@ public interface Topic2EntityDao {
     Boolean existTopic(String topicName);
 
 
-
+    List<Topic2Entity> getAllTopics();
 
 
 }

@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateFactory;
 
+import java.util.List;
+
 
 /*import dao.Topic2EntityDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -198,5 +200,29 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
     public Boolean existTopic(String topicName) {
         return this.getTopicByName(topicName) != null;
 
+    }
+
+    @Override
+    public List<Topic2Entity> getAllTopics() {
+        Session session =null;
+        List<Topic2Entity> list=null;
+        try{
+            session =HibernateFactory.getSession();
+            session.beginTransaction();
+            Query query = session
+                    .createQuery("from Topic2Entity");
+            list = query.list();
+            session.getTransaction().commit();
+            return list;
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return list;
     }
 }
