@@ -24,10 +24,7 @@ public class SignupController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-//    @RequestMapping(value = "/signup",method = RequestMethod.GET)
-//    public String Page(){
-//        return "signup";
-//    }
+
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String Page(){
         return "login";
@@ -60,7 +57,7 @@ public class SignupController {
              int img = random.nextInt(5) + 1;
              String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-             StringBuffer sb=new StringBuffer();
+             StringBuffer sb = new StringBuffer();
              for(int i=0;i<5;i++){
                  int number=random.nextInt(62);
                  sb.append(str.charAt(number));

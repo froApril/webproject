@@ -78,8 +78,10 @@ public class LoginController {
     public Map<String,Object> getTopic(String topic){
         TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
         Map<String, Object> result = new HashMap<String, Object>();
+        String st = topic.replaceAll(" ","");
+        st.toUpperCase();
 
-        TopicsEntity topicsEntity = topicEntityDao.getTopicByName(topic);
+        TopicsEntity topicsEntity = topicEntityDao.getTopicByName(st);
 
        if(topicsEntity == null)
            result.put("result","fail");
