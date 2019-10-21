@@ -211,4 +211,29 @@ public class Topic2EntityDaoImpl implements Topic2EntityDao {
 
         return list;
     }
+
+    @Override
+    public Boolean deleteTopic(String topicName) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            Topic2Entity topicEntity = this.getTopicByName(topicName);
+            if(topicEntity==null){
+                return false;
+            }
+            session.delete(topicEntity);
+            session.getTransaction().commit();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return true;
+
+    }
 }

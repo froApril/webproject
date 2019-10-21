@@ -320,4 +320,29 @@ public class UserEntityDaoImpl implements UserEntityDao {
 
         return findUser;
     }
+
+    //Jimmy
+    @Override
+    public List<UserEntity> getAllUsers() {
+        Session session =null;
+        List<UserEntity> list=null;
+        try{
+            session =HibernateFactory.getSession();
+            session.beginTransaction();
+            Query query = session
+                    .createQuery("from UserEntity");
+            list = query.list();
+            session.getTransaction().commit();
+            return list;
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return list;
+    }
 }

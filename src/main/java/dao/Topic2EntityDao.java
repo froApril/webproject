@@ -27,6 +27,7 @@ public interface Topic2EntityDao {
 
 
     List<Topic2Entity> getAllTopics();
+    Boolean deleteTopic(String topicName);
 
 
 }

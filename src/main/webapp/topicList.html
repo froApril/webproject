@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title> - Bootstrap Table</title>
+    <title>TopicList</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="resources/css/tt.css">
+    <link rel="stylesheet" href="resources/css/admin.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
 
     <link href="resources/css/mainpage.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/css/profile.css">
-    <script src="resources/js/tt.js"></script>
+    <script src="resources/js/admin-delete-topic.js"></script>
 
 
 
@@ -31,40 +31,26 @@
 
 <body>
 
-<!--div class="topic-list">
-    <div class="row">
-        <div class="col-2">
-            <div id="topics-list" class="list-group">
-            </div>
-        </div>
-        <div class="col-10">
-            <div data-spy="scroll" data-target="#topics-list" data-offset="0" class="topics-details" >
-
-            </div>
-        </div>
-    </div>
-    <script>
-        getAllTopics();
-    </script>
-</div-->
-
 <table class="table table-striped">
     <thead>
     <tr>
-        <th scope="col">#</th>
+        <th scope="col">Selection</th>
         <th scope="col">Major</th>
         <th scope="col">Course ID</th>
         <th scope="col">Course Name</th>
     </tr>
     </thead>
     <tbody class="content">
-    
+
     </tbody>
+    <script>
+        getAllTopics();
+    </script>
 </table>
 
-<script>
-    getAllTopics();
-</script>
+<button type="button" onclick="specialDel()" id="specialDel" name="specialDel" class="btn btn-danger btn-sm">DELETE</button>
+
+
 
 </body>
 
