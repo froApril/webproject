@@ -24,9 +24,9 @@ public class staffLoginController {
      *
 	 */
 
-	@RequestMapping(value = "/staffHomePage",method = RequestMethod.GET)
+	@RequestMapping(value = "/addTopic",method = RequestMethod.GET)
     public String staffHome(){
-	    return "staffHomepage";
+	    return "addTopic";
     }
 
 	@RequestMapping(value = "/staffLogin",method = RequestMethod.GET)

@@ -29,7 +29,7 @@
                     if(state.result == 'SUCCESS'){
                         console.log("Success");
                         $.cookie("username",param.username,{expires:7, path:'/'});
-                        window.location.href ="/staffHomePage"
+                        window.location.href ="/addTopic"
 
 
 
