@@ -60,6 +60,33 @@ public class UserEntityDaoImpl implements UserEntityDao {
     }
 
     @Override
+    public UserEntity getUserByNick(String nick) {
+        UserEntity findUser = null;
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Query query = session
+                    .createQuery("from UserEntity where nickname= " + "\'" + nick + "\'");
+            findUser = (UserEntity) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return findUser;
+    }
+
+    @Override
+    public Boolean isNicknameExist(String username) {
+
+        return this.getUserByNick(username) != null;
+    }
+
+
+    @Override
     public Boolean addUser(UserEntity user) {
 
         if(isUsernameExist(user.getUsername())){
@@ -100,7 +127,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
             session = HibernateFactory.getSession();
             session.beginTransaction();
             UserEntity userEntity = this.getUserByName(username);
-            if(!isUsernameExist(userEntity.getUsername())){
+            if(!isUsernameExist(userEntity.getUsername()) || isNicknameExist(userEntity.getUsername())){
                 return false;
             }
 
@@ -228,7 +255,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
             if(!isUsernameExist(userEntity.getUsername())){
                 return false;
             }
-            List<String> sep = Arrays.asList("Joker", "SSGS", "UMR");
+            List<String> sep = Arrays.asList("Joker", "SSGS", "UMR","1");
             if(!sep.contains(photoUrl)){
                 return false;
             }

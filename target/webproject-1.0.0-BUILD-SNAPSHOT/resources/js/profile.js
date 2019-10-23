@@ -170,8 +170,13 @@ window.onmouseout = function () {
                 data: param,
                 datatype: "json",
                 success: function (state) {
-                    $('#nickname').html(state.userN.toString());
-                    console.log(state.result);
+                   if(state.result == 'SUCCESS') {
+                       $('#nickname').html(state.userN.toString());
+                       console.log(state.result);
+                   }
+                    else{
+                        alert("Nickname is existed")
+                   }
 
                 }
             });

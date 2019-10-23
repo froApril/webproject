@@ -6,9 +6,11 @@ import java.util.List;
 public interface UserEntityDao {
 
     UserEntity getUserByName(String username);
+    UserEntity getUserByNick(String username);
     UserEntity getUserById(int id);
 
     Boolean isUsernameExist(String username);
+    Boolean isNicknameExist(String username);
     Boolean isStaff(String username);
     Boolean addUser(UserEntity user);
     Boolean setNewnickname(String username, String name);

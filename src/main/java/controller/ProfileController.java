@@ -83,11 +83,17 @@ public class ProfileController {
 
         Map<String, Object> result = new HashMap<String, Object>();
 
+
         if(userEntityDao.setNewnickname(username,nick))
         {
             UserEntity userEntity = userEntityDao.getUserByName(username);
             result.put("userN",userEntity.getNickname());
             result.put("result","SUCCESS");
+        }
+        else {
+
+                result.put("result","fail");
+
         }
 
 
