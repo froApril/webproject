@@ -1,9 +1,8 @@
-
-(function ($) {
+(function ($){
     "use strict";
 
     var input = $('.validate-input .input100');
-    
+
     //login button on click 
     $('.login100-form-btn').on('click',function(){
         var check = true;
@@ -14,71 +13,68 @@
                 check=false;
             }
         }
+        if (check){
+            var param={};
+            param.username = $("input[name='username']").val();
+            param.password = $("input[name='pass']").val();
+            $.ajax({
+                url:"staffLogin",
+                type:"post",
+                data: param,
+                datatype:"json",
+                success: function (state) {
 
-        var param={};
-        param.username = $("input[name='username']").val();
-        param.password = $("input[name='pass']").val();
-        $.ajax({
-            url:"staffLogin",
-            type:"post",
-            data: param,
-            datatype:"json",
-            success: function (state) {
+                    // console.log(state)
+                    if(state.result == 'SUCCESS'){
+                        console.log("Success");
+                        $.cookie("username",param.username,{expires:7, path:'/'});
+                        window.location.href ="/addTopic"
 
-                // console.log(state)
-                if(state.result == 'SUCCESS'){
-                    console.log("Success");
-                    document.cookie = param.username
-                    window.location.href ="/webproject_war/staffHomePage"
-                    // $.ajax({
-                    //     url:"staffHomepage",
-                    //     type:"get",
-                    //     success:function () {
-                    //
-                    //     }
-                    // })
+
+
+                    }
+                    else if(state.result == "Fail"){
+
+                        if($('#erruser').css("display") == "block" || $('#errstaff').css("display") == "block"){
+                            $('#erruser').css("display","none")
+                            $('#errstaff').css("display","none")
+                        }
+
+                        $('#errpss').css('display','block');
+
+                    }
+                    else if(state.result == "fail not staff"){
+                        if($('#erruser').css("display") == "block" || $('#errpss').css("display") == "block"){
+                            $('#erruser').css("display","none")
+                            $('#errpss').css("display","none")
+                        }
+
+
+                        $('#errstaff').css('display','block');
+
+                    }
+                    else{
+                        if($('#errstaff').css("display") == "block" || $('#errpss').css("display") == "block"){
+                            $('#errstaff').css("display","none")
+                            $('#errpss').css("display","none")
+                        }
+                        $('#erruser').css('display','block');
+                    }
 
 
                 }
-                else if(state.result == "Fail"){
+            })
+        }
 
-                    if($('#erruser').css("display") == "block" || $('#errstaff').css("display") == "block"){
-                        $('#erruser').css("display","none")
-                        $('#errstaff').css("display","none")
-                    }
-
-                    $('#errpss').css('display','block');
-
-                 }
-                else if(state.result == "fail not staff"){
-                    if($('#erruser').css("display") == "block" || $('#errpss').css("display") == "block"){
-                        $('#erruser').css("display","none")
-                        $('#errpss').css("display","none")
-                    }
-
-
-                    $('#errstaff').css('display','block');
-
-                }
-                else{
-                    if($('#errstaff').css("display") == "block" || $('#errpss').css("display") == "block"){
-                        $('#errstaff').css("display","none")
-                        $('#errpss').css("display","none")
-                    }
-                    $('#erruser').css('display','block');
-                }
-
-
-            }
-        })
 
 
     });
 
 
+
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
-           hideValidate(this);
+            hideValidate(this);
         });
     });
 
@@ -106,6 +102,6 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
+
 
 })(jQuery);
