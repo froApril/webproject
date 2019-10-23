@@ -61,13 +61,14 @@ public class CommentEntityImpl implements CommentEntityDao {
     @Override
     public List<CommentEntity> getCommentsByNick(String nick) {
 
-        List<CommentEntity> findcomments=new ArrayList<CommentEntity>();
+        List<CommentEntity> findcomments =new ArrayList<CommentEntity>();
         Session session = HibernateFactory.getSession();
         Transaction transaction = session.beginTransaction();
         try{
             Query query = session
-                    .createQuery("from CommentEntity where authorName "+nick);
+                    .createQuery("from CommentEntity where authorName= "+"\'" + nick + "\'");
             findcomments.addAll(query.list());
+            
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -78,9 +79,21 @@ public class CommentEntityImpl implements CommentEntityDao {
     }
 
     @Override
-    public void setimgURL(String nick) {
+    public void setimgURL(String nick, String imgUrl) {
 
         List<CommentEntity> findcomments = this.getCommentsByNick(nick);
+
+        Session session;
+
+        for(CommentEntity commentEntity : findcomments){
+            commentEntity.setImgUrl(imgUrl);
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            session.update(commentEntity);
+            session.getTransaction().commit();
+
+        }
+
 
     }
 

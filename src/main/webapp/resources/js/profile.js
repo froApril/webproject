@@ -142,7 +142,7 @@ window.onmouseout = function () {
                             $('#photo').attr("src",plink.toString());
                             console.log(state.result);
 
-                          //  window.location.reload();
+                            window.location.reload();
                         }
                         else
                             alert("Invalid Redemption Code")

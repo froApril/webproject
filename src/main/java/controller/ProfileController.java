@@ -1,7 +1,10 @@
 package controller;
 
+import dao.CommentEntityDao;
 import dao.UserEntityDao;
+import dao.impl.CommentEntityImpl;
 import dao.impl.UserEntityDaoImpl;
+import entities.CommentEntity;
 import entities.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,10 +65,13 @@ public class ProfileController {
 
         Map<String, Object> result = new HashMap<String, Object>();
 
+        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+
        if(userEntityDao.setNewphoto(username,pCode))
        {
            UserEntity userEntity = userEntityDao.getUserByName(username);
            result.put("userImg",userEntity.getPhotoPro());
+           commentEntityDao.setimgURL(userEntity.getNickname(),userEntity.getPhotoPro());
            result.put("result","SUCCESS");
        }
        else

@@ -12,6 +12,8 @@ public interface CommentEntityDao {
 
     List<CommentEntity> getCommentByTopicAndTitle(String topic,String title);
 
+    void setimgURL(String nick,String imgUrl);
+
     void addNewComment(CommentEntity commentEntity);
 
     boolean addNewThread(CommentEntity commentEntity);
