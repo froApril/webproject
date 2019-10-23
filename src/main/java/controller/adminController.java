@@ -66,12 +66,24 @@ public class adminController {
 
     }
 
-    /*@RequestMapping(value= "/admin/ceshi", method = RequestMethod.POST)
+    @RequestMapping(value= "/admin/addTopic", method = RequestMethod.POST)
     @ResponseBody
-    public int addceshi(@RequestBody List<String> ll) {
-        System.out.println("aaaaa");
-        return 1;
-    }*/
+    public Map<String,Object> addNewTopic(String topicName, String topicDescription) {
+        Map<String, Object> result = new HashMap<String, Object>();
+        TopicsEntity topicEntity = new TopicsEntity();
+        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        if (topicEntityDao.existTopic(topicName)) {
+            result.put("result","fail");
+        }
+        else {
+            topicEntity.setTopicName(topicName);
+            topicEntity.setCommentNum(0);
+            topicEntity.setTopicDescription(topicDescription);
+            topicEntityDao.addNewTopic(topicEntity);
+            result.put("result","success");
+        }
+        return result;
+    }
 
 
     @RequestMapping(value="/tpl",method=RequestMethod.GET)

@@ -10,7 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deleteUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-add-topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-add-topic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/admin-add-topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/admin-add-topic.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,7 +286,7 @@
       <workItem from="1571805248721" duration="2472000" />
       <workItem from="1571808773007" duration="3267000" />
       <workItem from="1571824029600" duration="7349000" />
-      <workItem from="1571835294748" duration="316000" />
+      <workItem from="1571835294748" duration="4357000" />
     </task>
     <servers />
   </component>

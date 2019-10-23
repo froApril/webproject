@@ -1,53 +1,41 @@
 function addOne() {
 
 
-    /*var param = {};
+    var param = {};
     param.topicName = $("input[name='topicName']").val();
-    param.topicDescription = $("input[name='topicDescription']").val();
-    alert(param.topicName.toString());*/
-    var param=[];
-    param[0] = $("input[name='topicName']").val();
-    param[1] = $("input[name='topicDescription']").val();
-    //alert(param);
+    param.topicDescription = $("textarea[name='topicDescription']").val();
+    param.check = $("input[name='check']").val();
+    if (param.topicName.toString().length == 0) {
+        alert("Please fill in the course name");
+    }
+    else if (param.topicDescription.toString().length == 0) {
+        alert("Please fill in the course description");
 
-    var r = confirm("Are you sure to delete?");
-    if (r==true) {
+    }
+
+    else {
+        alert(param.topicName.toString());
+        alert(param.topicName.toString());
         $.ajax({
-            url: "/admin/ceshi",
+            url: "/admin/addTopic",
             type: "post",
             datatype: "json",
-            contentType: "application/json",
-            data: JSON.stringify(param),
+
+            data: param,
             success: function (data) {
 
+                if (data.result == 'success') {
+                    alert("Add topic success!!!");
 
-                alert("Successfully deleted!");
+                } else {
+                    alert("This topic exists, please check!");
+
+                }
+                window.location.href = "addTopic";
+
 
             }
         })
     }
-
-    /*$.ajax({
-        url: "addNewTopic",
-        type: "post",
-        datatype: "json",
-
-        data: param,
-        success: function (data) {
-
-            if (data.result == 'success') {
-                alert("OK!");
-
-            }
-            else {
-                alert("NO!");
-
-            }
-
-
-
-
-        }
-    })*/
     
 }
