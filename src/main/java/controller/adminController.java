@@ -26,6 +26,11 @@ import java.util.Map;
 @Controller
 public class adminController {
 
+    @RequestMapping(value = "/addTopic",method = RequestMethod.GET)
+    public String getStaffPage(){
+        return "addTopic";
+    }
+
     @RequestMapping(value= "/addNewTopic", method = RequestMethod.POST)
     @ResponseBody
     public String addNewTopic(HttpServletRequest req) {
