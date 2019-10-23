@@ -7,25 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-delete-topic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Topic2EntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Topic2EntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/Topic2EntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/Topic2EntityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserEntityDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deleteTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/tt.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/tt.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/topicList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/topicList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/addTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/deleteTopic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/css/tt.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/tt.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topicList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/topicList.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,7 +129,7 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.433">
     <configuration name="Tomcat 8.5.433" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.433" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/addTopic.html" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/topicList.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webproject:war">
@@ -292,6 +280,8 @@
       <workItem from="1568349584599" duration="3468000" />
       <workItem from="1570347339683" duration="26266000" />
       <workItem from="1571585718300" duration="23009000" />
+      <workItem from="1571804035188" duration="854000" />
+      <workItem from="1571805248721" duration="2054000" />
     </task>
     <servers />
   </component>

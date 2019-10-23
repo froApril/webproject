@@ -64,5 +64,7 @@ public interface TopicEntityDao {
 
     List<TopicsEntity> getAllTopics();
 
+    boolean addNewTopic(TopicsEntity topic);
+
 
 }

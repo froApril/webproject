@@ -1,13 +1,14 @@
 package controller;
 
 import dao.Topic2EntityDao;
-//import dao.TopicEntityDao;
+import dao.TopicEntityDao;
+import dao.TopicEntityDao;
 import dao.UserEntityDao;
 import dao.impl.Topic2EntityDaoImpl;
-//import dao.impl.TopicEntityDaoImpl;
+import dao.impl.TopicEntityDaoImpl;
 import dao.impl.UserEntityDaoImpl;
 import entities.Topic2Entity;
-//import entities.TopicsEntity;
+import entities.TopicsEntity;
 import entities.UserEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,7 @@ public class adminController {
     @ResponseBody
     public String addNewTopic(HttpServletRequest req) {
 
-        Topic2Entity topicEntity = new Topic2Entity();
+        /*Topic2Entity topicEntity = new Topic2Entity();
         Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
         if(topicEntityDao.existTopic(req.getParameter("name"))) {
             return "fail";
@@ -39,6 +40,20 @@ public class adminController {
             topicEntity.setMajor(req.getParameter("major"));
             topicEntity.setCourseId(req.getParameter("id"));
             topicEntity.setName(req.getParameter("name"));
+            topicEntityDao.addNewTopic(topicEntity);
+            return "success";
+        }*/
+
+        TopicsEntity topicEntity = new TopicsEntity();
+        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        if(topicEntityDao.existTopic(req.getParameter("topicName"))) {
+            return "fail";
+        }
+
+        else {
+            topicEntity.setTopicName(req.getParameter("topicName"));
+            topicEntity.setCommentNum(0);
+            topicEntity.setTopicDescription(req.getParameter("topicDescription"));
             topicEntityDao.addNewTopic(topicEntity);
             return "success";
         }
@@ -57,6 +72,26 @@ public class adminController {
     @ResponseBody
     public List<Topic2Entity> delSpecial(@RequestBody List<String> ll) {
         Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
+        for (int i=0;i<ll.size();i++) {
+            String name = ll.get(i).substring(0,ll.get(i).length()-1);
+            topicEntityDao.deleteTopic(name);
+        }
+        return topicEntityDao.getAllTopics();
+
+    }
+
+    @RequestMapping(value="/admin/getTopic",method=RequestMethod.GET)
+    @ResponseBody
+    public List<TopicsEntity> getAllTopic() {
+        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        return topicEntityDao.getAllTopics();
+
+    }
+
+    @RequestMapping(value="/admin/deleteTopic",method=RequestMethod.POST)
+    @ResponseBody
+    public List<TopicsEntity> delSpecialTopic(@RequestBody List<String> ll) {
+        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
         for (int i=0;i<ll.size();i++) {
             String name = ll.get(i).substring(0,ll.get(i).length()-1);
             topicEntityDao.deleteTopic(name);
