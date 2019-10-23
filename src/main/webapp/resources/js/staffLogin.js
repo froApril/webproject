@@ -26,8 +26,8 @@
 
                     // console.log(state)
                     if(state.result == 'SUCCESS'){
-                        console.log("Success");
-                        $.cookie("username",param.username,{expires:7, path:'/'});
+                        //console.log("Success");
+                        //$.cookie("username",param.username,{expires:7, path:'/'});
                         window.location.href ="/addTopic"
 
 

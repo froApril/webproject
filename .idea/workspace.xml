@@ -8,11 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/CommentEntityImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/TopicEntityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/staffLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/staffLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/staffLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/resources/js/staffLogin.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +124,6 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.433">
     <configuration name="Tomcat 8.5.433" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.433" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/deleteTopic" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webproject:war">
@@ -281,6 +277,7 @@
       <workItem from="1571804035188" duration="854000" />
       <workItem from="1571805248721" duration="2472000" />
       <workItem from="1571808773007" duration="3267000" />
+      <workItem from="1571824029600" duration="601000" />
     </task>
     <servers />
   </component>
