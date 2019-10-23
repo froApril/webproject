@@ -31,22 +31,10 @@ public class adminController {
     }
 
     @RequestMapping(value= "/addNewTopic", method = RequestMethod.POST)
-    @ResponseBody
+    //@ResponseBody
     public String addNewTopic(HttpServletRequest req) {
+    //public Map<String,Object> addNewTopic(String topicName, String topicDescription) {
 
-        /*Topic2Entity topicEntity = new Topic2Entity();
-        Topic2EntityDaoImpl topicEntityDao = new Topic2EntityDaoImpl();
-        if(topicEntityDao.existTopic(req.getParameter("name"))) {
-            return "fail";
-        }
-
-        else {
-            topicEntity.setMajor(req.getParameter("major"));
-            topicEntity.setCourseId(req.getParameter("id"));
-            topicEntity.setName(req.getParameter("name"));
-            topicEntityDao.addNewTopic(topicEntity);
-            return "success";
-        }*/
 
         TopicsEntity topicEntity = new TopicsEntity();
         TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
@@ -61,7 +49,29 @@ public class adminController {
             topicEntityDao.addNewTopic(topicEntity);
             return "success";
         }
+        /*Map<String, Object> result = new HashMap<String, Object>();
+        TopicsEntity topicEntity = new TopicsEntity();
+        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        if (topicEntityDao.existTopic(topicName)) {
+            result.put("result","success");
+        }
+        else {
+            topicEntity.setTopicName(topicName);
+            topicEntity.setCommentNum(0);
+            topicEntity.setTopicDescription(topicDescription);
+            topicEntityDao.addNewTopic(topicEntity);
+            result.put("result","fail");
+        }
+        return result;*/
+
     }
+
+    /*@RequestMapping(value= "/admin/ceshi", method = RequestMethod.POST)
+    @ResponseBody
+    public int addceshi(@RequestBody List<String> ll) {
+        System.out.println("aaaaa");
+        return 1;
+    }*/
 
 
     @RequestMapping(value="/tpl",method=RequestMethod.GET)
