@@ -135,5 +135,96 @@ public class CommentEntityImpl implements CommentEntityDao {
         return flag;
     }
 
+    //Jimmy
+    @Override
+    public boolean deleteComment(int topic_id) {
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            List<CommentEntity> comments = this.getCommentsByTopic(topic_id);
+            if(comments.size() == 0){
+                return false;
+            }
+
+
+
+
+            for (CommentEntity comment:comments) {
+                session.delete(comment);
+            }
+            session.getTransaction().commit();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return true;
+    }
+
+    @Override
+    public List<CommentEntity> getCommentByAuthor(String author_name) {
+
+        List<CommentEntity> findcomments=new ArrayList<CommentEntity>();
+        Session session = HibernateFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Query query = session
+                    .createQuery("from CommentEntity where authorName= "+author_name);
+            findcomments.addAll(query.list());
+            List<CommentEntity> finallist=new ArrayList<CommentEntity>();
+            for(CommentEntity c: findcomments){
+                if(c.getParentId()==null){
+                    finallist.add(c);
+                }
+            }
+            findcomments = finallist;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            session.close();
+        }
+        return findcomments;
+
+    }
+
+
+    @Override
+    public boolean deleteComment(String author_name) {
+
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            List<CommentEntity> comments = this.getCommentByAuthor(author_name);
+            if(comments.size() == 0){
+                return false;
+            }
+
+
+
+
+            for (CommentEntity comment:comments) {
+                session.delete(comment);
+            }
+            session.getTransaction().commit();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        finally{
+            session.close();
+        }
+
+        return true;
+
+    }
+
 
 }

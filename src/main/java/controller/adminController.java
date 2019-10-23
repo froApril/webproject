@@ -1,9 +1,8 @@
 package controller;
 
-import dao.Topic2EntityDao;
+import dao.*;
 import dao.TopicEntityDao;
-import dao.TopicEntityDao;
-import dao.UserEntityDao;
+import dao.impl.CommentEntityImpl;
 import dao.impl.Topic2EntityDaoImpl;
 import dao.impl.TopicEntityDaoImpl;
 import dao.impl.UserEntityDaoImpl;
@@ -97,8 +96,10 @@ public class adminController {
     @ResponseBody
     public List<TopicsEntity> delSpecialTopic(@RequestBody List<String> ll) {
         TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        CommentEntityDao comment = new CommentEntityImpl();
         for (int i=0;i<ll.size();i++) {
             String name = ll.get(i).substring(0,ll.get(i).length()-1);
+            comment.deleteComment(topicEntityDao.getTopicByName(name).getId());
             topicEntityDao.deleteTopic(name);
         }
         return topicEntityDao.getAllTopics();
@@ -117,8 +118,10 @@ public class adminController {
     @ResponseBody
     public List<UserEntity> delSpecialUser(@RequestBody List<String> ll) {
         UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        CommentEntityDao comment = new CommentEntityImpl();
         for (int i=0;i<ll.size();i++) {
             String name = ll.get(i).substring(0,ll.get(i).length()-1);
+            comment.deleteComment(userEntityDao.getUserByName(name).getUsername());
             userEntityDao.deleteUser(name);
         }
         return userEntityDao.getAllUsers();

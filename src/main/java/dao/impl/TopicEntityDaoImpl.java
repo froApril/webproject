@@ -69,7 +69,7 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         }
         return true;
     }
-
+    //Jimmy
     @Override
     public boolean addNewTopic(TopicsEntity topic) {
         if(existTopic(topic.getTopicName())){

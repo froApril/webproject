@@ -63,7 +63,7 @@ public interface TopicEntityDao {
     boolean updateTopic(String oldName,String newName);
 
     List<TopicsEntity> getAllTopics();
-
+    //Jimmy
     boolean addNewTopic(TopicsEntity topic);
 
 
