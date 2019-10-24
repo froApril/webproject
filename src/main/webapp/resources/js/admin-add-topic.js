@@ -1,3 +1,5 @@
+
+//Jimmy
 function addOne() {
 
 
@@ -14,8 +16,6 @@ function addOne() {
     }
 
     else {
-        alert(param.topicName.toString());
-        alert(param.topicName.toString());
         $.ajax({
             url: "/admin/addTopic",
             type: "post",
