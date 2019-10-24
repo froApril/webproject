@@ -255,7 +255,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
             if(!isUsernameExist(userEntity.getUsername())){
                 return false;
             }
-            List<String> sep = Arrays.asList("Joker", "SSGS", "UMR","1");
+            List<String> sep = Arrays.asList("Joker", "SSGS", "UMR");
             if(!sep.contains(photoUrl)){
                 return false;
             }
