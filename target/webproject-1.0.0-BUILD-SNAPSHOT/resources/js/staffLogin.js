@@ -25,10 +25,12 @@
                 datatype:"json",
                 success: function (state) {
 
-                    // console.log(state)
+
                     if(state.result == 'SUCCESS'){
 
+                        $.cookie("username",param.username,{expires:7, path:'/'});
                         window.location.href ="/addTopic"
+
 
 
 
