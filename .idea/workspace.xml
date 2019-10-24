@@ -7,13 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c2fc42c-4f49-495f-96d7-557a3c206360" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-add-topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-add-topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-delete-topics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-delete-topics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-delete-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/admin-delete-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/staffLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/staffLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CommentEntityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessageEntityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TopicEntityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserEntityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/webproject-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,9 +69,9 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -128,7 +136,6 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.433">
     <configuration name="Tomcat 8.5.433" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.433" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/addTopic.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webproject:war">
@@ -288,15 +295,6 @@
       <workItem from="1571884623884" duration="331000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

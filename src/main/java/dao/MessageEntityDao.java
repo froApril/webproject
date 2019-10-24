@@ -1,11 +1,12 @@
 package dao;
 
+import Service.Service;
 import entities.MessageEntity;
 import entities.UserEntity;
 
 import java.util.List;
 
-public interface MessageEntityDao {
+public interface MessageEntityDao extends Service {
 
     /**
      *

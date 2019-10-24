@@ -1,5 +1,7 @@
 package controller;
 
+import Service.ServiceFactory;
+import dao.UserEntityDao;
 import dao.impl.UserEntityDaoImpl;
 import entities.UserEntity;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,7 @@ import java.util.Random;
 @Controller
 public class SignupController {
 
+    ServiceFactory serviceFactory = new ServiceFactory();
 
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -33,7 +36,7 @@ public class SignupController {
     @RequestMapping(value= "/signup",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> signup(String username, String password, String email, String gen){
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = new UserEntity();
         Map<String, Object> result = new HashMap<String, Object>();
 

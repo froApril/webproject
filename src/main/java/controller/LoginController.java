@@ -1,5 +1,8 @@
 package controller;
 
+import Service.ServiceFactory;
+import dao.TopicEntityDao;
+import dao.UserEntityDao;
 import dao.impl.TopicEntityDaoImpl;
 import dao.impl.UserEntityDaoImpl;
 import entities.TopicsEntity;
@@ -21,6 +24,7 @@ import java.util.Map;
 @Controller
 public class LoginController {
 
+    ServiceFactory serviceFactory = new ServiceFactory();
 
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -48,7 +52,7 @@ public class LoginController {
     @RequestMapping(value= "/login",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> login(String username, String password){
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao) serviceFactory.serviceFactory("UserEntityDao");
         Map<String, Object> result = new HashMap<String, Object>();
         if (username == null){
             result.put("result","fail, no name");
@@ -76,7 +80,7 @@ public class LoginController {
     @RequestMapping(value= "/getT",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getTopic(String topic){
-        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         Map<String, Object> result = new HashMap<String, Object>();
         String st = topic.replaceAll(" ","");
         st.toUpperCase();
@@ -89,7 +93,6 @@ public class LoginController {
            result.put("link","/comments?topic=" + topicsEntity.getTopicName());
            result.put("result","SUCCESS");
        }
-
 
         return result;
     }

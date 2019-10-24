@@ -1,5 +1,6 @@
 package dao;
 
+import Service.Service;
 import entities.TopicsEntity;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * Dao layer of Topics with hibernate
  */
 
-public interface TopicEntityDao {
+public interface TopicEntityDao extends Service {
 
     /**
      *

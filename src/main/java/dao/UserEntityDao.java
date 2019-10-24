@@ -1,9 +1,10 @@
 package dao;
 
+import Service.Service;
 import entities.UserEntity;
 import java.util.List;
 
-public interface UserEntityDao {
+public interface UserEntityDao extends Service {
 
     UserEntity getUserByName(String username);
     UserEntity getUserByNick(String username);

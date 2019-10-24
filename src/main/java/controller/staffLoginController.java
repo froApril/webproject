@@ -1,5 +1,7 @@
 package controller;
 
+import Service.ServiceFactory;
+import dao.UserEntityDao;
 import dao.impl.UserEntityDaoImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +19,7 @@ import java.util.Map;
  */
 @Controller
 public class staffLoginController {
-
+    ServiceFactory serviceFactory = new ServiceFactory();
 
     /**
      * Simply selects the home view to render by returning its name.
@@ -35,7 +37,7 @@ public class staffLoginController {
     @RequestMapping(value= "/staffLogin",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> staffLogin(String username, String password){
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         Map<String, Object> result = new HashMap<String, Object>();
         if (username == null){
             result.put("result","fail, no name");

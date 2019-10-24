@@ -1,6 +1,7 @@
 package controller;
 
 
+import Service.ServiceFactory;
 import dao.CommentEntityDao;
 import dao.TopicEntityDao;
 import dao.UserEntityDao;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @Controller
 public class BoardController {
+    ServiceFactory serviceFactory = new ServiceFactory();
 
     @RequestMapping(value="/comments",method = RequestMethod.GET)
     public String getComments(){
@@ -28,11 +30,11 @@ public class BoardController {
     @RequestMapping(value = "/comments/all",method = RequestMethod.GET)
     @ResponseBody
     public List<CommentEntity> getAllComments(String topic){
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         TopicsEntity topicEntity = topicEntityDao.getTopicByName(topic);
         int topic_id = topicEntity.getId();
         System.out.println(topic_id);
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         List<CommentEntity> commentEntityList =  commentEntityDao.getCommentsByTopic(topic_id);
         System.out.println(commentEntityList);
         return commentEntityList;
@@ -43,7 +45,7 @@ public class BoardController {
     @RequestMapping(value="/comments/detail", method = RequestMethod.GET)
     @ResponseBody
     public List<CommentEntity> getCommentsBytitle(String topic, String title){
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         List<CommentEntity>commentEntityList = commentEntityDao.getCommentByTopicAndTitle(topic,title);
         return commentEntityList;
 
@@ -52,8 +54,8 @@ public class BoardController {
     @RequestMapping(value="/comments/topicComment", method = RequestMethod.GET)
     @ResponseBody
     public CommentEntity getTopicComment(String topicComment,String topic){
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         TopicsEntity topicEntity = topicEntityDao.getTopicByName(topic);
         CommentEntity findComment=null;
         int topic_id = topicEntity.getId();
@@ -80,7 +82,7 @@ public class BoardController {
         UserEntityDao userEntityDao = new UserEntityDaoImpl();
         commentEntity.setImgUrl(
                 userEntityDao.getEntityByNickname(author).getPhotoPro());
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         commentEntityDao.addNewComment(commentEntity);
 
 
@@ -91,7 +93,7 @@ public class BoardController {
     @RequestMapping(value = "/comments/newthread", method = RequestMethod.POST)
     @ResponseBody
     public CommentEntity addNewThread(String author, String commentTitle,String topic,String message){
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         TopicsEntity topicsEntity = topicEntityDao.getTopicByName(topic);
         CommentEntity commentEntity = new CommentEntity();
 
@@ -100,11 +102,11 @@ public class BoardController {
         commentEntity.setCommentMessage(message);
         commentEntity.setCommentTitle(commentTitle);
 
-        UserEntityDao userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao) serviceFactory.serviceFactory("UserEntityDao");
         commentEntity.setImgUrl(
                 userEntityDao.getEntityByNickname(author).getPhotoPro());
 
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         if(!commentEntityDao.addNewThread(commentEntity)){
             commentEntity = null;
 

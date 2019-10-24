@@ -1,10 +1,11 @@
 package dao;
 
+import Service.Service;
 import entities.CommentEntity;
 
 import java.util.List;
 
-public interface CommentEntityDao {
+public interface CommentEntityDao extends Service {
 
 
     List<CommentEntity> getCommentsByTopic(int topic_id);

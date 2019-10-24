@@ -1,5 +1,6 @@
 package controller;
 
+import Service.ServiceFactory;
 import dao.CommentEntityDao;
 import dao.UserEntityDao;
 import dao.impl.CommentEntityImpl;
@@ -23,7 +24,7 @@ import java.util.Map;
 @Controller
 public class ProfileController {
 
-
+    ServiceFactory serviceFactory = new ServiceFactory();
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -41,7 +42,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> getPro(String username){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
@@ -61,11 +62,11 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> changePh(String username, String pCode){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
 
         Map<String, Object> result = new HashMap<String, Object>();
 
-        CommentEntityDao commentEntityDao = new CommentEntityImpl();
+        CommentEntityDao commentEntityDao = (CommentEntityDao)serviceFactory.serviceFactory("CommentEntityDao");
 
        if(userEntityDao.setNewphoto(username,pCode))
        {
@@ -85,7 +86,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> changeN(String username, String nick){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
 
         Map<String, Object> result = new HashMap<String, Object>();
 
@@ -110,7 +111,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> oldPas(String username, String ps){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
@@ -126,7 +127,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> newPas(String username, String ps){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         Map<String, Object> result = new HashMap<String, Object>();
 
         if(userEntityDao.setNewpassword(username,ps))
@@ -145,7 +146,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> newC(String username, String contactI){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
@@ -164,7 +165,7 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> newPre(String username, String pre){
 
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = userEntityDao.getUserByName(username);
         Map<String, Object> result = new HashMap<String, Object>();
 
@@ -181,7 +182,7 @@ public class ProfileController {
     @RequestMapping(value="/getNickname",method = RequestMethod.GET)
     @ResponseBody
     public UserEntity getNickname(String username){
-        UserEntityDao userEntityDao = new UserEntityDaoImpl();
+        UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         return userEntityDao.getUserByName(username);
 
     }

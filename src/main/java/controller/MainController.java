@@ -1,6 +1,7 @@
 package controller;
 
 
+import Service.ServiceFactory;
 import dao.TopicEntityDao;
 import dao.impl.TopicEntityDaoImpl;
 import entities.TopicsEntity;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Controller
 public class MainController {
+    ServiceFactory serviceFactory = new ServiceFactory();
 
     @RequestMapping(value = "/main",method = RequestMethod.GET)
     public String getMainPage(){
@@ -22,7 +24,7 @@ public class MainController {
     @RequestMapping(value="/main/allTopics",method=RequestMethod.GET)
     @ResponseBody
     public List<TopicsEntity> getAllTopics(){
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao)serviceFactory.serviceFactory("TopicEntityDao");
         return topicEntityDao.getAllTopics();
     }
 

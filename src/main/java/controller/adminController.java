@@ -1,5 +1,6 @@
 package controller;
 
+import Service.ServiceFactory;
 import dao.*;
 import dao.TopicEntityDao;
 import dao.impl.CommentEntityImpl;
@@ -18,6 +19,8 @@ import java.util.Map;
 @Controller
 public class adminController {
 
+    ServiceFactory serviceFactory = new ServiceFactory();
+
     @RequestMapping(value = "/addTopic",method = RequestMethod.GET)
     public String getStaffPage(){
         return "addTopic";
@@ -28,7 +31,7 @@ public class adminController {
     public Map<String,Object> addNewTopic(String topicName, String topicDescription) {
         Map<String, Object> result = new HashMap<String, Object>();
         TopicsEntity topicEntity = new TopicsEntity();
-        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         if (topicEntityDao.existTopic(topicName)) {
             result.put("result","fail");
         }
@@ -45,7 +48,7 @@ public class adminController {
     @RequestMapping(value="/admin/getTopic",method=RequestMethod.GET)
     @ResponseBody
     public List<TopicsEntity> getAllTopic() {
-        TopicEntityDao topicEntityDao = new TopicEntityDaoImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
         return topicEntityDao.getAllTopics();
 
     }
@@ -53,8 +56,8 @@ public class adminController {
     @RequestMapping(value="/admin/deleteTopic",method=RequestMethod.POST)
     @ResponseBody
     public List<TopicsEntity> delSpecialTopic(@RequestBody List<String> ll) {
-        TopicEntityDaoImpl topicEntityDao = new TopicEntityDaoImpl();
-        CommentEntityDao comment = new CommentEntityImpl();
+        TopicEntityDao topicEntityDao = (TopicEntityDao) serviceFactory.serviceFactory("TopicEntityDao");
+        CommentEntityDao comment = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         for (int i=0;i<ll.size();i++) {
             String name = ll.get(i).substring(0,ll.get(i).length()-1);
             comment.deleteComment(topicEntityDao.getTopicByName(name).getId());
@@ -67,7 +70,7 @@ public class adminController {
     @RequestMapping(value="/admin/getUser",method=RequestMethod.GET)
     @ResponseBody
     public List<UserEntity> getAllUsers() {
-        UserEntityDao user = new UserEntityDaoImpl();
+        UserEntityDao user = (UserEntityDao) serviceFactory.serviceFactory("UserEntityDao");
         return user.getAllUsers();
 
     }
@@ -75,8 +78,8 @@ public class adminController {
     @RequestMapping(value="/admin/deleteUser",method=RequestMethod.POST)
     @ResponseBody
     public List<UserEntity> delSpecialUser(@RequestBody List<String> ll) {
-        UserEntityDaoImpl userEntityDao = new UserEntityDaoImpl();
-        CommentEntityDao comment = new CommentEntityImpl();
+        UserEntityDao userEntityDao = (UserEntityDao) serviceFactory.serviceFactory("UserEntityDao");
+        CommentEntityDao comment = (CommentEntityDao) serviceFactory.serviceFactory("CommentEntityDao");
         for (int i=0;i<ll.size();i++) {
             String name = ll.get(i).substring(0,ll.get(i).length()-1);
             comment.deleteComment(userEntityDao.getUserByName(name).getUsername());
