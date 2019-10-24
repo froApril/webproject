@@ -1,0 +1,42 @@
+.container-fluid {
+    height: 145px;
+    border: 3px solid hsla(0,0%,100%,0);
+
+    /*border: 3px solid blue;*/
+}
+.row {
+    margin-top: 25px;
+    border: 3px solid hsla(0,0%,100%,0);
+    /*border: 3px solid red;*/
+}
+.navbar {
+    margin: auto;
+}
+li {
+    font-size: 200%;
+    margin-right: 20px;
+}
+
+
+.bt-black {
+    background-color: black;
+}
+
+.t-center {
+    text-align: center !important;
+}
+
+.background-frame {
+    background: #f6f6f6;
+    padding:30px;
+    position: relative;
+    margin: 70px 5% 5%;
+}
+
+
+
+.background-frame h3 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #666666;
+}

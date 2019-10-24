@@ -69,6 +69,31 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
         }
         return true;
     }
+    //Jimmy
+    @Override
+    public boolean addNewTopic(TopicsEntity topic) {
+        if(existTopic(topic.getTopicName())){
+            return false;
+        }
+
+        Session session =null;
+        try{
+            session = HibernateFactory.getSession();
+            session.beginTransaction();
+            session.save(topic);
+            session.getTransaction().commit();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            return false;
+        }
+        finally {
+            session.close();
+        }
+        return true;
+
+    }
 
 
 
@@ -148,4 +173,6 @@ public class TopicEntityDaoImpl implements TopicEntityDao {
 
         return list;
     }
+
+
 }

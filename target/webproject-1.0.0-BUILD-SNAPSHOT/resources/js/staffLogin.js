@@ -3,7 +3,7 @@
     "use strict";
 
     var input = $('.validate-input .input100');
-    
+
     //login button on click 
     $('.login100-form-btn').on('click',function(){
         var check = true;
@@ -27,8 +27,7 @@
 
                     // console.log(state)
                     if(state.result == 'SUCCESS'){
-                        console.log("Success");
-                        $.cookie("username",param.username,{expires:7, path:'/'});
+
                         window.location.href ="/addTopic"
 
 
@@ -75,7 +74,7 @@
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
-           hideValidate(this);
+            hideValidate(this);
         });
     });
 
@@ -103,6 +102,6 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
+
 
 })(jQuery);

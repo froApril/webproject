@@ -25,6 +25,10 @@ public interface UserEntityDao {
     String getNicknameByUsername(String username);
     UserEntity getEntityByNickname(String nickname);
 
+
+    //Jimmy
+    List<UserEntity> getAllUsers();
+
     
 
 }

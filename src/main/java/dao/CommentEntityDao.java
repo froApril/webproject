@@ -17,6 +17,12 @@ public interface CommentEntityDao {
     void addNewComment(CommentEntity commentEntity);
 
     boolean addNewThread(CommentEntity commentEntity);
+    //Jimmy
+    boolean deleteComment(int topic_id);
+
+    List<CommentEntity> getCommentByAuthor(String author_name);
+
+    boolean deleteComment(String author_name);
 
 
 }
