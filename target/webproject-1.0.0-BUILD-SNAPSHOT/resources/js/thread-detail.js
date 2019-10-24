@@ -3,7 +3,7 @@ var parent_comment;
 function getTopicComment(comment) {
     var html = "";
     parent_comment = comment;
-    console.log(comment);
+   // console.log(comment);
 
     html+= "<div class=\"container thread-title thread-main\">"+
         "<h1 style=\"margin-top: 20px\">"+comment.commentTitle+"</h1>"

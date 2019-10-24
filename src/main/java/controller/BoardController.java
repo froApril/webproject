@@ -65,6 +65,12 @@ public class BoardController {
                 findComment = c;
             }
         }
+        if(findComment == null)
+        {
+            findComment = new CommentEntity();
+            findComment.setId(-1);
+
+        }
         return findComment;
     }
 
