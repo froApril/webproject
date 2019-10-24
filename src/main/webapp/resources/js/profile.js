@@ -109,15 +109,23 @@ window.onmouseout = function () {
         datatype: "json",
         success: function (state) {
 
-            var plink = "resources/images/photo/" + state.userImg.toString() +".png";
-            $('#photoh').attr("src",plink.toString());
-            $('#photo').attr("src",plink.toString());
-            $('#username').html(state.username.toString());
-            $('#nickname').html(state.userN.toString());
-            $('#contact').html(state.userCon.toString());
-            $('#userPre').html(state.userPre.toString());
-            var link = "resources/images/gender/" + state.userGen.toString() +".png";
-            $('#gender').attr("src",link.toString());
+            if(state.result =="fail"){
+
+                alert("Please login!");
+                window.location.href = "/login";
+            }
+            else{
+                var plink = "resources/images/photo/" + state.userImg.toString() +".png";
+                $('#photoh').attr("src",plink.toString());
+                $('#photo').attr("src",plink.toString());
+                $('#username').html(state.username.toString());
+                $('#nickname').html(state.userN.toString());
+                $('#contact').html(state.userCon.toString());
+                $('#userPre').html(state.userPre.toString());
+                var link = "resources/images/gender/" + state.userGen.toString() +".png";
+                $('#gender').attr("src",link.toString());
+            }
+
 
 
         }

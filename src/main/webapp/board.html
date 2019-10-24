@@ -43,9 +43,16 @@
 							data: param,
 							datatype: "json",
 							success: function (state) {
+								if(state.result =="fail"){
 
-								var plink = "resources/images/photo/" + state.userImg.toString() + ".png";
-								$('#photoh').attr("src", plink.toString());
+									alert("Please login!");
+									window.location.href = "/login";
+								}
+								else {
+
+									var plink = "resources/images/photo/" + state.userImg.toString() + ".png";
+									$('#photoh').attr("src", plink.toString());
+								}
 
 
 							}

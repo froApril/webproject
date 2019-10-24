@@ -42,9 +42,17 @@ public class ProfileController {
     @ResponseBody
     public Map<String,Object> getPro(String username){
 
+
+        Map<String, Object> result = new HashMap<String, Object>();
+        if(username.equals("null")){
+            result.put("result","fail");
+            return  result;
+        }
+
         UserEntityDao userEntityDao = (UserEntityDao)serviceFactory.serviceFactory("UserEntityDao");
         UserEntity userEntity = userEntityDao.getUserByName(username);
-        Map<String, Object> result = new HashMap<String, Object>();
+
+
 
         result.put("username",userEntity.getUsername());
         result.put("userN",userEntity.getNickname());
