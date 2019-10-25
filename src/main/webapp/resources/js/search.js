@@ -64,7 +64,7 @@
                     }
                     else{
 
-                        alert("No such thread!");
+                        alert("No Such Thread!");
                     }
 
                 }
