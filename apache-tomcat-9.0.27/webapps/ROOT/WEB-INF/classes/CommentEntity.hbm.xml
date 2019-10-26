@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.CommentEntity" table="Comment" schema="webApplication">
+        <id name="id">
+            <column name="id" sql-type="int(11) unsigned"/>
+        </id>
+        <property name="parentId">
+            <column name="parent_id" sql-type="int(11)" />
+        </property>
+        <property name="commentTitle">
+            <column name="commentTitle" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="authorName">
+            <column name="authorName" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="commentMessage">
+            <column name="commentMessage" sql-type="varchar(140)" length="140"/>
+        </property>
+        <property name="topicId">
+            <column name="topic_id" sql-type="int(11) unsigned"/>
+        </property>
+        <property name="imgUrl">
+            <column name="imgURL" sql-type="int(10)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

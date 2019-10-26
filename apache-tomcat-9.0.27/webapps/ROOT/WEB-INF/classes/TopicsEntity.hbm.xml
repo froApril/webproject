@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.TopicsEntity" table="Topics" schema="webApplication">
+        <id name="id">
+            <column name="id" sql-type="int(11) unsigned"/>
+        </id>
+        <property name="topicName">
+            <column name="topicName" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="commentNum">
+            <column name="commentNum" sql-type="int(100) unsigned" />
+        </property>
+        <property name="topicDescription">
+            <column name="topicDescription" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Profile</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="./resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+     <!--===============================================================================================-->
+     <link rel="icon" type="image/png" href="resources/images/icons/favicon.ico"/>
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/bootstrap/css/bootstrap.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/animate/animate.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/css-hamburgers/hamburgers.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/animsition/css/animsition.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/select2/select2.min.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/vendor/daterangepicker/daterangepicker.css">
+     <!--===============================================================================================-->
+     <link rel="stylesheet" type="text/css" href="resources/css/util.css">
+     <link rel="stylesheet" type="text/css" href="resources/css/profile.css">
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+          <a class="navbar-brand" href="#">
+               <img src="resources/images/icons/brand-icon.svg" alt=""
+                    class="d-inline-block align-top" width="30" height="30">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                         <a class="nav-link" href=/main>Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href=/profile><img id = "photoh" class="round_icon"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              User
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href=/profile>Profile</a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href=/logout onclick="logout()" >Log out</a>
+                              <script>
+                                   function logout() {
+                                        $.cookie("username", null, { path: '/' });
+                                        console.log($.cookie("username"));
+                                   }
+                              </script>
+                         </div>
+                    </li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id ="searchI">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id = "searchB">Search</button>
+               </form>
+          </div>
+     </nav>
+
+     <div class = "contentContainer">
+
+          <div style="text-align:center" >
+          <div id="profile-photo" >
+               <img id = "photo" height="200" width="200"/>
+          </div>
+               <p>
+          </div>
+
+
+               <div style="text-align:center">  <button type = "button" id = "changePh" class="btn btn-outline-info btn-sm">Enter a Redemption Code to Change Photo Profile</button>
+          </div>
+
+          <div style="display:inline">
+               <h3 class="text-muted">User Name: <pre id = "username" style="display:inline" class="text-muted"> </pre> &nbsp; <img id ="gender" style="display:inline" class="round_icon"></h3>
+          </div>
+
+
+               <button type = "button" id = "changePs" class="btn btn-outline-info btn-sm" >Set Your Password</button>
+     </div>
+          <br>
+
+
+          <br>
+          <div>
+          <h3 class="text-muted">Nickname: <pre id = "nickname" style="display:inline" class="text-muted"> </pre>&nbsp;&nbsp;<button type = "button" id = "changeN" class="btn btn-outline-info btn-sm">Set</button></h3>
+
+          </div>
+
+          <br>
+
+
+          <br>
+          <h3 class="text-muted">Contact Details: <pre id = "contact" style="display:inline" class="text-muted"> </pre> &nbsp;&nbsp;<button type = "button" id = "changeC" class="btn btn-outline-info btn-sm" >Set</button></h3>
+
+
+          <br>
+          <br>
+
+
+
+          <h3 class="text-muted">Motto: <pre id = "userPre" style="display:inline" class="text-muted"></pre></h3>
+<p>
+          <button type = "button" id = "changePre" class="btn btn-outline-info btn-sm" >Write Something Here</button>
+
+     </div>
+
+
+
+<!--===============================================================================================-->
+<script src="resources/vendor/daterangepicker/moment.min.js"></script>
+<script src="resources/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="resources/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="resources/js/profile.js"></script>
+     <script src="resources/js/search.js"></script>
+</body>
+</html>

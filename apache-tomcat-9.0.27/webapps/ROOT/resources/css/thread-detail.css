@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Yifei Xu
+ * @date    2019-10-05
+ * @version 1.0
+ */
+
+
+
+.requester img{
+	width: 70%;
+	height: 70%;
+	margin: 5px 0px 0px 30px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.user-info{
+	margin-top: 18px;
+
+}
+
+.user-info p{
+	line-height: 15px;
+}
+
+.requester{
+	margin-left:50px;
+	margin-top:20px;
+}
+.thread-title, .thread-main{
+	margin-left: 80px;
+}
+
+.user-name{
+	color: #ff4000;
+}
+
+.thread-date{
+	color: rgb(247, 39, 146);
+}
+
+.reply-thread{
+	color:#AAAAAA;
+}
+
+.reply-thread:hover{
+	color: #888888;
+	text-decoration: none;
+}
+
+.btn{
+	border:1px solid rgba(0,0,0,.125);
+}
+
+.btn:hover{
+	background-color: #CCDDFF;
+}
+
+.comment-user--profile-photo img{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+	text-align: center;
+}
+
+.comment-group{
+	margin-top: 30px;
+}
+
+.input-group.mb-3 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.comments-group {
+    padding: 40px 0px 40px 0px;
+}
+
+.comment-user-info{
+	margin-top: 12px;
+	line-height: 5px;
+}
+
+.comment-message{
+	line-height:20px;
+}
+.reply-row{
+	margin-bottom: 30px;
+}
+
+
+.col-10 p{
+    line-height: 30px;
+}
+
+
+
+
+

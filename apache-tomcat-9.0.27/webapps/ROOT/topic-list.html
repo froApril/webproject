@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Examples</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+
+		<link rel="stylesheet" href="resources/css/topic-list.css">
+	</head>
+	<body>
+
+		<div class="input-group mb-3">
+		  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+		  <div class="input-group-prepend">
+		    <button class="btn btn-outline-secondary" type="button">Search</button>
+		  </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newThread" >New thread</button>
+            <div class="modal fade" id="newThread" tabindex="-1" role="dialog" aria-labelledby="ThreadLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ThreadLabel">New Comment</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="ThreadTitle" class="col-form-label">Title:</label>
+                                    <input type="text" class="form-control" id="ThreadTitle">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Threadtext" class="col-form-label">Comments:</label>
+                                    <textarea class="form-control" id="Threadtext"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary sendNewThread">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $('#newThread').on('show.bs.modal', function (event) {
+                    // var button = $(event.relatedTarget);
+                    var modal = $(this)
+                    modal.find('.modal-title').text('New comment to ' + getTopic())
+                    modal.find('.sendNewThread').on('click',function () {
+                        addNewThread(modal.find('#ThreadTitle').val(),modal.find('#Threadtext').val(),modal);
+                    });
+                })
+            </script>
+        </div>
+		<div class="main-list">
+			<div id="accordion">
+			  
+			  
+			</div>
+		</div>
+
+	    
+	</body>
+
+<footer>
+	<script type="text/javascript" src="resources/js/comments-loading.js"></script>
+
+</footer>
+</html>

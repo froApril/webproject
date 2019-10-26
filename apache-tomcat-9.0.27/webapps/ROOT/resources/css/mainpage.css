@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Yifei (yixu5881@uni.sydney.edu.au)
+ * @date    2019-10-05
+ * @version 1.0
+ */
+
+
+.jumbotron{
+	background-size: cover;
+	background-image: url(../images/black-background.jpg) ;
+	height: 300px;
+}
+.jumbotron h1,p{
+	color:#FFFFE0;
+	margin-top:20px;
+}
+
+.main-head{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.topics-details{
+	height:400px;
+	overflow-y: scroll;
+	position: relative;
+
+}
+.topic-list{
+	display: block;
+	margin:40px 20px 100px 20px;
+}
+
+.topics-details{
+	border:1px solid rgba(0,0,0,.125);
+	padding: 20px;
+	border-radius: 5px;
+}
+.topics-details p{
+	color: black;
+	margin-bottom: 100px;
+}
+
+.margin-class{
+	margin-top: 100px;
+}
+
+h4{
+    padding-top: 50px;
+}
+
+h4#list-item-1{
+    padding:0;
+}
+p{
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom:30px;
+}

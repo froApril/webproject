@@ -1,0 +1,88 @@
+@charset "UTF-8";
+html{height: 100%}
+body{margin: 0;height: 100%;
+  background: #fff;}
+canvas{display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+nav{
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  /*height: 100%;*/
+  line-height: 100%;
+  /*top: 0;*/
+  position: absolute;
+  top:0;
+  /*font-size: 50px;*/
+}
+
+#profile-photo{ margin:10px auto}
+#profile-photo img{ border-radius:50%}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto";
+}
+.round_icon{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#photoh{
+  width: 25px;
+  height: 25px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.jumbotron{
+  background-size: cover;
+  background-image: url(../images/black-background.jpg) ;
+  height: 300px;
+}
+.jumbotron h1,p{
+  color:#FFFFE0;
+  margin-top:20px;
+}
+
+.main-head{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.topics-details{
+  height:400px;
+  overflow-y: scroll;
+  position: relative;
+
+}
+.topic-list{
+  display: block;
+  margin:40px 20px 100px 20px;
+}
+
+.topics-details{
+  border:1px solid rgba(0,0,0,.125);
+  padding: 20px;
+  border-radius: 5px;
+}
+.topics-details p{
+  color: black;
+  margin-bottom: 100px;
+}
+
+.margin-class{
+  margin-top: 100px;
+}
+
