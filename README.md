@@ -31,3 +31,36 @@ Admin can check all the topics and replies on the check page, they do not need t
 On the delete page, all the topics and users will be shown on it. Admin can use the selection box to choose one or more topics or users to delete, once the topic or user has been deleted all the relevant comments will be automatically deleted as well. Once the admin takes the action of delete, there will show the confirm notification to avoid deleting incorrectly.
 
 
+## Configuration
+
+### Tomcat
+This project uses html as its front end display language instead of using jsp. Hence we need you use the specific Tomcat server we provide to run this project. 
+The Tomcat server files are contained in the project folder:
+
+Path: {local path}/webproject/apache-tomcat-9.0.27 
+
+The deployment configuration should be as the following image shows:
+
+
+
+### SQL connection
+
+Our project use Google Cloud SQL Database, hence we provide a test account for new user to visit the database with local IP.
+
+Step 1: Login with the test Google account
+Account: testcomp5619@gmail.com 
+Password: Tester1234
+Step 2: Visit http://ip4.me to get the local IP4 address
+
+Step 3:  Visit Google Cloud Platform
+https://console.cloud.google.com/sql/instances/webproject/overview?project=webproject-9f90f&authuser=1&duration=PT1H
+
+Step 4: Choose CONNECTIONS tab
+
+
+Step 5: Add your IP4 here and save
+
+
+Then you can start to run the website in localhost, enjoy.
+
+
