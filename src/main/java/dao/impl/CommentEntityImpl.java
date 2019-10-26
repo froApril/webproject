@@ -174,7 +174,7 @@ public class CommentEntityImpl implements CommentEntityDao {
         return flag;
     }
 
-    //Jimmy
+    //BingKun Miao
     @Override
     public boolean deleteComment(int topic_id) {
         Session session =null;
@@ -185,9 +185,6 @@ public class CommentEntityImpl implements CommentEntityDao {
             if(comments.size() == 0){
                 return false;
             }
-
-
-
 
             for (CommentEntity comment:comments) {
                 session.delete(comment);
@@ -201,7 +198,6 @@ public class CommentEntityImpl implements CommentEntityDao {
         finally{
             session.close();
         }
-
         return true;
     }
 
@@ -229,9 +225,7 @@ public class CommentEntityImpl implements CommentEntityDao {
             session.close();
         }
         return findcomments;
-
     }
-
 
     @Override
     public boolean deleteComment(String author_name) {
@@ -244,9 +238,6 @@ public class CommentEntityImpl implements CommentEntityDao {
             if(comments.size() == 0){
                 return false;
             }
-
-
-
 
             for (CommentEntity comment:comments) {
                 session.delete(comment);
@@ -262,8 +253,5 @@ public class CommentEntityImpl implements CommentEntityDao {
         }
 
         return true;
-
     }
-
-
 }

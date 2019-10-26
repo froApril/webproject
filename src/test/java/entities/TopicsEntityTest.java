@@ -1,6 +1,6 @@
 package entities;
 import junit.framework.TestCase;
-
+//BingKun Miao
 public class TopicsEntityTest extends TestCase {
     private TopicsEntity topic;
 

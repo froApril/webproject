@@ -1,4 +1,4 @@
-//Jimmy
+//BingKun Miao
 var html ="";
 
 function getAllUsers(){
@@ -8,11 +8,9 @@ function getAllUsers(){
         datatype:"json",
         async : false,
         success: function(data){
-            //var index =1;
-            for(var i=0;i<data.length;i++){
 
+            for (var i=0;i<data.length;i++) {
                 insertUserDetail(data[i]);
-                //index++;
             }
 
             $(".content").html(html);
@@ -21,15 +19,13 @@ function getAllUsers(){
     })
 }
 
-
 function insertUserDetail(data) {
 
     html +="<tr>\n"+"<td>"+"<input type='checkbox' id='checkbox' name='checkbox' value="+data.username+"/>"+"</td>\n"+"<td>"+data.username+"</td>\n"+
         "<td>"+data.nickname+"</td>\n"+"</tr>\n"
 }
 
-
-function specialDel(){
+function specialDel() {
     var checkID=[];
     $("input[name='checkbox']:checked").each(function(i){
         checkID[i] = $(this).val();
@@ -38,8 +34,6 @@ function specialDel(){
         alert("Please make a selection");
     }
     else {
-        /*confirm("Are you sure to delete?", "", function (isConfirm) {
-            if (isConfirm) {*/
         var r = confirm("Are you sure to delete?");
         if (r==true) {
             $.ajax({
@@ -50,21 +44,16 @@ function specialDel(){
                 data:JSON.stringify(checkID),
                 success : function(data) {
 
-                    for(var i=0;i<data.length;i++){
-
+                    for (var i=0;i<data.length;i++) {
                         insertUserDetail(data[i]);
-
                     }
 
                     $(".content").html(html);
                     html="";
 
                     alert("Successfully deleted!");
-
                 }
             })
-
         }
-
     }
 }

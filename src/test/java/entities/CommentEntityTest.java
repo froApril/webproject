@@ -1,6 +1,6 @@
 package entities;
 import junit.framework.TestCase;
-
+//BingKun Miao
 public class CommentEntityTest extends TestCase{
     private CommentEntity comment;
 

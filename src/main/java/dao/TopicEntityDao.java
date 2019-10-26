@@ -64,7 +64,7 @@ public interface TopicEntityDao extends Service {
     boolean updateTopic(String oldName,String newName);
 
     List<TopicsEntity> getAllTopics();
-    //Jimmy
+    //BingKun Miao
     boolean addNewTopic(TopicsEntity topic);
 
 

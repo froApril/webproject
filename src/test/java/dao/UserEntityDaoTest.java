@@ -4,7 +4,7 @@ import entities.UserEntity;
 import junit.framework.TestCase;
 
 import java.util.List;
-
+//BingKun Miao
 public class UserEntityDaoTest extends TestCase {
     private UserEntityDao userDao;
     private UserEntity user1 = new UserEntity();

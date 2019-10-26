@@ -1,4 +1,4 @@
-//Jimmy
+//BingKun Miao
 var html ="";
 
 function getAllTopics(){
@@ -8,11 +8,9 @@ function getAllTopics(){
         datatype:"json",
         async : false,
         success: function(data){
-            //var index =1;
             for(var i=0;i<data.length;i++){
 
                 insertTopicDetail(data[i]);
-                //index++;
             }
 
             $(".content").html(html);
@@ -21,12 +19,10 @@ function getAllTopics(){
     })
 }
 
-
 function insertTopicDetail(data) {
     html +="<tr>\n"+"<td>"+"<input type='checkbox' id='checkbox' name='checkbox' value="+data.topicName+"/>"+"</td>\n"+"<td>"+data.topicName+"</td>\n"+
         "<td>"+data.topicDescription+"</td>\n"+"</tr>\n"
 }
-
 
 function specialDel(){
     var checkID=[];
@@ -37,8 +33,6 @@ function specialDel(){
         alert("Please make a selection");
     }
     else {
-        /*confirm("Are you sure to delete?", "", function (isConfirm) {
-            if (isConfirm) {*/
         var r = confirm("Are you sure to delete?");
         if (r==true) {
             $.ajax({
@@ -49,21 +43,16 @@ function specialDel(){
                 data:JSON.stringify(checkID),
                 success : function(data) {
 
-                    for(var i=0;i<data.length;i++){
-
+                    for (var i=0;i<data.length;i++) {
                         insertTopicDetail(data[i]);
-
                     }
 
                     $(".content").html(html);
                     html="";
 
                     alert("Successfully deleted!");
-
                 }
             })
-
         }
-
     }
 }

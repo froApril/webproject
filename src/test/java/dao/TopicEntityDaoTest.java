@@ -4,7 +4,7 @@ import entities.TopicsEntity;
 import junit.framework.TestCase;
 
 import java.util.List;
-
+//BingKun Miao
 public class TopicEntityDaoTest extends TestCase {
     private TopicEntityDao topicDao;
     private TopicsEntity topic1 = new TopicsEntity();

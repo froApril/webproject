@@ -348,7 +348,7 @@ public class UserEntityDaoImpl implements UserEntityDao {
         return findUser;
     }
 
-    //Jimmy
+    //BingKun Miao
     @Override
     public List<UserEntity> getAllUsers() {
         Session session =null;

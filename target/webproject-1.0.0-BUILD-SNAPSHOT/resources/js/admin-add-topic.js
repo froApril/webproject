@@ -1,8 +1,5 @@
-
-//Jimmy
+//BingKun Miao
 function addOne() {
-
-
     var param = {};
     param.topicName = $("input[name='topicName']").val();
     param.topicDescription = $("textarea[name='topicDescription']").val();
@@ -14,7 +11,6 @@ function addOne() {
         alert("Please fill in the course description");
 
     }
-
     else {
         $.ajax({
             url: "/admin/addTopic",
@@ -32,10 +28,7 @@ function addOne() {
 
                 }
                 window.location.href = "addTopic";
-
-
             }
         })
     }
-    
 }

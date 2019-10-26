@@ -27,7 +27,7 @@ public interface UserEntityDao extends Service {
     UserEntity getEntityByNickname(String nickname);
 
 
-    //Jimmy
+    //BingKun Miao
     List<UserEntity> getAllUsers();
 
     

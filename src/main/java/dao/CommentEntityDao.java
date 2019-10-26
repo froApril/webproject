@@ -18,7 +18,8 @@ public interface CommentEntityDao extends Service {
     void addNewComment(CommentEntity commentEntity);
 
     boolean addNewThread(CommentEntity commentEntity);
-    //Jimmy
+
+    //BingKun Miao
     boolean deleteComment(int topic_id);
 
     List<CommentEntity> getCommentByAuthor(String author_name);
